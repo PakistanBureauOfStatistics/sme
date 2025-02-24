@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parent_drawer"
+    tools:context="pbs.sme.survey.activity.S2Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scrollView"
+            style="@style/hr_form_scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_household"/>
+
+                <TextView
+                    style="@style/summary_txt_lg"
+                    android:layout_width="match_parent"
+                    android:text="SECTION -2" />
+
+                <LinearLayout
+                    style="@style/smp_container_hr"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Year of Commencement of Activity"/>
+                    <EditText
+                        android:id="@+id/started_year"
+                        style="@style/edit_form_text"
+                        android:digits="0123456789"
+                        android:maxLength="4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Is the establishment registered with any government agency/autonomous body?"/>
+                    <RadioGroup
+                        android:id="@+id/is_registered"
+                        style="@style/rdg"
+                        android:layout_width="match_parent"
+                        android:weightSum="2">
+                        <RadioButton
+                            android:id="@+id/is_registered1"
+                            style="@style/rd_yesno"
+                            android:text="Yes" />
+                        <RadioButton
+                            android:id="@+id/is_registered2"
+                            style="@style/rd_yesno"
+                            android:text="No" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_agency"
+                    style="@style/vliner"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Name of  agency"/>
+                    <EditText
+                        android:id="@+id/agency"
+                        style="@style/edit_form_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Is the establishment maintaining accounts?"/>
+                    <RadioGroup
+                        android:id="@+id/is_maintaining"
+                        style="@style/rdg"
+                        android:layout_width="match_parent"
+                        android:weightSum="2">
+                        <RadioButton
+                            android:id="@+id/is_maintaining1"
+                            style="@style/rd_yesno"
+                            android:text="Yes" />
+                        <RadioButton
+                            android:id="@+id/is_maintaining2"
+                            style="@style/rd_yesno"
+                            android:text="No" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Type of Ownership "/>
+                    <RadioGroup
+                        android:id="@+id/ownership"
+                        style="@style/rdg"
+                        android:layout_width="match_parent"
+                        android:weightSum="3">
+                        <RadioButton
+                            android:id="@+id/ownership1"
+                            style="@style/rd_yesno"
+                            android:text="Individual " />
+                        <RadioButton
+                            android:id="@+id/ownership2"
+                            style="@style/rd_yesno"
+                            android:text="Partnership" />
+                        <RadioButton
+                            android:id="@+id/ownership3"
+                            style="@style/rd_yesno"
+                            android:text="Other" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner"
+                    android:id="@+id/l_ownership"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="If Other (Specify)"/>
+                    <EditText
+                        android:id="@+id/ownership_other"
+                        style="@style/edit_form_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Code (PSIC-2010)"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_container">
+                        <Spinner
+                            android:id="@+id/psic"
+                            style="@style/spn_form"
+                            android:entries="@array/spn_pisc"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Description of the Activity"/>
+                    <EditText
+                        android:id="@+id/activity"
+                        style="@style/edit_form_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Is the major manufacturing activity seasonal?"/>
+                    <RadioGroup
+                        android:id="@+id/is_seasonal"
+                        style="@style/rdg"
+                        android:layout_width="match_parent"
+                        android:weightSum="2">
+                        <RadioButton
+                            android:id="@+id/is_seasonal1"
+                            style="@style/rd_yesno"
+                            android:text="Yes" />
+                        <RadioButton
+                            android:id="@+id/is_seasonal2"
+                            style="@style/rd_yesno"
+                            android:text="No" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner"
+                    android:weightSum="10">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="If Yes tick the months during which activity is carried out "/>
+                    <LinearLayout
+                        style="@style/horizontal_wrapper"
+                        android:weightSum="4">
+                        <CheckBox
+                            android:id="@+id/jan"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Jan" />
+                        <CheckBox
+                            android:id="@+id/feb"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Feb" />
+                        <CheckBox
+                            android:id="@+id/mar"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Mar" />
+                        <CheckBox
+                            android:id="@+id/apr"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Apr" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/horizontal_wrapper"
+                        android:weightSum="4">
+                        <CheckBox
+                            android:id="@+id/may"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="May" />
+                        <CheckBox
+                            android:id="@+id/jun"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Jun" />
+                        <CheckBox
+                            android:id="@+id/jul"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Jul" />
+                        <CheckBox
+                            android:id="@+id/aug"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Aug" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/horizontal_wrapper"
+                        android:weightSum="4">
+                        <CheckBox
+                            android:id="@+id/sep"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Sep" />
+                        <CheckBox
+                            android:id="@+id/oct"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Oct" />
+                        <CheckBox
+                            android:id="@+id/nov"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Nov" />
+                        <CheckBox
+                            android:id="@+id/dec"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Dec" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="No. of  months worked"/>
+                    <EditText
+                        android:id="@+id/months"
+                        style="@style/edit_form_text"
+                        android:digits="0123456789"
+                        android:enabled="false"
+                        android:background="@drawable/bg_disabled"
+                        android:maxLength="2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Is there any other seasonal activity carried out by establishment?  "/>
+                    <RadioGroup
+                        android:id="@+id/is_establishement"
+                        style="@style/rdg"
+                        android:layout_width="match_parent"
+                        android:weightSum="2">
+                        <RadioButton
+                            android:id="@+id/is_establishement1"
+                            style="@style/rd_yesno"
+                            android:text="Yes" />
+                        <RadioButton
+                            android:id="@+id/is_establishement2"
+                            style="@style/rd_yesno"
+                            android:text="No" />
+                    </RadioGroup>
+                </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <LinearLayout
+                            style="@style/vertical_wrapper"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="5dp">
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="Number of Employees"/>
+                            <EditText
+                                android:id="@+id/emp_count"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="4"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vertical_wrapper"
+                            android:layout_weight="1"
+                            android:layout_width="0dp">
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="Employment Cost"/>
+                            <EditText
+                                android:id="@+id/emp_cost"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="12"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <include layout="@layout/layout_form_buttons"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_nav"/>
+</androidx.drawerlayout.widget.DrawerLayout>

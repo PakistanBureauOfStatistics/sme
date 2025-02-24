@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parent_drawer"
+    tools:context="pbs.sme.survey.activity.S3Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scrollView"
+            style="@style/hr_form_scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_household"/>
+
+                <TextView
+                    style="@style/summary_txt_lg"
+                    android:layout_width="match_parent"
+                    android:text="Section-4: Output Excluding Sales Tax (Last 3 Months)" />
+
+                <LinearLayout
+                    style="@style/smp_container_hr"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        style="@style/smp_container_hr"
+                        android:weightSum="10"
+                        android:paddingVertical="?pad"
+                        android:background="?s_color">
+                        <TextView
+                            style="@style/summary_eng"
+                            android:layout_weight="1.2"
+                            android:textColor="@color/white"
+                            android:text="Code"
+                            android:gravity="center_horizontal"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:layout_weight="6.8"
+                            android:text="Description"
+                            android:textColor="@color/white"
+                            android:gravity="left"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:layout_weight="2"
+                            android:textColor="@color/white"
+                            android:text="Value"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="401"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Value of sales of finished /Semi finished goods" />
+                        <EditText
+                            android:id="@+id/value__401"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="402"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Value of goods/fixed assets produced and consumed by establishment" />
+                        <EditText
+                            android:id="@+id/value__402"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="403"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Receipt from work done for others" />
+                        <EditText
+                            android:id="@+id/value__403"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="404"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Value of goods/material purchased for resale" />
+                        <EditText
+                            android:id="@+id/value__404"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="405"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Value of sales from goods/material that is purchase for resale without further processing" />
+                        <EditText
+                            android:id="@+id/value__405"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="406"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Income from scrap, electricity, waste product etc" />
+                        <EditText
+                            android:id="@+id/value__406"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="407"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Other revenues n.e.c" />
+                        <EditText
+                            android:id="@+id/value__407"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="400"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Total" />
+                        <EditText
+                            android:id="@+id/value__400"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_eng_c"
+                            android:text="408"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:text="Revenue/ Income via own website, Domestic DIPs, International DIPs  (% of total)" />
+                        <EditText
+                            android:id="@+id/value__408"
+                            style="@style/edit_table_num"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_form_buttons"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_nav"/>
+</androidx.drawerlayout.widget.DrawerLayout>
