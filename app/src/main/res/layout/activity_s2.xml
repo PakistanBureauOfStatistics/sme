@@ -36,6 +36,7 @@
                         android:id="@+id/started_year"
                         style="@style/edit_form_text"
                         android:digits="0123456789"
+                        android:inputType="number"
                         android:maxLength="4"/>
                 </LinearLayout>
 
@@ -305,7 +306,8 @@
                                 android:id="@+id/emp_count"
                                 style="@style/edit_form_text"
                                 android:digits="0123456789"
-                                android:maxLength="4"/>
+                                android:inputType="number"
+                                android:maxLength="5"/>
                         </LinearLayout>
                         <LinearLayout
                             style="@style/vertical_wrapper"
@@ -318,6 +320,7 @@
                                 android:id="@+id/emp_cost"
                                 style="@style/edit_form_text"
                                 android:digits="0123456789"
+                                android:inputType="number"
                                 android:maxLength="12"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -326,7 +329,6 @@
                 <include layout="@layout/layout_form_buttons"/>
             </LinearLayout>
         </ScrollView>
-
 
         <include
             android:id="@+id/footer"

@@ -70,14 +70,16 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHold
         else{
             holder.statusbtn.setVisibility(View.INVISIBLE);
         }
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        if(a.getCreated()!=null){
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                intent.setClass(context,a.getActivity());
-                context.startActivity(intent);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    intent.setClass(context,a.getActivity());
+                    context.startActivity(intent);
+                }
+            });
+        }
     }
 
     @Override

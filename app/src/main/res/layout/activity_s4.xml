@@ -151,6 +151,8 @@
                             android:text="Total" />
                         <EditText
                             android:id="@+id/value__400"
+                            android:enabled="false"
+                            android:background="@drawable/bg_disabled"
                             style="@style/edit_table_num"/>
                     </LinearLayout>
                     <LinearLayout
@@ -161,9 +163,11 @@
                             android:text="408"/>
                         <TextView
                             style="@style/summary_eng"
+                            android:textColor="@color/red"
                             android:text="Revenue/ Income via own website, Domestic DIPs, International DIPs  (% of total)" />
                         <EditText
                             android:id="@+id/value__408"
+                            android:maxLength="3"
                             style="@style/edit_table_num"/>
                     </LinearLayout>
 

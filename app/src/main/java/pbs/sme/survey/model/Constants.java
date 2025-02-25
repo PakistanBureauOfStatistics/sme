@@ -1,6 +1,7 @@
 package pbs.sme.survey.model;
 
 
+import pbs.sme.survey.activity.BaseActivity;
 import pbs.sme.survey.activity.HomeActivity;
 import pbs.sme.survey.activity.S1Activity;
 import pbs.sme.survey.activity.S2Activity;
@@ -69,6 +70,6 @@ public class Constants {
              S2Activity.class,
              S3Activity.class,
              S4Activity.class,
-             HomeActivity.class
+             BaseActivity.class
      };
 }

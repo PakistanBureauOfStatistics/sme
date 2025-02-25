@@ -190,7 +190,9 @@
                             android:text="Total" />
                         <EditText
                             android:id="@+id/value__300"
-                            style="@style/edit_table_num"/>
+                            style="@style/edit_table_num"
+                            android:background="@drawable/bg_disabled"
+                            android:enabled="false"/>
                     </LinearLayout>
 
                     <include layout="@layout/layout_form_buttons"/>

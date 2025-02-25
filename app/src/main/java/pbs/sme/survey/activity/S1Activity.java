@@ -1,6 +1,5 @@
 package pbs.sme.survey.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.util.Log;
@@ -10,12 +9,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.List;
 
 import pbs.sme.survey.R;
-import pbs.sme.survey.model.Constants;
 import pbs.sme.survey.model.Section12;
 import pk.gov.pbs.utils.StaticUtils;
 

@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import pbs.sme.survey.BuildConfig;
 import pbs.sme.survey.DB.Database;
+import pbs.sme.survey.DB.DatabaseBackup;
 import pbs.sme.survey.api.ApiClient;
 import pbs.sme.survey.api.ApiInterface;
 import pbs.sme.survey.helper.DateHelper;
@@ -26,6 +27,7 @@ import com.google.android.material.navigation.NavigationView;
 import pbs.sme.survey.R;
 import pbs.sme.survey.model.House;
 import pbs.sme.survey.model.Household;
+import pbs.sme.survey.model.Section12;
 import pbs.sme.survey.model.User;
 import pbs.sme.survey.online.Returning;
 import pbs.sme.survey.online.Sync;
@@ -143,9 +145,9 @@ public class MyActivity extends CustomActivity implements NavigationView.OnNavig
         Intent intent=null;
         int id=item.getItemId();
         if(id==R.id.pbsHome){
-            /*intent=new Intent(c, ImportActivity.class);
+            intent=new Intent(c, ImportActivity.class);
             startActivity(intent);
-            finishAffinity();*/
+            finishAffinity();
         }
         /*
         else if(id==R.id.nav_guide){
@@ -181,14 +183,11 @@ public class MyActivity extends CustomActivity implements NavigationView.OnNavig
 
         }
         else if(id==R.id.nav_logout){
-            int total=dbHandler.queryInteger("SELECT count(*) from "+ Household.class.getSimpleName()+" where is_deleted=? and env=?","0",env);
-            int upload=dbHandler.queryInteger("SELECT count(*) from "+ Household.class.getSimpleName()+" where is_deleted=0 and env='"+env+"' and sync_time is not null");
+            int total=dbHandler.queryInteger("SELECT count(*) from "+ Section12.class.getSimpleName()+" where is_deleted=? and env=?","0",env);
+            int upload=dbHandler.queryInteger("SELECT count(*) from "+ Section12.class.getSimpleName()+" where is_deleted=0 and env='"+env+"' and sync_time is not null");
 
-            int ht=dbHandler.queryInteger("SELECT count(*) from "+ House.class.getSimpleName()+" where is_deleted=? and env=?","0",env);
-            int hu=dbHandler.queryInteger("SELECT count(*) from "+ House.class.getSimpleName()+" where is_deleted=0 and env='"+env+"' and sync_time is not null");
-
-            if(settings.getString(Constants.ENV,"").equalsIgnoreCase("field") && upload<total && hu<ht){
-                mUXToolkit.showToast("Cannot logout, "+(total-upload)+" Household(s) are not uploaded");
+            if(settings.getString(Constants.ENV,"").equalsIgnoreCase("field") && upload<total){
+                mUXToolkit.showToast("Cannot logout, "+(total-upload)+" records(s) are not uploaded");
             }
             else{
                 try{

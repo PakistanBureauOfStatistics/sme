@@ -8,6 +8,7 @@ import pbs.sme.survey.model.User;
 import pbs.sme.survey.online.Returning;
 import pbs.sme.survey.online.Sync;
 import pbs.sme.survey.model.Import;
+import pbs.sme.survey.online.Sync2;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -44,4 +45,8 @@ public interface ApiInterface {
 
     @POST("iac/sync_listing2?")
     Call<Returning> upload(@Body Sync data);
+
+
+    @POST("sme/sync_sme?")
+    Call<Returning> upload2(@Body Sync2 data);
 }
