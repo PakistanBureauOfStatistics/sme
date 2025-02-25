@@ -84,8 +84,8 @@ public class HomeActivity extends FormActivity {
         List<Section12> s2= dbHandler.query(Section12.class,"uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         long s3=dbHandler.getCount(Section34.class, "uid='"+resumeModel.uid+"' AND section=3 and (is_deleted=0 OR is_deleted is null)");
         long s4=dbHandler.getCount(Section34.class, "uid='"+resumeModel.uid+"' AND section=4 and (is_deleted=0 OR is_deleted is null)");
-        String s3time=dbHandler.queryString("SELECT min(created_time) from "+Section34.class.getSimpleName()+" where section=3 and uid='"+resumeModel.uid+"' and and (is_deleted=0 OR is_deleted is null)");
-        String s4time=dbHandler.queryString("SELECT min(created_time) from "+Section34.class.getSimpleName()+" where section=4 and uid='"+resumeModel.uid+"' and and (is_deleted=0 OR is_deleted is null)");
+        String s3time=dbHandler.queryString("SELECT min(created_time) from "+Section34.class.getSimpleName()+" where section=3 and uid='"+resumeModel.uid+"' and (is_deleted=0 OR is_deleted is null)");
+        String s4time=dbHandler.queryString("SELECT min(created_time) from "+Section34.class.getSimpleName()+" where section=4 and uid='"+resumeModel.uid+"' and (is_deleted=0 OR is_deleted is null)");
 
         if(s2!=null){
             Section12 o=s2.get(0);
