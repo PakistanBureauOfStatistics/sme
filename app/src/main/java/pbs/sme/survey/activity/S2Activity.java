@@ -3,10 +3,12 @@ package pbs.sme.survey.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 import java.util.List;
 
@@ -17,13 +19,16 @@ import pk.gov.pbs.utils.StaticUtils;
 public class S2Activity extends FormActivity {
 
     private Button sbtn;
-    private Section12 section2_database;
-    private RadioGroup is_registered, ownership;
+    private Section12 modelDatabase;
+    private RadioGroup is_registered;
+    Spinner sownership, mownership;
 
     private final String[] inputValidationOrder= new String[]{
-            "started_year","is_registered","agency","is_maintaining","ownership","ownership_other","activity","psic","is_seasonal",
-            "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec","months","is_establishement","emp_count","emp_cost"
+            "started_year","is_registered","exports","imports","stocks","agency","is_maintaining","sownership","mownership","ownership_other","organization","activity","psic","is_seasonal",
+            "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec","months","is_establishement","emp_count","male_count","female_count","emp_unpaid","male_unpaid","female_unpaid"
     };
+    private final int[] small=new int[]{R.id.small1,R.id.small2,R.id.small3,R.id.small4, R.id.small5};
+    private final int[] medium=new int[]{R.id.medium1,R.id.medium2,R.id.medium3,R.id.medium4, R.id.medium5};
 
 
     @Override
@@ -40,6 +45,26 @@ public class S2Activity extends FormActivity {
             StaticUtils.getHandler().post(this::saveForm);
         });
 
+        if(resumeModel.emp_count!=null && resumeModel.emp_count>=50){
+            for(int l : medium){
+                findViewById(l).setVisibility(View.VISIBLE);
+            }
+            for(int l : small){
+                findViewById(l).setVisibility(View.GONE);
+            }
+            setOwnership(R.id.mownership,4);
+        }
+        else{
+            for(int l : small){
+                findViewById(l).setVisibility(View.VISIBLE);
+            }
+            for(int l : medium){
+                findViewById(l).setVisibility(View.GONE);
+            }
+            setOwnership(R.id.mownership,3);
+
+        }
+
         is_registered=findViewById(R.id.is_registered);
         is_registered.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -52,27 +77,16 @@ public class S2Activity extends FormActivity {
                 }
             }
         });
-        ownership=findViewById(R.id.ownership);
-        ownership.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.ownership3){
-                    findViewById(R.id.l_ownership).setVisibility(View.VISIBLE);
-                }
-                else{
-                    findViewById(R.id.l_ownership).setVisibility(View.GONE);
-                }
-            }
-        });
+
     }
 
 
     private void loadForm(){
         List<Section12> s2= dbHandler.query(Section12.class,"uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         if(s2.size() == 1){
-            section2_database = s2.get(0);
+            modelDatabase = s2.get(0);
             //Part1TextWatcher.IGNORE_TEXT_WATCHER = true;
-            setFormFromModel(this, section2_database, inputValidationOrder, "", false, this.findViewById(android.R.id.content));
+            setFormFromModel(this, modelDatabase, inputValidationOrder, "", false, this.findViewById(android.R.id.content));
         }
 
     }
@@ -81,27 +95,32 @@ public class S2Activity extends FormActivity {
 
     private void saveForm() {
         sbtn.setEnabled(false);
-        Section12 s2;
+        Section12 sec;
 
-
+        if(modelDatabase!=null){
+            sec=modelDatabase;
+        }
+        else{
+            sec=resumeModel;
+        }
         try {
-            s2 = (Section12) extractValidatedModelFromForm(this, resumeModel,true, inputValidationOrder,"", Section12.class,false, this.findViewById(android.R.id.content));
+            sec = (Section12) extractValidatedModelFromForm(this, sec,true, inputValidationOrder,"", Section12.class,false, this.findViewById(android.R.id.content));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
 
-        if (s2 == null) {
+        if (sec == null) {
             mUXToolkit.showAlertDialogue("Failed","فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔"  , alertForEmptyFieldEvent);
             sbtn.setEnabled(true);
             return;
         }
-        s2.months=months();
+        sec.months=months();
 
         /////TODO CHECKS////////////////////////////
 
 
-        Long iid = dbHandler.replace(s2);
+        Long iid = dbHandler.replace(sec);
 
         if (iid != null && iid > 0) {
             mUXToolkit.showToast("Success");
@@ -128,5 +147,25 @@ public class S2Activity extends FormActivity {
             }
         }
         return t;
+    }
+
+    private void setOwnership(int id, int pos){
+        Spinner spn=findViewById(id);
+        spn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position==pos){
+                    findViewById(R.id.l_ownership).setVisibility(View.VISIBLE);
+                }
+                else{
+                    findViewById(R.id.l_ownership).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }

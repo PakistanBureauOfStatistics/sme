@@ -21,24 +21,16 @@ public interface ApiInterface {
     @GET("iac/test")
     Call<Result> apiResponse();
 
-    @POST("iac/authenticate?")
+    @POST("sme/authenticate?")
     @FormUrlEncoded
     Call<List<User>> authenticate(@Field("uname") String uname, @Field("pass") String pass,
                   @Field("deviceID") String deviceID, @Field("deviceName") String deviceName,
                   @Field("mac") String mac, @Field("os") String os, @Field("referer") String referer,
                   @Field("lat") double lat, @Field("lon") double lon);
 
-    @POST("iac/forget_password?")
-    @FormUrlEncoded
-    Call<Forgot> forgot(@Field("app") int app,  @Field("username") String username);
 
 
-    @POST("iac/change_password?")
-    @FormUrlEncoded
-    Call<Result> change(@Field("app") int app,  @Field("username") String username, @Field("password") String password);
-
-
-    @POST("iac/fetch_listing?")
+    @POST("sme/fetch?")
     @FormUrlEncoded
     Call<Import> fetch(@Field("app") int app, @Field("vcode") String vcode, @Field("uid") int uid, @Field("sid") long sid, @Field("mid") int mid, @Field("utime") String utime, @Field("ctime") String ctime, @Field("cnt") long cnt);
 

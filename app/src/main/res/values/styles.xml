@@ -116,6 +116,11 @@
         <item name="android:maxLength">4</item>
     </style>
 
+    <style name="spn_rel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/spinner_container</item>
+    </style>
     <style name="spn_form">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?h_btn</item>
@@ -459,6 +464,11 @@
         <item name="android:background">@drawable/bg_text_field</item>
     </style>
 
+    <style name="edit_form_val" parent="edit_form_text">
+        <item name="android:inputType">number</item>
+        <item name="android:digits">0123456789</item>
+    </style>
+
     <style name="edit_form_t" parent="edit_form">
         <item name="android:layout_marginRight">?paddd</item>
         <item name="android:layout_weight">.17</item>
@@ -491,6 +501,10 @@
     <style name="rd_yesno">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="rd_linear">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
@@ -629,6 +643,12 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/grey</item>
         <item name="android:id">@id/my_drawer_layout</item>
+    </style>
+
+    <style name="brdg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
 

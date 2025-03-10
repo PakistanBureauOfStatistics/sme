@@ -46,6 +46,86 @@
                             android:id="@+id/owner"
                             style="@style/edit_form_text"/>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/medium1"
+                        style="@style/vertical_wrapper"
+                        android:visibility="gone">
+                        <LinearLayout
+                            style="@style/vliner">
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="Gender of the Owner(s)/Proprietor(s): "/>
+                            <RadioGroup
+                                android:id="@+id/owner_gender"
+                                style="@style/rdg"
+                                android:layout_width="match_parent"
+                                android:weightSum="2">
+                                <RadioButton
+                                    android:id="@+id/owner_gender1"
+                                    style="@style/rd_yesno"
+                                    android:text="Male" />
+                                <RadioButton
+                                    android:id="@+id/owner_gender2"
+                                    style="@style/rd_yesno"
+                                    android:text="Female" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner">
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="Head Qaurter Address "/>
+                            <LinearLayout
+                                style="@style/horizontal_wrapper"
+                                android:weightSum="5">
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:hint="Head Quarter Address"
+                                    android:layout_marginRight="?pad"
+                                    android:id="@+id/hq_address"
+                                    style="@style/edit_form_text"/>
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/spinner_container">
+                                    <Spinner
+                                        android:id="@+id/hq_district"
+                                        style="@style/spn_form"
+                                        android:entries="@array/districts"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner">
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="Factor Address "/>
+                            <LinearLayout
+                                style="@style/horizontal_wrapper"
+                                android:weightSum="5">
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:hint="Factory Address"
+                                    android:layout_marginRight="?pad"
+                                    android:id="@+id/factory_address"
+                                    style="@style/edit_form_text"/>
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/spinner_container">
+                                    <Spinner
+                                        android:id="@+id/factory_district"
+                                        style="@style/spn_form"
+                                        android:entries="@array/districts"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
                         <TextView

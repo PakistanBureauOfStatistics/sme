@@ -19,12 +19,12 @@ import pk.gov.pbs.utils.StaticUtils;
 public class S1Activity extends FormActivity {
 
     private Button sbtn;
-    private Section12 section1_database;
+    private Section12 modelDatabase;
     protected Spinner phone_type, phone_code, reason_no_phone;
     EditText phone_code2,phone_number;
 
     private final String[] inputValidationOrder= new String[]{
-            "title","owner","name","designation","phone_type","phone_code","phone_number"
+            "title","owner","owner_gender","name","factory_address", "factory_district", "hq_address","hq_district","designation","phone_type","phone_code","phone_number"
             ,"reason_no_phone","email","website"
     };
 
@@ -43,6 +43,13 @@ public class S1Activity extends FormActivity {
             sbtn.requestFocus();
             StaticUtils.getHandler().post(this::saveForm);
         });
+
+        if(resumeModel.emp_count!=null && resumeModel.emp_count>=50){
+            findViewById(R.id.medium1).setVisibility(View.VISIBLE);
+        }
+        else{
+            findViewById(R.id.medium1).setVisibility(View.GONE);
+        }
 
         init();
 
@@ -163,9 +170,9 @@ public class S1Activity extends FormActivity {
     private void loadForm(){
         List<Section12> s1= dbHandler.query(Section12.class,"uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         if(s1.size() == 1){
-            section1_database = s1.get(0);
+            modelDatabase = s1.get(0);
             //Part1TextWatcher.IGNORE_TEXT_WATCHER = true;
-            setFormFromModel(this, section1_database, inputValidationOrder, "",false, this.findViewById(android.R.id.content));
+            setFormFromModel(this, modelDatabase, inputValidationOrder, "",false, this.findViewById(android.R.id.content));
         }
         else{
             setFormFromModel(this,resumeModel,inputValidationOrder,"",false,this.findViewById(android.R.id.content));
@@ -200,8 +207,6 @@ public class S1Activity extends FormActivity {
             phone_type.setSelection(1);
         }
 
-        Log.d("VALE",String.valueOf(resumeModel.flag));
-
 
     }
 
@@ -209,17 +214,22 @@ public class S1Activity extends FormActivity {
 
     private void saveForm() {
         sbtn.setEnabled(false);
-        Section12 s1;
+        Section12 sec;
 
-
+        if(modelDatabase!=null){
+            sec=modelDatabase;
+        }
+        else{
+            sec=resumeModel;
+        }
         try {
-            s1 = (Section12) extractValidatedModelFromForm(this, resumeModel,true, inputValidationOrder,"", Section12.class, false, this.findViewById(android.R.id.content));
+            sec = (Section12) extractValidatedModelFromForm(this, sec,true, inputValidationOrder,"", Section12.class, false, this.findViewById(android.R.id.content));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
 
-        if (s1 == null) {
+        if (sec == null) {
             mUXToolkit.showAlertDialogue("Failed","فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔"  , alertForEmptyFieldEvent);
             sbtn.setEnabled(true);
             return;
@@ -228,7 +238,7 @@ public class S1Activity extends FormActivity {
         /////TODO CHECKS////////////////////////////
 
 
-        Long iid = dbHandler.replace(s1);
+        Long iid = dbHandler.replace(sec);
 
         if (iid != null && iid > 0) {
             mUXToolkit.showToast("Success");

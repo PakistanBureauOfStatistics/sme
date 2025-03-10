@@ -39,40 +39,41 @@
                         android:inputType="number"
                         android:maxLength="4"/>
                 </LinearLayout>
-
                 <LinearLayout
-                    style="@style/vliner">
-                    <TextView
-                        style="@style/q_heading"
-                        android:text="Is the establishment registered with any government agency/autonomous body?"/>
-                    <RadioGroup
-                        android:id="@+id/is_registered"
-                        style="@style/rdg"
-                        android:layout_width="match_parent"
-                        android:weightSum="2">
-                        <RadioButton
-                            android:id="@+id/is_registered1"
-                            style="@style/rd_yesno"
-                            android:text="Yes" />
-                        <RadioButton
-                            android:id="@+id/is_registered2"
-                            style="@style/rd_yesno"
-                            android:text="No" />
-                    </RadioGroup>
+                    android:id="@+id/small1"
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Is the establishment registered with any government agency/autonomous body?"/>
+                        <RadioGroup
+                            android:id="@+id/is_registered"
+                            style="@style/rdg"
+                            android:layout_width="match_parent"
+                            android:weightSum="2">
+                            <RadioButton
+                                android:id="@+id/is_registered1"
+                                style="@style/rd_yesno"
+                                android:text="Yes" />
+                            <RadioButton
+                                android:id="@+id/is_registered2"
+                                style="@style/rd_yesno"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l_agency"
+                        style="@style/vliner"
+                        android:visibility="gone">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Name of  agency"/>
+                        <EditText
+                            android:id="@+id/agency"
+                            style="@style/edit_form_text"/>
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/l_agency"
-                    style="@style/vliner"
-                    android:visibility="gone">
-                    <TextView
-                        style="@style/q_heading"
-                        android:text="Name of  agency"/>
-                    <EditText
-                        android:id="@+id/agency"
-                        style="@style/edit_form_text"/>
-                </LinearLayout>
-
                 <LinearLayout
                     style="@style/vliner">
                     <TextView
@@ -94,28 +95,101 @@
                     </RadioGroup>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/medium1"
+                    style="@style/vertical_wrapper"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Establishement Export Production?"/>
+                        <RadioGroup
+                            android:id="@+id/exports"
+                            style="@style/rdg"
+                            android:layout_width="match_parent"
+                            android:weightSum="2">
+                            <RadioButton
+                                android:id="@+id/exports1"
+                                style="@style/rd_yesno"
+                                android:text="Yes" />
+                            <RadioButton
+                                android:id="@+id/exports2"
+                                style="@style/rd_yesno"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Establishment Import Raw Material?"/>
+                        <RadioGroup
+                            android:id="@+id/imports"
+                            style="@style/rdg"
+                            android:layout_width="match_parent"
+                            android:weightSum="2">
+                            <RadioButton
+                                android:id="@+id/imports1"
+                                style="@style/rd_yesno"
+                                android:text="Yes" />
+                            <RadioButton
+                                android:id="@+id/imports2"
+                                style="@style/rd_yesno"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Establishment Listed with Stock Exchange?"/>
+                        <RadioGroup
+                            android:id="@+id/stocks"
+                            style="@style/rdg"
+                            android:layout_width="match_parent"
+                            android:weightSum="2">
+                            <RadioButton
+                                android:id="@+id/stock1"
+                                style="@style/rd_yesno"
+                                android:text="Yes" />
+                            <RadioButton
+                                android:id="@+id/stock2"
+                                style="@style/rd_yesno"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/small2"
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Type of Ownership "/>
-                    <RadioGroup
-                        android:id="@+id/ownership"
-                        style="@style/rdg"
-                        android:layout_width="match_parent"
-                        android:weightSum="3">
-                        <RadioButton
-                            android:id="@+id/ownership1"
-                            style="@style/rd_yesno"
-                            android:text="Individual " />
-                        <RadioButton
-                            android:id="@+id/ownership2"
-                            style="@style/rd_yesno"
-                            android:text="Partnership" />
-                        <RadioButton
-                            android:id="@+id/ownership3"
-                            style="@style/rd_yesno"
-                            android:text="Other" />
-                    </RadioGroup>
+                        android:text="Type of Ownership (Small Enterprise)"/>
+                    <RelativeLayout
+                        style="@style/spn_rel">
+                        <Spinner
+                            android:id="@+id/sownership"
+                            style="@style/spn_form"
+                            android:entries="@array/spn_sownership"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/medium2"
+                    style="@style/vliner"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Type of Ownership (Medium Enterprise)"/>
+                    <RelativeLayout
+                        style="@style/spn_rel">
+                        <Spinner
+                            android:id="@+id/mownership"
+                            style="@style/spn_form"
+                            android:entries="@array/spn_mownership"/>
+                    </RelativeLayout>
                 </LinearLayout>
                 <LinearLayout
                     style="@style/vliner"
@@ -128,6 +202,21 @@
                         android:id="@+id/ownership_other"
                         style="@style/edit_form_text"/>
                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/medium3"
+                    style="@style/vliner"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Type of Organization"/>
+                    <RelativeLayout
+                        style="@style/spn_rel">
+                        <Spinner
+                            android:id="@+id/organization"
+                            style="@style/spn_form"
+                            android:entries="@array/spn_organization"/>
+                    </RelativeLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     style="@style/vliner">
@@ -135,9 +224,7 @@
                         style="@style/q_heading"
                         android:text="Code (PSIC-2010)"/>
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/spinner_container">
+                        style="@style/spn_rel">
                         <Spinner
                             android:id="@+id/psic"
                             style="@style/spn_form"
@@ -155,6 +242,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/small3"
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
@@ -176,6 +264,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/small5"
                     style="@style/vliner"
                     android:weightSum="10">
                     <TextView
@@ -256,21 +345,22 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/medium5"
                     style="@style/vliner"
                     android:visibility="gone">
                     <TextView
                         style="@style/q_heading"
-                        android:text="No. of  months worked"/>
+                        android:text="No. of  months worked During the Year"/>
                     <EditText
+                        android:inputType="number"
                         android:id="@+id/months"
                         style="@style/edit_form_text"
                         android:digits="0123456789"
-                        android:enabled="false"
-                        android:background="@drawable/bg_disabled"
                         android:maxLength="2"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/small4"
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
@@ -290,40 +380,82 @@
                             android:text="No" />
                     </RadioGroup>
                 </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Number of Employees (Male + Female = Total)"/>
                     <LinearLayout
                         style="@style/vliner"
                         android:orientation="horizontal"
-                        android:weightSum="2">
-                        <LinearLayout
-                            style="@style/vertical_wrapper"
-                            android:layout_weight="1"
-                            android:layout_width="0dp"
-                            android:layout_marginRight="5dp">
-                            <TextView
-                                style="@style/q_heading"
-                                android:text="Number of Employees"/>
-                            <EditText
-                                android:id="@+id/emp_count"
-                                style="@style/edit_form_text"
-                                android:digits="0123456789"
-                                android:inputType="number"
-                                android:maxLength="5"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/vertical_wrapper"
-                            android:layout_weight="1"
-                            android:layout_width="0dp">
-                            <TextView
-                                style="@style/q_heading"
-                                android:text="Employment Cost"/>
-                            <EditText
-                                android:id="@+id/emp_cost"
-                                style="@style/edit_form_text"
-                                android:digits="0123456789"
-                                android:inputType="number"
-                                android:maxLength="12"/>
-                        </LinearLayout>
+                        android:weightSum="3">
+                    <EditText
+                        android:id="@+id/male_count"
+                        android:layout_weight="1"
+                        style="@style/edit_form_val"
+                        android:hint="Male"
+                        android:maxLength="2"/>
+                    <EditText
+                        android:id="@+id/female_count"
+                        android:layout_weight="1"
+                        style="@style/edit_form_val"
+                        android:layout_marginHorizontal="?padd"
+                        android:hint="Female"
+                        android:maxLength="2"/>
+                    <EditText
+                        android:id="@+id/emp_count"
+                        android:layout_weight="1"
+                        style="@style/edit_form_val"
+                        android:enabled="false"
+                        android:hint="Total"
+                        android:background="@drawable/bg_disabled"
+                        android:maxLength="2"/>
                     </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/medium4"
+                    style="@style/vliner"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Un-Paid Workers (Male + Female = Total)"/>
+                    <LinearLayout
+                        style="@style/vliner"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                        <EditText
+                            android:id="@+id/male_unpaid"
+                            android:layout_weight="1"
+                            style="@style/edit_form_val"
+                            android:hint="Male"
+                            android:maxLength="2"/>
+                        <EditText
+                            android:id="@+id/female_unpaid"
+                            android:layout_weight="1"
+                            style="@style/edit_form_val"
+                            android:layout_marginHorizontal="?padd"
+                            android:hint="Female"
+                            android:maxLength="2"/>
+                        <EditText
+                            android:id="@+id/emp_unpaid"
+                            android:layout_weight="1"
+                            style="@style/edit_form_val"
+                            android:hint="Total"
+                            android:background="@drawable/bg_disabled"
+                            android:maxLength="2"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Employement Cost (in RS)"/>
+                    <EditText
+                        android:id="@+id/emp_cost"
+                        style="@style/edit_form_val"
+                        android:hint="Employee Cost (in RS)"
+                        android:maxLength="12"/>
+                </LinearLayout>
 
                 </LinearLayout>
                 <include layout="@layout/layout_form_buttons"/>

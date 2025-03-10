@@ -82,10 +82,9 @@ public class HomeActivity extends FormActivity {
         total = times.length;
 
         List<Section12> s2= dbHandler.query(Section12.class,"uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
-        long s3=dbHandler.getCount(Section34.class, "uid='"+resumeModel.uid+"' AND section=3 and (is_deleted=0 OR is_deleted is null)");
-        long s4=dbHandler.getCount(Section34.class, "uid='"+resumeModel.uid+"' AND section=4 and (is_deleted=0 OR is_deleted is null)");
         String s3time=dbHandler.queryString("SELECT min(created_time) from "+Section34.class.getSimpleName()+" where section=3 and uid='"+resumeModel.uid+"' and (is_deleted=0 OR is_deleted is null)");
         String s4time=dbHandler.queryString("SELECT min(created_time) from "+Section34.class.getSimpleName()+" where section=4 and uid='"+resumeModel.uid+"' and (is_deleted=0 OR is_deleted is null)");
+        String base=dbHandler.queryString("SELECT min(created_time) from "+Baseline.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and (is_deleted=0 OR is_deleted is null)");
 
         if(s2!=null){
             Section12 o=s2.get(0);
@@ -100,17 +99,27 @@ public class HomeActivity extends FormActivity {
                 times[1]=o.modified_time;
                 status[1]=R.drawable.ic_tick;
             }
-            if(s3time!=null && !s3time.equalsIgnoreCase("")){
-                times[2]=o.created_time;
-                status[2]=R.drawable.ic_tick;
-            }
-            if(s4time!=null && !s4time.equalsIgnoreCase("")){
-                times[3]=o.modified_time;
-                status[3]=R.drawable.ic_tick;
-            }
         }
-        times[4]="";
-        status[4]=R.drawable.ic_block;
+
+        if(s3time!=null && !s3time.equalsIgnoreCase("")){
+            times[2]=s3time;
+            status[2]=R.drawable.ic_tick;
+        }
+
+        if(s4time!=null && !s4time.equalsIgnoreCase("")){
+            times[3]=s4time;
+            status[3]=R.drawable.ic_tick;
+        }
+
+        if(base!=null && !base.equalsIgnoreCase("")){
+            times[4]=base;
+            status[4]=R.drawable.ic_tick;
+        }
+        else{
+            times[4]="";
+            status[4]=R.drawable.ic_block;
+        }
+
 
         progress=0;
         missing="";

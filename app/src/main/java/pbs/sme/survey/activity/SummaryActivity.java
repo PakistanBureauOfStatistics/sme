@@ -73,7 +73,7 @@ public class SummaryActivity extends MyActivity {
 
     private void init(){
         try{
-            DatabaseBackup.backupDatabase(this,this,dbHandler.getDatabaseName(), mUXToolkit);
+            //DatabaseBackup.backupDatabase(this,this,dbHandler.getDatabaseName(), mUXToolkit);
         }
         catch (Exception e){
             mUXToolkit.showToast("Backup Error...");

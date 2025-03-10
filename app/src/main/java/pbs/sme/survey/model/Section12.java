@@ -6,7 +6,12 @@ public class Section12 extends FormTable {
     public Integer  id;
     public String title;
     public String owner;
+    public Integer owner_gender;
     public String name;
+    public String factory_district;
+    public String factory_address;
+    public String hq_district;
+    public String hq_address;
     public String designation;
     public Integer phone_type;
     public String phone_code;
@@ -15,12 +20,17 @@ public class Section12 extends FormTable {
     public String email;
     public String website;
     public Integer started_year;
+    public Integer exports;
+    public Integer imports;
+    public Integer stocks;
     public Integer is_registered;
     public String agency;
     public Integer is_maintaining;
-    public Integer ownership;
+    public Integer sownership;
+    public Integer mownership;
     public String ownership_other;
     public String activity;
+    public Integer organization;
     public String psic;
     public Integer  is_seasonal;
     public Integer jan;
@@ -38,6 +48,11 @@ public class Section12 extends FormTable {
     public Integer months;
     public Integer is_establishement;
     public Integer emp_count;
+    public Integer male_count;
+    public Integer female_count;
+    public Integer emp_unpaid;
+    public Integer male_unpaid;
+    public Integer female_unpaid;
     public Integer emp_cost;
     public Double lat;
     public Double lon;
@@ -59,13 +74,19 @@ public class Section12 extends FormTable {
 
     public Section12(){}
 
+
     @Override
     public String toString() {
         return "Section12{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", owner='" + owner + '\'' +
+                ", owner_gender=" + owner_gender +
                 ", name='" + name + '\'' +
+                ", factory_district='" + factory_district + '\'' +
+                ", factory_address='" + factory_address + '\'' +
+                ", hq_district='" + hq_district + '\'' +
+                ", hq_address='" + hq_address + '\'' +
                 ", designation='" + designation + '\'' +
                 ", phone_type=" + phone_type +
                 ", phone_code='" + phone_code + '\'' +
@@ -74,12 +95,17 @@ public class Section12 extends FormTable {
                 ", email='" + email + '\'' +
                 ", website='" + website + '\'' +
                 ", started_year=" + started_year +
+                ", exports=" + exports +
+                ", imports=" + imports +
+                ", stocks=" + stocks +
                 ", is_registered=" + is_registered +
                 ", agency='" + agency + '\'' +
-                ", is_maIntegeraining=" + is_maintaining +
-                ", ownership=" + ownership +
+                ", is_maintaining=" + is_maintaining +
+                ", sownership=" + sownership +
+                ", mownership=" + mownership +
                 ", ownership_other='" + ownership_other + '\'' +
                 ", activity='" + activity + '\'' +
+                ", organization=" + organization +
                 ", psic='" + psic + '\'' +
                 ", is_seasonal=" + is_seasonal +
                 ", jan=" + jan +
@@ -97,6 +123,11 @@ public class Section12 extends FormTable {
                 ", months=" + months +
                 ", is_establishement=" + is_establishement +
                 ", emp_count=" + emp_count +
+                ", male_count=" + male_count +
+                ", female_count=" + female_count +
+                ", emp_unpaid=" + emp_unpaid +
+                ", male_unpaid=" + male_unpaid +
+                ", female_unpaid=" + female_unpaid +
                 ", emp_cost=" + emp_cost +
                 ", lat=" + lat +
                 ", lon=" + lon +
@@ -116,7 +147,7 @@ public class Section12 extends FormTable {
                 ", mlon=" + mlon +
                 ", monthly='" + monthly + '\'' +
                 ", blk_desc='" + blk_desc + '\'' +
-                ", hno=" + sno +
+                ", sno=" + sno +
                 ", uid='" + uid + '\'' +
                 ", userid=" + userid +
                 ", created_time='" + created_time + '\'' +
@@ -132,7 +163,7 @@ public class Section12 extends FormTable {
                 ", rcol2=" + rcol2 +
                 ", remarks='" + remarks + '\'' +
                 ", flag=" + flag +
-                ", survey=" + survey +
+                ", survey='" + survey + '\'' +
                 ", status=" + status +
                 '}';
     }

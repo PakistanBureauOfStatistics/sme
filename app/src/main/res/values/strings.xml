@@ -135,7 +135,7 @@
     </string-array>
 
     <string-array name="spn_contact">
-        <item>Phone Type</item>
+        <item>--Select Phone Type--</item>
         <item>Mobile</item>
         <item>Landline</item>
         <item>None</item>
@@ -151,6 +151,30 @@
         <item>NCHBLOCK</item>
     </string-array>
 
+    <string-array name="spn_sownership">
+        <item>--Select Ownership Type--</item>
+        <item>Individual</item>
+        <item>Partnership</item>
+        <item>Other Specify</item>
+    </string-array>
+    <string-array name="spn_mownership">
+        <item>--Select Ownership Type--</item>
+        <item>State Owned / Public Sector</item>
+        <item>Privately Owned</item>
+        <item>Foreign Controlled Enterprise</item>
+        <item>Other Specify</item>
+    </string-array>
+    <string-array name="spn_organization">
+        <item>--Select Organization Type--</item>
+        <item>Individual Group</item>
+        <item>Partnership</item>
+        <item>Private Limited Co.</item>
+        <item>Public Limited Co.</item>
+        <item>Cooperative</item>
+        <item>Govt.</item>
+        <item>Others</item>
+    </string-array>
+
     <string-array name="spn_pisc">
         <item>Select PISC Code</item>
         <item>123</item>
@@ -158,7 +182,7 @@
     </string-array>
 
     <string-array name="spn_codes">
-        <item>Code</item>
+        <item>--Select Code--</item>
         <item>0300</item>
         <item>0301</item>
         <item>0302</item>
@@ -219,6 +243,349 @@
         <item>0370</item>
     </string-array>
 
+    <string-array name="districts">
+        <item>--Select District--</item>
+        <item>ABBOTTABAD DISTRICT</item>
+        <item>ASTORE DISTRICT</item>
+        <item>ATTOCK DISTRICT</item>
+        <item>AWARAN DISTRICT</item>
+        <item>BADIN DISTRICT</item>
+        <item>BAGH DISTRICT</item>
+        <item>BAHAWALNAGAR DISTRICT</item>
+        <item>BAHAWALPUR DISTRICT</item>
+        <item>BAJAUR DISTRICT</item>
+        <item>BANNU DISTRICT</item>
+        <item>BARKHAN DISTRICT</item>
+        <item>BATAGRAM DISTRICT</item>
+        <item>BHAKKAR DISTRICT</item>
+        <item>BHIMBER DISTRICT</item>
+        <item>BUNER DISTRICT</item>
+        <item>CHAGAI DISTRICT</item>
+        <item>CHAKWAL DISTRICT</item>
+        <item>CHAMAN DISTRICT</item>
+        <item>CHARSADDA DISTRICT</item>
+        <item>CHINIOT DISTRICT</item>
+        <item>CHOLISTAN AREA</item>
+        <item>DADU DISTRICT</item>
+        <item>DERA BUGTI DISTRICT</item>
+        <item>DERA GHAZI KHAN DISTRICT</item>
+        <item>DERA ISMAIL KHAN DISTRICT</item>
+        <item>DIAMER DISTRICT</item>
+        <item>DUKI DISTRICT</item>
+        <item>FAISALABAD DISTRICT</item>
+        <item>GHANCHE DISTRICT</item>
+        <item>GHIZER DISTRICT</item>
+        <item>GHOTKI DISTRICT</item>
+        <item>GILGIT DISTRICT</item>
+        <item>GUJRANWALA DISTRICT</item>
+        <item>GUJRAT DISTRICT</item>
+        <item>GWADAR DISTRICT</item>
+        <item>HAFIZABAD DISTRICT</item>
+        <item>HANGU DISTRICT</item>
+        <item>HARIPUR DISTRICT</item>
+        <item>HARNAI DISTRICT</item>
+        <item>HAVELI DISTRICT</item>
+        <item>HUNZA DISTRICT</item>
+        <item>HYDERABAD DISTRICT</item>
+        <item>ISLAMABAD DISTRICT</item>
+        <item>JACOBABAD DISTRICT</item>
+        <item>JAFFARABAD DISTRICT</item>
+        <item>JAMSHORO DISTRICT</item>
+        <item>JHAL MAGSI DISTRICT</item>
+        <item>JHANG DISTRICT</item>
+        <item>JHELUM DISTRICT</item>
+        <item>JHELUM VALLEY DISTRICT</item>
+        <item>KACHHI DISTRICT</item>
+        <item>KALAT DISTRICT</item>
+        <item>KAMBAR SHAHDAD KOT DISTRICT</item>
+        <item>KARACHI CENTRAL DISTRICT</item>
+        <item>KARACHI EAST DISTRICT</item>
+        <item>KARACHI SOUTH DISTRICT</item>
+        <item>KARACHI WEST DISTRICT</item>
+        <item>KARAK DISTRICT</item>
+        <item>KASHMORE DISTRICT</item>
+        <item>KASUR DISTRICT</item>
+        <item>KEAMARI DISTRICT</item>
+        <item>KECH DISTRICT</item>
+        <item>KHAIRPUR DISTRICT</item>
+        <item>KHANEWAL DISTRICT</item>
+        <item>KHARAN DISTRICT</item>
+        <item>KHARMANG DISTRICT</item>
+        <item>KHUSHAB DISTRICT</item>
+        <item>KHUZDAR DISTRICT</item>
+        <item>KHYBER DISTRICT</item>
+        <item>KILLA ABDULLAH DISTRICT</item>
+        <item>KILLA SAIFULLAH DISTRICT</item>
+        <item>KOHAT DISTRICT</item>
+        <item>KOHLU DISTRICT</item>
+        <item>KOLAI PALAS KOHISTAN DISTRICT</item>
+        <item>KORANGI DISTRICT</item>
+        <item>KOTLI DISTRICT</item>
+        <item>KURRAM DISTRICT</item>
+        <item>LAHORE DISTRICT</item>
+        <item>LAKKI MARWAT DISTRICT</item>
+        <item>LARKANA DISTRICT</item>
+        <item>LASBELA DISTRICT</item>
+        <item>LAYYAH DISTRICT</item>
+        <item>LODHRAN DISTRICT</item>
+        <item>LORALAI DISTRICT</item>
+        <item>LOWER CHITRAL DISTRICT</item>
+        <item>LOWER DIR DISTRICT</item>
+        <item>LOWER KOHISTAN DISTRICT</item>
+        <item>MALAKAND PROTECTED AREA</item>
+        <item>MALIR DISTRICT</item>
+        <item>MANDI BAHAUDDIN DISTRICT</item>
+        <item>MANSEHRA DISTRICT</item>
+        <item>MARDAN DISTRICT</item>
+        <item>MASTUNG DISTRICT</item>
+        <item>MATIARI DISTRICT</item>
+        <item>MIANWALI DISTRICT</item>
+        <item>MIRPUR DISTRICT</item>
+        <item>MIRPUR KHAS DISTRICT</item>
+        <item>MOHMAND DISTRICT</item>
+        <item>MULTAN DISTRICT</item>
+        <item>MUSAKHEL DISTRICT</item>
+        <item>MUZAFFARABAD DISTRICT</item>
+        <item>MUZAFFARGARH DISTRICT</item>
+        <item>NAGAR DISTRICT</item>
+        <item>NANKANA SAHIB DISTRICT</item>
+        <item>NAROWAL DISTRICT</item>
+        <item>NASIRABAD DISTRICT</item>
+        <item>NAUSHAHRO FEROZE DISTRICT</item>
+        <item>NEELUM DISTRICT</item>
+        <item>NORTH WAZIRISTAN DISTRICT</item>
+        <item>NOWSHERA DISTRICT</item>
+        <item>NUSHKI DISTRICT</item>
+        <item>OKARA DISTRICT</item>
+        <item>ORAKZAI DISTRICT</item>
+        <item>PAKPATTAN DISTRICT</item>
+        <item>PANJGUR DISTRICT</item>
+        <item>PESHAWAR DISTRICT</item>
+        <item>PISHIN DISTRICT</item>
+        <item>POONCH DISTRICT</item>
+        <item>QUETTA DISTRICT</item>
+        <item>RAHIM YAR KHAN DISTRICT</item>
+        <item>RAJANPUR DISTRICT</item>
+        <item>RAWALPINDI DISTRICT</item>
+        <item>SAHIWAL DISTRICT</item>
+        <item>SANGHAR DISTRICT</item>
+        <item>SARGODHA DISTRICT</item>
+        <item>SHAHEED BENAZIRABAD DISTRICT</item>
+        <item>SHANGLA DISTRICT</item>
+        <item>SHEIKHUPURA DISTRICT</item>
+        <item>SHERANI DISTRICT</item>
+        <item>SHIGAR DISTRICT</item>
+        <item>SHIKARPUR DISTRICT</item>
+        <item>SIALKOT DISTRICT</item>
+        <item>SIBI DISTRICT</item>
+        <item>SKARDU DISTRICT</item>
+        <item>SOHBATPUR DISTRICT</item>
+        <item>SOUTH WAZIRISTAN DISTRICT</item>
+        <item>SUDHNOTI DISTRICT</item>
+        <item>SUJAWAL DISTRICT</item>
+        <item>SUKKUR DISTRICT</item>
+        <item>SURAB DISTRICT</item>
+        <item>SWABI DISTRICT</item>
+        <item>SWAT DISTRICT</item>
+        <item>TANDO ALLAHYAR DISTRICT</item>
+        <item>TANDO MUHAMMAD KHAN DISTRICT</item>
+        <item>TANK DISTRICT</item>
+        <item>THARPARKAR DISTRICT</item>
+        <item>THATTA DISTRICT</item>
+        <item>TOBA TEK SINGH DISTRICT</item>
+        <item>TORGHAR DISTRICT</item>
+        <item>UMER KOT DISTRICT</item>
+        <item>UPPER CHITRAL DISTRICT</item>
+        <item>UPPER DIR DISTRICT</item>
+        <item>UPPER KOHISTAN DISTRICT</item>
+        <item>VEHARI DISTRICT</item>
+        <item>WASHUK DISTRICT</item>
+        <item>ZHOB DISTRICT</item>
+        <item>ZIARAT DISTRICT</item>
+    </string-array>
+
+
+    <string-array name="a1">
+        <item>Less than 5%</item>
+        <item>Up to 15%</item>
+        <item>Up to 25%</item>
+        <item>Up to 50%</item>
+        <item>More than 50%</item>
+    </string-array>
+
+
+    <string-array name="a2">
+        <item>Less than 5%</item>
+        <item>Up to 15%</item>
+        <item>Up to 25%</item>
+        <item>Up to 50%</item>
+        <item>More than 50%</item>
+    </string-array>
+
+
+    <string-array name="a3">
+        <item>Business Regulations</item>
+        <item>Procedures of Import Export</item>
+        <item>High rates of taxation</item>
+        <item>Inadequate infrastructure</item>
+        <item>Security and law and order</item>
+    </string-array>
+
+
+    <string-array name="b1">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+
+
+    <string-array name="b2">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+
+
+    <string-array name="b3">
+        <item>Starting a business</item>
+        <item>Business expansion</item>
+        <item>Working capital support</item>
+        <item>Technology upgradation</item>
+        <item>Financial distress</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="b4">
+        <item>Lack of collateral</item>
+        <item>Issues in documentation</item>
+        <item>Lack of standard financial statement</item>
+        <item>Insufficient credit history</item>
+        <item>Business plan not feasible / or not properly presented</item>
+        <item>Bank not interested</item>
+    </string-array>
+
+    <string-array name="b5">
+        <item>Interest rates too high</item>
+        <item>Loan application procedure is very difficult/cumbersome</item>
+        <item>Do not need a loan</item>
+        <item>Religious reasons</item>
+    </string-array>
+
+    <string-array name="b6">
+        <item>Lack of collateral</item>
+        <item>High interest rates</item>
+        <item>Complicated application process</item>
+        <item>Lack of financial records</item>
+        <item>Limited knowledge about financial products</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="b7">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+
+    <string-array name="b8">
+        <item>Yes - I know the scheme and how to avail it,</item>
+        <item>Yes - I know the scheme but dont know how to avail it</item>
+        <item>No - I do not know of the schemes</item>
+    </string-array>
+
+    <string-array name="b9">
+        <item>yes</item>
+        <item>yes</item>
+    </string-array>
+
+    <string-array name="b10">
+        <item>Lack of awareness</item>
+        <item>High cost of interest</item>
+        <item>Issues of security and trust</item>
+        <item>Other(Specify)</item>
+    </string-array>
+
+    <string-array name="c1">
+        <item>Dense population</item>
+        <item>Traffic congestion</item>
+        <item>Environmental pollution (smoke, noise, contamination)</item>
+        <item>Law and order/security issues</item>
+        <item>Accessibility for customers and suppliers</item>
+        <item>Other</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="c2">
+        <item>Electricity</item>
+        <item>Communication (Phone, Mobile, Internet, Fax, etc.)</item>
+        <item>Gas</item>
+        <item>Water supply</item>
+        <item>Security</item>
+    </string-array>
+
+    <string-array name="c3">
+        <item>WAPDA (100%)</item>
+        <item>Solar (100%)</item>
+        <item>Both WAPDA and Solar (Specify Percentage)</item>
+        <item>Generator (Specify Percentage)</item>
+        <item>Combined (WAPDA, Solar, and Generator) (Specify Percentage)</item>
+    </string-array>
+
+    <string-array name="d1">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="d2">
+        <item>Lack of awareness</item>
+        <item>High cost of services</item>
+        <item>Service not required</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="d3">
+        <item>Business information and advisory support</item>
+        <item>Training and Capacity Building in Business Management, Finance or Operations</item>
+        <item>E-commerce / Online Business</item>
+        <item>Marketing, Sales Promotion and Business Networking</item>
+        <item>Technology acquisition, Licensing and Certification</item>
+    </string-array>
+
+
+    <string-array name="d4">
+        <item>Physical</item>
+        <item>Online</item>
+        <item>Both Physical and Online</item>
+    </string-array>
+
+
+    <string-array name="d5">
+        <item>Govt</item>
+        <item>Private</item>
+        <item>Both</item>
+        <item>No Satisfied</item>
+    </string-array>
+
+    <string-array name="d7">
+        <item>Lack of awareness</item>
+        <item>Services are not easily available in area</item>
+        <item>Does not fulfill current business needs</item>
+        <item>Quality of services provided</item>
+        <item>Cost of services</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="e1">
+        <item>Digital Marketing (Social Media, Email, etc.)</item>
+        <item>Traditional Marketing (TV, Radio, Print, etc.)</item>
+        <item>Direct Marketing / Networking</item>
+        <item>Other (please specify)</item>
+        </string-array>
+
+    <string-array name="e2">
+        <item>Less than 5%</item>
+        <item>5–10%</item>
+        <item>10–20%</item>
+        <item>More than 20%</item>
+    </string-array>
+    
     <string name="profile">profile</string>
     <string name="setting">Setting</string>
     <string name="home">home</string>
@@ -239,41 +606,6 @@
     <string name="next" translatable="false">Next</string>
     <string name="previous" translatable="false">Previous</string>
 
-    <string name="lorem_ipsum" translatable="false">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
-        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
-        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
-        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
-        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
-        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
-        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
-        convallis.\n\n
-        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
-        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
-        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
-        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
-        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
-        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
-    </string>
+
     <string name="import_from_online" translatable="false">Import (From Online)</string>
 </resources>
