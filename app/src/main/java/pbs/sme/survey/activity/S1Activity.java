@@ -235,6 +235,13 @@ public class S1Activity extends FormActivity {
             return;
         }
 
+
+        if(sec.email!=null && !sec.email.isEmpty() && !(sec.email.contains("@") && sec.email.contains("."))){
+            setScrollAndBorderAnimation(findViewById(R.id.email));
+            mUXToolkit.showAlertDialogue("Failed","Email should contain letter @ and . in email"  , alertForEmptyFieldEvent);
+            return;
+        }
+
         /////TODO CHECKS////////////////////////////
 
 

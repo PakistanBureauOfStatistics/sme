@@ -217,7 +217,15 @@
                             android:entries="@array/spn_organization"/>
                     </RelativeLayout>
                 </LinearLayout>
-
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="Description of the Activity"/>
+                    <EditText
+                        android:id="@+id/activity"
+                        style="@style/edit_form_text"/>
+                </LinearLayout>
                 <LinearLayout
                     style="@style/vliner">
                     <TextView
@@ -231,15 +239,7 @@
                             android:entries="@array/spn_pisc"/>
                     </RelativeLayout>
                 </LinearLayout>
-                <LinearLayout
-                    style="@style/vliner">
-                    <TextView
-                        style="@style/q_heading"
-                        android:text="Description of the Activity"/>
-                    <EditText
-                        android:id="@+id/activity"
-                        style="@style/edit_form_text"/>
-                </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/small3"
@@ -384,7 +384,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Number of Employees (Male + Female = Total)"/>
+                        android:text="Employees (Male + Female = Total)"/>
                     <LinearLayout
                         style="@style/vliner"
                         android:orientation="horizontal"
@@ -394,14 +394,14 @@
                         android:layout_weight="1"
                         style="@style/edit_form_val"
                         android:hint="Male"
-                        android:maxLength="2"/>
+                        android:maxLength="3"/>
                     <EditText
                         android:id="@+id/female_count"
                         android:layout_weight="1"
                         style="@style/edit_form_val"
                         android:layout_marginHorizontal="?padd"
                         android:hint="Female"
-                        android:maxLength="2"/>
+                        android:maxLength="3"/>
                     <EditText
                         android:id="@+id/emp_count"
                         android:layout_weight="1"
@@ -409,7 +409,7 @@
                         android:enabled="false"
                         android:hint="Total"
                         android:background="@drawable/bg_disabled"
-                        android:maxLength="2"/>
+                        android:maxLength="3"/>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -428,21 +428,21 @@
                             android:layout_weight="1"
                             style="@style/edit_form_val"
                             android:hint="Male"
-                            android:maxLength="2"/>
+                            android:maxLength="3"/>
                         <EditText
                             android:id="@+id/female_unpaid"
                             android:layout_weight="1"
                             style="@style/edit_form_val"
                             android:layout_marginHorizontal="?padd"
                             android:hint="Female"
-                            android:maxLength="2"/>
+                            android:maxLength="3"/>
                         <EditText
                             android:id="@+id/emp_unpaid"
                             android:layout_weight="1"
                             style="@style/edit_form_val"
                             android:hint="Total"
                             android:background="@drawable/bg_disabled"
-                            android:maxLength="2"/>
+                            android:maxLength="3"/>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout

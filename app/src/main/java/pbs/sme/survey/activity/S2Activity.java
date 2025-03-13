@@ -115,7 +115,20 @@ public class S2Activity extends FormActivity {
             sbtn.setEnabled(true);
             return;
         }
-        sec.months=months();
+
+        if(sec.emp_count<=50){
+            sec.months=months();
+        }
+        if(sec.started_year<1900 || sec.started_year>2025){
+            setScrollAndBorderAnimation(findViewById(R.id.started_year));
+            mUXToolkit.showAlertDialogue("Failed","Started Year should be 1900-2025"  , alertForEmptyFieldEvent);
+            return;
+        }
+        if(sec.months!=null || sec.months>12){
+            setScrollAndBorderAnimation(findViewById(R.id.months));
+            mUXToolkit.showAlertDialogue("Failed","Number of months work 0-12"  , alertForEmptyFieldEvent);
+            return;
+        }
 
         /////TODO CHECKS////////////////////////////
 

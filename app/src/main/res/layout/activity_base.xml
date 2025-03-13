@@ -18,17 +18,17 @@
 
                 <include layout="@layout/layout_household"/>
 
-                <TextView
-                    style="@style/summary_txt_lg"
-                    android:layout_width="match_parent"
-                    android:text="BaseLine Form" />
-
                 <LinearLayout
                     style="@style/smp_container_hr"
                     android:orientation="vertical">
 
 
-                 <LinearLayout
+                    <TextView
+                        style="@style/summary_txt_lg"
+                        android:layout_width="match_parent"
+                        android:text="BaseLine Form" />
+
+                    <LinearLayout
                         style="@style/vliner">
                         <TextView style="@style/q_heading"  android:text="1.What percentage of your time is spent in dealing with Government functionaries / inspection visits?" />
                         <RadioGroup
@@ -40,7 +40,7 @@
                             <RadioButton android:id="@+id/a14" style="@style/rd_linear" android:text="Up to 50%" />
                             <RadioButton android:id="@+id/a15" style="@style/rd_linear" android:text="More than 50%" />
                         </RadioGroup>
-                        </LinearLayout>
+                    </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="2.What percentage of your annual sales turnover of Last Financial Year is spent on coping with Government regulations? " />
@@ -67,23 +67,26 @@
                             <RadioButton android:id="@+id/a35" style="@style/rd_linear" android:text="Security and law and order  " />
                         </RadioGroup>
                     </LinearLayout>
+                    <TextView
+                        style="@style/s_heading"
+                        android:text="Section-B"/>
                     <LinearLayout
                         style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="1.	Do you currently use bank loans, lines of credit or any other financial product? " />
                         <RadioGroup
                             android:id="@+id/b1"
-                            style="@style/brdg"
-                            >
-                            <RadioButton android:id="@+id/b11" style="@style/rd_linear" android:text="yes" />
-                            <RadioButton android:id="@+id/b12" style="@style/rd_linear" android:text="no" />
-                           </RadioGroup>
+                            style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/b11" style="@style/rd_yesno" android:text="yes" />
+                            <RadioButton android:id="@+id/b12" style="@style/rd_yesno" android:text="no" />
+                        </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="2.	In case of ‘No’ have you ever applied for loan? " />
-                        <RadioGroup android:id="@+id/b2" style="@style/brdg" >
-                            <RadioButton android:id="@+id/b21" style="@style/rd_linear" android:text="yes" />
-                            <RadioButton android:id="@+id/b22" style="@style/rd_linear" android:text="no" />
+                        <RadioGroup android:id="@+id/b2" style="@style/rdg" android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/b21" style="@style/rd_yesno" android:text="yes" />
+                            <RadioButton android:id="@+id/b22" style="@style/rd_yesno" android:text="no" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
@@ -136,8 +139,7 @@
                         <TextView style="@style/q_heading" android:text="6. What is the biggest challenge you face when approaching a Bank or a financial institution?" />
                         <RadioGroup
                             android:id="@+id/b6"
-                            style="@style/brdg"
-                            >
+                            style="@style/brdg">
                             <RadioButton android:id="@+id/b61" style="@style/rd_linear" android:text="Lack of collateral" />
                             <RadioButton android:id="@+id/b62" style="@style/rd_linear" android:text="High interest rates" />
                             <RadioButton android:id="@+id/b63" style="@style/rd_linear" android:text="Complicated application process" />
@@ -160,10 +162,10 @@
                         <TextView style="@style/q_heading" android:text="7.	Do you maintain financial records of your business? " />
                         <RadioGroup
                             android:id="@+id/b7"
-                            style="@style/brdg"
-                            >
-                            <RadioButton android:id="@+id/b71" style="@style/rd_linear" android:text="yes" />
-                            <RadioButton android:id="@+id/b72" style="@style/rd_linear" android:text="no" />
+                            style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/b71" style="@style/rd_yesno" android:text="yes" />
+                            <RadioButton android:id="@+id/b72" style="@style/rd_yesno" android:text="no" />
                         </RadioGroup>
                     </LinearLayout>
                     <!-- Never Applied for Loan Reason -->
@@ -183,10 +185,10 @@
                         <TextView style="@style/q_heading" android:text="9.	Have you used financing options other than Banks, e.g. Fintech’s, peer to peer lending, etc.?" />
                         <RadioGroup
                             android:id="@+id/b9"
-                            style="@style/brdg"
-                            >
-                            <RadioButton android:id="@+id/b91" style="@style/rd_linear" android:text="yes" />
-                            <RadioButton android:id="@+id/b92" style="@style/rd_linear" android:text="yes" />
+                            style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/b91" style="@style/rd_yesno" android:text="yes" />
+                            <RadioButton android:id="@+id/b92" style="@style/rd_yesno" android:text="yes" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout style="@style/vliner">
@@ -199,7 +201,7 @@
                             <RadioButton android:id="@+id/b102" style="@style/rd_linear" android:text="High cost of interest" />
                             <RadioButton android:id="@+id/b103" style="@style/rd_linear" android:text="Issues of security and trust" />
                             <RadioButton android:id="@+id/b104" style="@style/rd_linear" android:text="Other(Specify)" />
-                           </RadioGroup>
+                        </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
@@ -210,13 +212,15 @@
                             android:id="@+id/b10_other"
                             style="@style/edit_form_text"/>
                     </LinearLayout>
+                    <TextView
+                        style="@style/s_heading"
+                        android:text="C. Business Environment and Utilities"/>
                     <!-- C. Business Environment and Utilities -->
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="1. Please rank on five-point scale how problematic are the following aspects in terms of operating business effectively (1 least problematic and 5 most problematic)?" />
                         <RadioGroup
                             android:id="@+id/c1"
-                            style="@style/brdg"
-                            >
+                            style="@style/brdg">
                             <RadioButton android:id="@+id/c11" style="@style/rd_linear" android:text="Dense population" />
                             <RadioButton android:id="@+id/c12" style="@style/rd_linear" android:text="Traffic congestion" />
                             <RadioButton android:id="@+id/c13" style="@style/rd_linear" android:text="Environmental pollution (smoke, noise, contamination)" />
@@ -227,7 +231,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vertical_wrapper">
+                    <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Other (Specify)" />
                         <EditText android:id="@+id/c1_other" style="@style/edit_form_text" />
                     </LinearLayout>
@@ -236,8 +240,7 @@
                         <TextView style="@style/q_heading" android:text="2. What is the situation of availability of following utilities to operate business optimally? Please rank on five-point scale in terms of availability (1 very good and 5 unsatisfactory)" />
                         <RadioGroup
                             android:id="@+id/c2"
-                            style="@style/brdg"
-                            >
+                            style="@style/brdg">
                             <RadioButton android:id="@+id/c21" style="@style/rd_linear" android:text="Electricity" />
                             <RadioButton android:id="@+id/c22" style="@style/rd_linear" android:text="Communication (Phone, Mobile, Internet, Fax, etc.)" />
                             <RadioButton android:id="@+id/c23" style="@style/rd_linear" android:text="Gas" />
@@ -250,8 +253,7 @@
                         <TextView style="@style/q_heading" android:text="3. What source of electricity do you use?" />
                         <RadioGroup
                             android:id="@+id/c3"
-                            style="@style/brdg"
-                            >
+                            style="@style/brdg">
                             <RadioButton android:id="@+id/c31" style="@style/rd_linear" android:text="WAPDA (100%)" />
                             <RadioButton android:id="@+id/c32" style="@style/rd_linear" android:text="Solar (100%)" />
                             <RadioButton android:id="@+id/c33" style="@style/rd_linear" android:text="Both WAPDA and Solar (Specify Percentage)" />
@@ -261,11 +263,16 @@
                     </LinearLayout>
 
                     <!-- Business Development Services -->
+
+                    <TextView
+                        style="@style/s_heading"
+                        android:text="D. Business Development Services"/>
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="1. Does your business have ever received and or obtained any ‘Business Development Services’?" />
-                        <RadioGroup android:id="@+id/d1" style="@style/brdg">
-                            <RadioButton android:id="@+id/d11" style="@style/rd_linear" android:text="Yes" />
-                            <RadioButton android:id="@+id/d12" style="@style/rd_linear" android:text="No" />
+                        <RadioGroup android:id="@+id/d1" style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/d11" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/d12" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
 
@@ -305,28 +312,28 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                        <LinearLayout style="@style/vliner">
-                            <TextView style="@style/q_heading" android:text="5. Are you satisfied by the availability of business development services from?" />
-                            <RadioGroup
-                                android:id="@+id/d5"
-                                style="@style/brdg"
-                                >
-                                <RadioButton android:id="@+id/d51" style="@style/rd_linear" android:text="Govt" />
-                                <RadioButton android:id="@+id/d52" style="@style/rd_linear" android:text="Private" />
-                                <RadioButton android:id="@+id/d53" style="@style/rd_linear" android:text="Both" />
-                                <RadioButton android:id="@+id/d54" style="@style/rd_linear" android:text="No Satisfied" />
-                            </RadioGroup>
-                        </LinearLayout>
+                    <LinearLayout style="@style/vliner">
+                        <TextView style="@style/q_heading" android:text="5. Are you satisfied by the availability of business development services from?" />
+                        <RadioGroup
+                            android:id="@+id/d5"
+                            style="@style/brdg"
+                            >
+                            <RadioButton android:id="@+id/d51" style="@style/rd_linear" android:text="Govt" />
+                            <RadioButton android:id="@+id/d52" style="@style/rd_linear" android:text="Private" />
+                            <RadioButton android:id="@+id/d53" style="@style/rd_linear" android:text="Both" />
+                            <RadioButton android:id="@+id/d54" style="@style/rd_linear" android:text="No Satisfied" />
+                        </RadioGroup>
+                    </LinearLayout>
 
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading"
                             android:text="6. Are you willing to pay for availing the most relevant and important services for your business?" />
                         <RadioGroup
                             android:id="@+id/d6"
-                            style="@style/brdg"
-                            >
-                            <RadioButton android:id="@+id/d61" style="@style/rd_linear" android:text="Yes" />
-                            <RadioButton android:id="@+id/d62" style="@style/rd_linear" android:text="No" />
+                            style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/d61" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/d62" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
 
@@ -345,11 +352,15 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vertical_wrapper">
+                    <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Other(Specify)" />
                         <EditText android:id="@+id/d7_other" style="@style/edit_form_text" />
                     </LinearLayout>
                     <!-- E. Marketing Strategies and Challenges -->
+
+                    <TextView
+                        style="@style/s_heading"
+                        android:text="E. Marketing Strategies and Challenges"/>
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="1. What are the primary marketing strategies of your business?" />
                         <RadioGroup
@@ -363,7 +374,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vertical_wrapper">
+                    <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Other (Specify)" />
                         <EditText android:id="@+id/e1_other" style="@style/edit_form_text" />
                     </LinearLayout>
@@ -383,11 +394,11 @@
 
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading"  android:text="3. What are the biggest challenges your business faces in marketing? (Select all that apply)" />
-                        <CheckBox android:id="@+id/e31" style="@style/moption" android:text="Limited budget" />
-                        <CheckBox android:id="@+id/e32" style="@style/moption" android:text="Lack of skilled personnel" />
-                        <CheckBox android:id="@+id/e33" style="@style/moption" android:text="Difficulty in reaching target customers" />
-                        <CheckBox android:id="@+id/e34" style="@style/moption" android:text="Competition" />
-                        <CheckBox android:id="@+id/e35" style="@style/moption" android:text="Limited access to digital platforms" />
+                        <CheckBox android:id="@+id/e3a" style="@style/moption" android:text="Limited budget" />
+                        <CheckBox android:id="@+id/e3b" style="@style/moption" android:text="Lack of skilled personnel" />
+                        <CheckBox android:id="@+id/e3c" style="@style/moption" android:text="Difficulty in reaching target customers" />
+                        <CheckBox android:id="@+id/e3d" style="@style/moption" android:text="Competition" />
+                        <CheckBox android:id="@+id/e3e" style="@style/moption" android:text="Limited access to digital platforms" />
                     </LinearLayout>
 
                     <LinearLayout style="@style/vliner">
@@ -405,12 +416,16 @@
 
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="5. What type of support do you expect from the government or other business development organizations to improve your marketing efforts?" />
-                        <CheckBox android:id="@+id/e51" style="@style/moption" android:text="Financial assistance" />
-                        <CheckBox android:id="@+id/e52" style="@style/moption" android:text="Access to marketing tools and platforms" />
-                        <CheckBox android:id="@+id/e53" style="@style/moption" android:text="Training and capacity-building programs" />
-                        <CheckBox android:id="@+id/e54" style="@style/moption" android:text="Market research and data access" />
+                        <CheckBox android:id="@+id/e5a" style="@style/moption" android:text="Financial assistance" />
+                        <CheckBox android:id="@+id/e5b" style="@style/moption" android:text="Access to marketing tools and platforms" />
+                        <CheckBox android:id="@+id/e5c" style="@style/moption" android:text="Training and capacity-building programs" />
+                        <CheckBox android:id="@+id/e5d" style="@style/moption" android:text="Market research and data access" />
                     </LinearLayout>
                     <!-- F. Technology Usage and Challenges -->
+
+                    <TextView
+                        style="@style/s_heading"
+                        android:text="F. Technology Usage and Challenges"/>
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="1. What type of technology do you primarily use in your current business operations?" />
                         <RadioGroup
@@ -499,9 +514,10 @@
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="7. Have you availed any Government support for technology upgrades?" />
                         <RadioGroup
-                            android:id="@+id/f7" style="@style/brdg" >
-                            <RadioButton android:id="@+id/f71" style="@style/rd_linear" android:text="Yes" />
-                            <RadioButton android:id="@+id/f72" style="@style/rd_linear" android:text="No" />
+                            android:id="@+id/f7" style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/f71" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/f72" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout style="@style/vliner">
@@ -509,14 +525,15 @@
 
                         <RadioGroup
                             android:id="@+id/f8"
-                            style="@style/brdg" >
-                            <RadioButton android:id="@+id/f81" style="@style/rd_linear" android:text="Yes" />
-                            <RadioButton android:id="@+id/f82" style="@style/rd_linear" android:text="No" />
+                            style="@style/rdg"
+                            android:layout_width="match_parent">
+                            <RadioButton android:id="@+id/f81" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/f82" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="9. If ‘Yes’, please specify the scheme" />
-                        <EditText android:id="@+id/f9" style="@style/edit_form_text" android:hint="specify the scheme" android:visibility="gone"/>
+                        <EditText android:id="@+id/f9" style="@style/edit_form_text" android:hint="specify the scheme"/>
 
                     </LinearLayout>
 
@@ -537,20 +554,17 @@
                     </LinearLayout>
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Other(Specify)" />
-                        <EditText android:id="@+id/f10_other" style="@style/edit_form_text" android:hint="Other" android:visibility="gone"/>
+                        <EditText android:id="@+id/f10_other" style="@style/edit_form_text" android:hint="Other"/>
 
                     </LinearLayout>
                     <LinearLayout
-                        style="@style/vliner"
-                        android:weightSum="6">
-
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="11. Which of the following types of Government support would be most helpful in acquisition of latest/modern technology in your business? (Select all that apply)" />
-
+                        style="@style/vliner">
                         <LinearLayout
-                            style="@style/horizontal_wrapper"
-                            android:weightSum="3">
+                            style="@style/vertical_wrapper">
+
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="11. Which of the following types of Government support would be most helpful in acquisition of latest/modern technology in your business? (Select all that apply)" />
                             <CheckBox
                                 android:id="@+id/f11a"
                                 style="@style/moption"
@@ -569,8 +583,7 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/horizontal_wrapper"
-                            android:weightSum="3">
+                            style="@style/vertical_wrapper">
                             <CheckBox
                                 android:id="@+id/f11d"
                                 style="@style/moption"
@@ -587,222 +600,191 @@
                                 android:layout_weight="1"
                                 android:text="Other" />
                         </LinearLayout>
-                        <LinearLayout
-                            style="@style/vliner"
-                            android:weightSum="2">
-
-                            <TextView
-                                style="@style/q_heading"
-                                android:text="1. Is your enterprise currently involved in export activities?" />
-
-                            <RadioGroup
-                                android:id="@+id/export1"
-
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <RadioButton
-                                    android:id="@+id/export11"
-                                    style="@style/rd_linear"
-                                    android:text="Yes" />
-                                <RadioButton
-                                    android:id="@+id/export22"
-                                    style="@style/rd_linear"
-                                    android:text="No" />
-                            </RadioGroup>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/vliner"
-                            android:weightSum="8"
-                            android:id="@+id/export_markets_wrapper">
-
-                            <TextView
-                                style="@style/q_heading"
-                                android:text="2. If Yes, what are your primary target markets (Region/Blocks) for exports?" />
-
-                            <LinearLayout
-                                style="@style/horizontal_wrapper"
-                                android:weightSum="4">
-                                <CheckBox
-                                    android:id="@+id/export2a"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="China" />
-                                <CheckBox
-                                    android:id="@+id/export2b"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:layout_height="50dp"
-                                    android:text="North America (USA and Canada)" />
-                                <CheckBox
-                                    android:id="@+id/export2c"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="European Union" />
-                                <CheckBox
-                                    android:id="@+id/export2d"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="UK" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                style="@style/horizontal_wrapper"
-                                android:weightSum="4">
-                                <CheckBox
-                                    android:id="@+id/export2e"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="Middle East" />
-                                <CheckBox
-                                    android:id="@+id/export2f"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="Africa" />
-                                <CheckBox
-                                    android:id="@+id/export2g"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="Russian Federation" />
-                                <CheckBox
-                                    android:id="@+id/export2h"
-                                    style="@style/moption"
-                                    android:layout_weight="1"
-                                    android:text="Other" />
-                            </LinearLayout>
-
-                            <LinearLayout style="@style/vertical_wrapper">
-                                <TextView style="@style/q_heading" android:text="Other (Specify)" />
-                                <EditText android:id="@+id/export_other" style="@style/edit_form_text" />
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/vliner"
-                            android:id="@+id/export_reasons_wrapper">
-
-                            <TextView
-                                style="@style/q_heading"
-                                android:text="3. If No, what are the main reasons for not engaging in export activities?" />
-
-                            <LinearLayout
-                                style="@style/vertical_wrapper">
-                                <CheckBox
-                                    android:id="@+id/export3"
-                                    style="@style/moption"
-                                    android:text="Lack of information about export opportunities" />
-                                <CheckBox
-                                    android:id="@+id/export3a"
-                                    style="@style/moption"
-                                    android:text="High cost of compliance with export regulations" />
-                                <CheckBox
-                                    android:id="@+id/export3b"
-                                    style="@style/moption"
-                                    android:text="Difficulty in meeting international quality standards" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                style="@style/vertical_wrapper">
-                                <CheckBox
-                                    android:id="@+id/export3c"
-                                    style="@style/moption"
-                                    android:text="Limited financial resources for export-related activities" />
-                                <CheckBox
-                                    android:id="@+id/export3d"
-                                    style="@style/moption"
-                                    android:text="Lack of access to international markets or networks" />
-                                <CheckBox
-                                    android:id="@+id/export3e"
-                                    style="@style/moption"
-                                    android:text="Limited Production Capacity to meet Export Orders" />
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:weightSum="6">
-
-                                <TextView
-                                    style="@style/q_heading"
-                                    android:text="4. What type of support from the government would help your enterprise engage in exports?" />
-
-                                <LinearLayout
-                                    style="@style/vertical_wrapper">
-                                    <CheckBox
-                                        android:id="@+id/export4"
-                                        style="@style/moption"
-                                        android:text="Access to export financing or credit facilities" />
-                                    <CheckBox
-                                        android:id="@+id/export4a"
-                                        style="@style/moption"
-                                        android:text="Training and capacity building for export readiness" />
-                                    <CheckBox
-                                        android:id="@+id/export4b"
-                                        style="@style/moption"
-                                        android:text="Support in meeting international quality and certification standards" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    style="@style/vertical_wrapper">
-                                    <CheckBox
-                                        android:id="@+id/export4c"
-                                        style="@style/moption"
-                                        android:text="Assistance in finding international buyers and markets" />
-                                    <CheckBox
-                                        android:id="@+id/export4d"
-                                        style="@style/moption"
-                                        android:text="Simplification of export regulations and procedures" />
-                                    <CheckBox
-                                        android:id="@+id/export_trade_fairs"
-                                        style="@style/moption"
-                                        android:text="Support and Facilitation in participation in International Trade Fairs" />
-                                </LinearLayout>
-                                <LinearLayout
-                                    style="@style/vliner"
-                                    android:weightSum="5">
-
-                                    <TextView
-                                        style="@style/q_heading"
-                                        android:text="5. In your opinion, what are the key challenges SMEs face in scaling their business for export markets? (Rank 1-5, where 1 is most challenging and 5 is least challenging)" />
-
-                                        <RadioGroup
-                                            android:id="@+id/export5"
-                                            style="@style/vertical_wrapper">
-
-                                            <RadioButton
-                                                android:id="@+id/export51"
-                                                style="@style/moption"
-                                                android:text="Access to finance and credit facilities" />
-                                            <RadioButton
-                                                android:id="@+id/export52"
-                                                style="@style/moption"
-                                                android:text="Compliance with international standards and certifications" />
-                                            <RadioButton
-                                                android:id="@+id/export53"
-                                                style="@style/moption"
-                                                android:text="Limited market intelligence and export marketing support" />
-                                            <RadioButton
-                                                android:id="@+id/export54"
-                                                style="@style/moption"
-                                                android:text="Lack of awareness about Free Trade Agreements or Preferential Trade Agreements" />
-                                            <RadioButton
-                                                android:id="@+id/export55"
-                                                style="@style/moption"
-                                                android:text="Challenges in adapting products/services to meet foreign market demands" />
-                                        </RadioGroup>
-                                    </LinearLayout>
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-
                     </LinearLayout>
-            <include layout="@layout/layout_form_buttons"/>
-        </LinearLayout>
-    </ScrollView>
+                    <TextView
+                        style="@style/s_heading"
+                        android:text="Section - Export"/>
+                    <LinearLayout
+                        style="@style/vliner"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="1. Is your enterprise currently involved in export activities?" />
+
+                        <RadioGroup
+                            android:id="@+id/export1"
+                            android:layout_width="match_parent"
+                            style="@style/rdg">
+
+                            <RadioButton
+                                android:id="@+id/export11"
+                                style="@style/rd_yesno"
+                                android:text="Yes" />
+                            <RadioButton
+                                android:id="@+id/export22"
+                                style="@style/rd_yesno"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="2. If Yes, what are your primary target markets (Region/Blocks) for exports?" />
+
+                        <CheckBox
+                            android:id="@+id/export2a"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="China" />
+                        <CheckBox
+                            android:id="@+id/export2b"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:layout_height="50dp"
+                            android:text="North America (USA and Canada)" />
+                        <CheckBox
+                            android:id="@+id/export2c"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="European Union" />
+                        <CheckBox
+                            android:id="@+id/export2d"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="UK" />
+                        <CheckBox
+                            android:id="@+id/export2e"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Middle East" />
+                        <CheckBox
+                            android:id="@+id/export2f"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Africa" />
+                        <CheckBox
+                            android:id="@+id/export2g"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Russian Federation" />
+                        <CheckBox
+                            android:id="@+id/export2h"
+                            style="@style/moption"
+                            android:layout_weight="1"
+                            android:text="Other" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/vliner">
+                        <TextView style="@style/q_heading" android:text="Other (Specify)" />
+                        <EditText android:id="@+id/export_other" style="@style/edit_form_text" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner"
+                    android:id="@+id/export_reasons_wrapper">
+
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="3. If No, what are the main reasons for not engaging in export activities?" />
+                    <CheckBox
+                        android:id="@+id/export3a"
+                        style="@style/moption"
+                        android:text="Lack of information about export opportunities" />
+                    <CheckBox
+                        android:id="@+id/export3b"
+                        style="@style/moption"
+                        android:text="High cost of compliance with export regulations" />
+                    <CheckBox
+                        android:id="@+id/export3c"
+                        style="@style/moption"
+                        android:text="Difficulty in meeting international quality standards" />
+                    <CheckBox
+                        android:id="@+id/export3d"
+                        style="@style/moption"
+                        android:text="Limited financial resources for export-related activities" />
+                    <CheckBox
+                        android:id="@+id/export3e"
+                        style="@style/moption"
+                        android:text="Lack of access to international markets or networks" />
+                    <CheckBox
+                        android:id="@+id/export3f"
+                        style="@style/moption"
+                        android:text="Limited Production Capacity to meet Export Orders" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="4. What type of support from the government would help your enterprise engage in exports?" />
+                    <CheckBox
+                        android:id="@+id/export4a"
+                        style="@style/moption"
+                        android:text="Access to export financing or credit facilities" />
+                    <CheckBox
+                        android:id="@+id/export4b"
+                        style="@style/moption"
+                        android:text="Training and capacity building for export readiness" />
+                    <CheckBox
+                        android:id="@+id/export4c"
+                        style="@style/moption"
+                        android:text="Support in meeting international quality and certification standards" />
+                    <CheckBox
+                        android:id="@+id/export4d"
+                        style="@style/moption"
+                        android:text="Assistance in finding international buyers and markets" />
+                    <CheckBox
+                        android:id="@+id/export4e"
+                        style="@style/moption"
+                        android:text="Simplification of export regulations and procedures" />
+                    <CheckBox
+                        android:id="@+id/export4f"
+                        style="@style/moption"
+                        android:text="Support and Facilitation in participation in International Trade Fairs" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="5. In your opinion, what are the key challenges SMEs face in scaling their business for export markets? (Rank 1-5, where 1 is most challenging and 5 is least challenging)" />
+
+                    <RadioGroup
+                        android:id="@+id/export5"
+                        style="@style/vertical_wrapper">
+
+                        <RadioButton
+                            android:id="@+id/export51"
+                            style="@style/moption"
+                            android:text="Access to finance and credit facilities" />
+                        <RadioButton
+                            android:id="@+id/export52"
+                            style="@style/moption"
+                            android:text="Compliance with international standards and certifications" />
+                        <RadioButton
+                            android:id="@+id/export53"
+                            style="@style/moption"
+                            android:text="Limited market intelligence and export marketing support" />
+                        <RadioButton
+                            android:id="@+id/export54"
+                            style="@style/moption"
+                            android:text="Lack of awareness about Free Trade Agreements or Preferential Trade Agreements" />
+                        <RadioButton
+                            android:id="@+id/export55"
+                            style="@style/moption"
+                            android:text="Challenges in adapting products/services to meet foreign market demands" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <include layout="@layout/layout_form_buttons"/>
+            </LinearLayout>
+        </ScrollView>
         <include
             android:id="@+id/footer"
             layout="@layout/footer"/>
     </RelativeLayout>
-
     <include layout="@layout/layout_nav"/>
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -26,11 +26,20 @@ public class BaseActivity extends FormActivity {
     "a1","a2","a3","b1","b2","b3","b4","b5","b6","b6_other",
             "b7","b8","b9","b10","b10_other",
             "c1","c1_other","c2","c3","d1","d2","d2_other","d3","d4","d5",
-            "d6","d7","d7_other","e1","e1_other","e2","e3",
-            "e4","e5","f1","f2","f3","f4","f5","f6","f6_other",
+            "d6","d7","d7_other","e1","e1_other","e2",
+            "e3a","e3b","e3c","e3d","e3e",
+            "e4",
+            "e5a","e5b","e5b","e5d",
+            "f1","f2","f3","f4","f5","f6","f6_other",
             "f7","f8","f9","f9_other","f10",
-            "f10_other","f11","export1","export2","export2_other","export3",
-            "export4","export5","time_spent","survey"};
+            "f10_other",
+            "f11a","f11b","f11c","f11d","f11e","f11f",
+            "export1",
+            "export2a","export2b","export2c","export2d","export2e","export2f","export2g","export2h",
+            "export3a","export3b","export3c","export3d","export3e","export3f",
+            "export4a","export4b","export4c","export4d","export4e","export4f",
+
+            "export2_other","export5","time_spent","survey"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +93,7 @@ public class BaseActivity extends FormActivity {
         /////TODO CHECKS////////////////////////////
 
 
+        setCommonFields(sec);
         Long iid = dbHandler.replace(sec);
 
         if (iid != null && iid > 0) {

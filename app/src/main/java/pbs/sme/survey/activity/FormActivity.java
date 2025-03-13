@@ -73,14 +73,14 @@ public class FormActivity extends MyActivity{
 
         tv_block.setText(resumeModel.blk_desc);
         tv_sno.setText(String.valueOf(resumeModel.sno));
-        if(resumeModel.emp_count>=50){
+        if(resumeModel.emp_count>250){
+            tv_type.setText("Large");
+        }
+        else if(resumeModel.emp_count>50){
             tv_type.setText("Medium");
         }
-        else if(resumeModel.emp_count>0){
-            tv_type.setText("Small");
-        }
         else{
-            tv_type.setText("None");
+            tv_type.setText("Small");
         }
         tv_emp.setText(String.valueOf(resumeModel.emp_count));
         tv_title.setText(resumeModel.title);
