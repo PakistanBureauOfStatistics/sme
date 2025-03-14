@@ -21,7 +21,7 @@
                 <TextView
                     style="@style/summary_txt_lg"
                     android:layout_width="match_parent"
-                    android:text="Section-3: Raw Materials Input (Last 3 Months) " />
+                    android:text="Section-3: Raw Materials Input  (FY 2023-2024) (Last 3 Months) " />
 
                 <LinearLayout
                     style="@style/smp_container_hr"

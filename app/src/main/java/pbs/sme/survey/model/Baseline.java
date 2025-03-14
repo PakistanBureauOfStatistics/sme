@@ -56,8 +56,6 @@ public class Baseline extends FormTable {
     public String export3;
     public String export4;
     public Integer export5;
-    public Integer time_spent;
-    public String survey;
 
     @Override
     public String toString() {
@@ -117,7 +115,7 @@ public class Baseline extends FormTable {
                 ", export4=" + export4 +
                 ", export5=" + export5 +
                 ", time_spent=" + time_spent +
-                ", survey='" + survey + '\'' +
+                ", env='" + env + '\'' +
                 ", blk_desc='" + blk_desc + '\'' +
                 ", sno=" + sno +
                 ", uid='" + uid + '\'' +

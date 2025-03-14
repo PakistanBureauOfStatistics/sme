@@ -162,11 +162,11 @@ public class HomeActivity extends FormActivity {
 
 
     public void upload(View view){
-        if(stime!=null && progress>=5){
+        if(stime==null && progress>=5){
             Toast.makeText(getApplicationContext(),"Uploading Please Wait",Toast.LENGTH_SHORT).show();
-            List<Section12> s12=dbHandler.queryRawSql(Section12.class,"SELECT * FROM "+ Section12.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null;");
-            List<Section34> s34=dbHandler.queryRawSql(Section34.class,"SELECT * FROM "+ Section34.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null;");
-            List<Baseline> base=dbHandler.queryRawSql(Baseline.class,"SELECT * FROM "+ Baseline.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null;");
+            List<Section12> s12=dbHandler.queryRawSql(Section12.class,"SELECT * FROM "+ Section12.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null and (is_deleted=0 OR is_deleted is null);");
+            List<Section34> s34=dbHandler.queryRawSql(Section34.class,"SELECT * FROM "+ Section34.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null and (is_deleted=0 OR is_deleted is null);");
+            List<Baseline> base=dbHandler.queryRawSql(Baseline.class,"SELECT * FROM "+ Baseline.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null and (is_deleted=0 OR is_deleted is null);");
             if(s12.size()>0 && s34.size()>0){
                 Sync2 s=new Sync2();
                 s.setS12(s12);

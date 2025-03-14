@@ -74,6 +74,7 @@ public class S4Activity extends FormActivity {
                 return;
             }
 
+
             list.add(m);
             setCommonFields(m);
             m.section=4;

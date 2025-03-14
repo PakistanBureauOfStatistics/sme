@@ -66,7 +66,6 @@ public class Section12 extends FormTable {
     public Integer is_outside;
     public Integer m_outside;
     public String r_outside;
-    public String env;
     public String vcode;
     public Double mlat;
     public Double mlon;

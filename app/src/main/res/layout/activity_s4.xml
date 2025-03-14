@@ -21,7 +21,7 @@
                 <TextView
                     style="@style/summary_txt_lg"
                     android:layout_width="match_parent"
-                    android:text="Section-4: Output Excluding Sales Tax (Last 3 Months)" />
+                    android:text="Section-4: Output Excluding Sales Tax (FY 2023-2024) (Last 3 Months)" />
 
                 <LinearLayout
                     style="@style/smp_container_hr"
@@ -167,7 +167,7 @@
                             android:text="Revenue/ Income via own website, Domestic DIPs, International DIPs  (% of total)" />
                         <EditText
                             android:id="@+id/value__408"
-                            android:maxLength="3"
+                            android:maxLength="2"
                             style="@style/edit_table_num"/>
                     </LinearLayout>
 

@@ -35,7 +35,7 @@ import pk.gov.pbs.database.exceptions.UnsupportedDataType;
 import pk.gov.pbs.utils.ExceptionReporter;
 
 public class Database extends ModelBasedDatabaseHelper {
-    private static final int dbVersion = 2;
+    private static final int dbVersion = 3;
     private static Database instance;
     protected Context mContext;
 

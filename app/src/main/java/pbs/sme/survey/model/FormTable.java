@@ -58,6 +58,7 @@ public class FormTable implements Serializable {
     public Integer flag;
 
     public String survey;
+    public String env;
 
     @Default("1")
     @SqlExclude

@@ -239,6 +239,14 @@ public class S1Activity extends FormActivity {
         if(sec.email!=null && !sec.email.isEmpty() && !(sec.email.contains("@") && sec.email.contains("."))){
             setScrollAndBorderAnimation(findViewById(R.id.email));
             mUXToolkit.showAlertDialogue("Failed","Email should contain letter @ and . in email"  , alertForEmptyFieldEvent);
+            sbtn.setEnabled(true);
+            return;
+        }
+
+        if(sec.website!=null && !sec.website.isEmpty() && !(sec.website.contains("."))){
+            setScrollAndBorderAnimation(findViewById(R.id.website));
+            mUXToolkit.showAlertDialogue("Failed","Website should contain letter '.'"  , alertForEmptyFieldEvent);
+            sbtn.setEnabled(true);
             return;
         }
 

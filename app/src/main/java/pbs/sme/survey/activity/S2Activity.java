@@ -25,7 +25,7 @@ public class S2Activity extends FormActivity {
 
     private final String[] inputValidationOrder= new String[]{
             "started_year","is_registered","exports","imports","stocks","agency","is_maintaining","sownership","mownership","ownership_other","organization","activity","psic","is_seasonal",
-            "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec","months","is_establishement","emp_count","male_count","female_count","emp_unpaid","male_unpaid","female_unpaid"
+            "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec","months","is_establishement","emp_count","male_count","female_count","emp_unpaid","male_unpaid","female_unpaid","emp_cost"
     };
     private final int[] small=new int[]{R.id.small1,R.id.small2,R.id.small3,R.id.small4, R.id.small5};
     private final int[] medium=new int[]{R.id.medium1,R.id.medium2,R.id.medium3,R.id.medium4, R.id.medium5};
@@ -119,20 +119,54 @@ public class S2Activity extends FormActivity {
         if(sec.emp_count<=50){
             sec.months=months();
         }
+
         if(sec.started_year<1900 || sec.started_year>2025){
             setScrollAndBorderAnimation(findViewById(R.id.started_year));
             mUXToolkit.showAlertDialogue("Failed","Started Year should be 1900-2025"  , alertForEmptyFieldEvent);
+            sbtn.setEnabled(true);
             return;
         }
-        if(sec.months!=null || sec.months>12){
+
+        if(sec.months>12){
             setScrollAndBorderAnimation(findViewById(R.id.months));
             mUXToolkit.showAlertDialogue("Failed","Number of months work 0-12"  , alertForEmptyFieldEvent);
+            sbtn.setEnabled(true);
+            return;
+        }
+
+        try{
+            if(sec.emp_count!=(sec.male_count+sec.female_count)){
+                setScrollAndBorderAnimation(findViewById(R.id.emp_count));
+                mUXToolkit.showAlertDialogue("Failed","Male+Female Employees <> Total"  , alertForEmptyFieldEvent);
+                sbtn.setEnabled(true);
+                return;
+            }
+        }
+        catch (Exception e){
+            setScrollAndBorderAnimation(findViewById(R.id.emp_count));
+            mUXToolkit.showAlertDialogue("Failed","Male+Female Employees <> Total"  , alertForEmptyFieldEvent);
+            sbtn.setEnabled(true);
+            return;
+        }
+
+        try{
+            if(sec.emp_count>50 && sec.emp_unpaid!=(sec.male_unpaid+sec.female_unpaid)){
+                setScrollAndBorderAnimation(findViewById(R.id.emp_unpaid));
+                mUXToolkit.showAlertDialogue("Failed","Male+Female Unpaid <> Total"  , alertForEmptyFieldEvent);
+                sbtn.setEnabled(true);
+                return;
+            }
+        }
+        catch (Exception e){
+            setScrollAndBorderAnimation(findViewById(R.id.emp_unpaid));
+            mUXToolkit.showAlertDialogue("Failed","Male+Female Unpaid <> Total"  , alertForEmptyFieldEvent);
+            sbtn.setEnabled(true);
             return;
         }
 
         /////TODO CHECKS////////////////////////////
 
-
+        setCommonFields(sec);
         Long iid = dbHandler.replace(sec);
 
         if (iid != null && iid > 0) {

@@ -149,11 +149,11 @@
                             android:layout_width="match_parent"
                             android:weightSum="2">
                             <RadioButton
-                                android:id="@+id/stock1"
+                                android:id="@+id/stocks1"
                                 style="@style/rd_yesno"
                                 android:text="Yes" />
                             <RadioButton
-                                android:id="@+id/stock2"
+                                android:id="@+id/stocks2"
                                 style="@style/rd_yesno"
                                 android:text="No" />
                         </RadioGroup>
@@ -441,7 +441,6 @@
                             android:layout_weight="1"
                             style="@style/edit_form_val"
                             android:hint="Total"
-                            android:background="@drawable/bg_disabled"
                             android:maxLength="3"/>
                     </LinearLayout>
                 </LinearLayout>
