@@ -150,11 +150,6 @@
         <item>Any Other</item>
     </string-array>
 
-    <string-array name="spn_nch_type">
-        <item> منتخب کریں</item>
-        <item>انفرادی</item>
-        <item>گورنمنٹ</item>
-    </string-array>
 
     <string-array name="spn_blocks">
         <item>NCHBLOCK</item>

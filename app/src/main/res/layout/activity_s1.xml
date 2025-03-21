@@ -60,7 +60,7 @@
                                 android:id="@+id/owner_gender"
                                 style="@style/rdg"
                                 android:layout_width="match_parent"
-                                android:weightSum="2">
+                                android:weightSum="3">
                                 <RadioButton
                                     android:id="@+id/owner_gender1"
                                     style="@style/rd_yesno"
@@ -104,16 +104,22 @@
                         </LinearLayout>
                         <LinearLayout
                             style="@style/vliner">
+
                             <TextView
                                 style="@style/q_heading"
-                                android:text="Factor Address (*)"/>
+                                android:text="Factory Address (*)"/>
+                            <CheckBox
+                                android:id="@+id/cb_same"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Factory Address Same as Above"/>
                             <LinearLayout
                                 style="@style/horizontal_wrapper"
                                 android:weightSum="5">
                                 <EditText
                                     android:layout_width="0dp"
                                     android:layout_weight="3"
-                                    android:hint="Factory Address (*)"
+                                    android:hint="Factory Address"
                                     android:layout_marginRight="?pad"
                                     android:id="@+id/factory_address"
                                     style="@style/edit_form_text"/>

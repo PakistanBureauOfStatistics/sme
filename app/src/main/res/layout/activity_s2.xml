@@ -231,13 +231,21 @@
                     <TextView
                         style="@style/q_heading"
                         android:text="Code (PSIC-2010)"/>
-                    <RelativeLayout
-                        style="@style/spn_rel">
-                        <Spinner
-                            android:id="@+id/psic"
+                    <LinearLayout style="@style/vliner">
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vertical_wrapper">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Search PSIC Code">
+                            <AutoCompleteTextView android:id="@+id/psic" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView android:id="@+id/activity2" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:padding="8dp" android:text="Selected PSIC Code will appear here"/>
+                        <!--<Spinner
+                            android:id="@+id/psicx"
                             style="@style/spn_form"
                             android:entries="@array/spn_pisc"/>
-                    </RelativeLayout>
+                            -->
+                    </LinearLayout>
                 </LinearLayout>
 
 

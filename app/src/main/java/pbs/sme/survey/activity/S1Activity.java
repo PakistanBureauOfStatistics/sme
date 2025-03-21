@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -22,6 +24,7 @@ public class S1Activity extends FormActivity {
     private Section12 modelDatabase;
     protected Spinner phone_type, phone_code, reason_no_phone;
     EditText phone_code2,phone_number;
+    CheckBox cb_same;
 
     private final String[] inputValidationOrder= new String[]{
             "title","owner","owner_gender","name","factory_address", "factory_district", "hq_address","hq_district","designation","phone_type","phone_code","phone_number"
@@ -50,6 +53,19 @@ public class S1Activity extends FormActivity {
         else{
             findViewById(R.id.medium1).setVisibility(View.GONE);
         }
+
+        cb_same=findViewById(R.id.cb_same);
+        cb_same.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    int d=((Spinner) findViewById(R.id.hq_district)).getSelectedItemPosition();
+                    ((Spinner) findViewById(R.id.factory_district)).setSelection(d);
+                    String a=((EditText) findViewById(R.id.hq_address)).getText().toString();
+                    ((EditText) findViewById(R.id.factory_address)).setText(a);
+                }
+            }
+        });
 
         init();
 

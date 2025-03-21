@@ -99,7 +99,7 @@ public class ImportActivity extends MyActivity {
         long sb=dbHandler.getCount(Assignment.class, "ISDELETED=0 AND start_list_time is not null");
         long cb=dbHandler.getCount(Assignment.class, "ISDELETED=0 AND end_list_time is not null");
         long s=dbHandler.getCount(Section12.class, "emp_count<=50 and emp_count>0 and is_deleted=0 and env='"+env+"' and blk_desc in (select distinct blk_desc from  "+Assignment.class.getSimpleName()+" a where a.isdeleted=0) ");
-        long m=dbHandler.getCount(Section12.class, "emp_count>50 and is_deleted=0 and env='"+env+"' and blk_desc in (select distinct blk_desc from  "+Assignment.class.getSimpleName()+" a where a.isdeleted=0) ");
+        long m=dbHandler.getCount(Section12.class, "emp_count>50 and emp_count<=250 and is_deleted=0 and env='"+env+"' and blk_desc in (select distinct blk_desc from  "+Assignment.class.getSimpleName()+" a where a.isdeleted=0) ");
         long u=dbHandler.getCount(Section12.class, "sync_time is not null and is_deleted=0 and env='"+env+"' and blk_desc in (select distinct blk_desc from  "+Assignment.class.getSimpleName()+" a where a.isdeleted=0) ");
 
         tblk.setText(("00" + tb).substring(String.valueOf(tb).length()));

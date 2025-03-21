@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -22,9 +26,10 @@ public class S2Activity extends FormActivity {
     private Section12 modelDatabase;
     private RadioGroup is_registered;
     Spinner sownership, mownership;
+    AutoCompleteTextView pisc;
 
     private final String[] inputValidationOrder= new String[]{
-            "started_year","is_registered","exports","imports","stocks","agency","is_maintaining","sownership","mownership","ownership_other","organization","activity","psic","is_seasonal",
+            "started_year","is_registered","exports","imports","stocks","agency","is_maintaining","sownership","mownership","ownership_other","organization","activity","is_seasonal",
             "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec","months","is_establishement","emp_count","male_count","female_count","emp_unpaid","male_unpaid","female_unpaid","emp_cost"
     };
     private final int[] small=new int[]{R.id.small1,R.id.small2,R.id.small3,R.id.small4, R.id.small5};
@@ -77,6 +82,34 @@ public class S2Activity extends FormActivity {
                 }
             }
         });
+
+
+        pisc = findViewById(R.id.psic);
+        // Set up AutoCompleteTextView Adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_dropdown_item_1line,
+                getResources().getStringArray(R.array.spn_pisc)
+        );
+
+        pisc.setAdapter(adapter);
+        pisc.setThreshold(1); // Start showing suggestions after typing 1 character
+
+        // Handle item selection
+        pisc.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedText = (String) parent.getItemAtPosition(position);
+
+            // Find matching PSIC code
+            for (String model : getResources().getStringArray(R.array.spn_pisc)) {
+                TextView activity2=findViewById(R.id.activity2);
+                if (model.equals(selectedText)) {
+                    activity2.setText("Selected PSIC Code: " + model);
+                    break;
+                }
+            }
+        });
+
+
 
     }
 
