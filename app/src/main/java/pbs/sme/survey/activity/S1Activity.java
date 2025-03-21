@@ -25,7 +25,7 @@ public class S1Activity extends FormActivity {
 
     private final String[] inputValidationOrder= new String[]{
             "title","owner","owner_gender","name","factory_address", "factory_district", "hq_address","hq_district","designation","phone_type","phone_code","phone_number"
-            ,"reason_no_phone","email","website"
+            ,"reason_no_phone"
     };
 
 
@@ -207,6 +207,13 @@ public class S1Activity extends FormActivity {
             phone_type.setSelection(1);
         }
 
+        if(resumeModel.email!=null){
+            ((EditText) findViewById(R.id.email)).setText(resumeModel.email);
+        }
+
+        if(resumeModel.website!=null){
+            ((EditText) findViewById(R.id.website)).setText(resumeModel.website);
+        }
 
     }
 
@@ -236,7 +243,10 @@ public class S1Activity extends FormActivity {
         }
 
 
-        if(sec.email!=null && !sec.email.isEmpty() && !(sec.email.contains("@") && sec.email.contains("."))){
+        sec.email=((EditText) findViewById(R.id.email)).getText().toString();
+        sec.website=((EditText) findViewById(R.id.website)).getText().toString();
+
+       /* if(sec.email!=null && !sec.email.isEmpty() && !(sec.email.contains("@") && sec.email.contains("."))){
             setScrollAndBorderAnimation(findViewById(R.id.email));
             mUXToolkit.showAlertDialogue("Failed","Email should contain letter @ and . in email"  , alertForEmptyFieldEvent);
             sbtn.setEnabled(true);
@@ -248,7 +258,7 @@ public class S1Activity extends FormActivity {
             mUXToolkit.showAlertDialogue("Failed","Website should contain letter '.'"  , alertForEmptyFieldEvent);
             sbtn.setEnabled(true);
             return;
-        }
+        }*/
 
         /////TODO CHECKS////////////////////////////
 

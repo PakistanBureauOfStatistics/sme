@@ -31,7 +31,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Title of Establishment"/>
+                            android:text="Title of Establishment (*)"/>
                         <EditText
                             android:id="@+id/title"
                             style="@style/edit_form_text"
@@ -41,7 +41,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Name of Owner(s)/Proprietor(s): "/>
+                            android:text="Name of Owner(s)/Proprietor(s) (*)"/>
                         <EditText
                             android:id="@+id/owner"
                             style="@style/edit_form_text"/>
@@ -55,7 +55,7 @@
                             style="@style/vliner">
                             <TextView
                                 style="@style/q_heading"
-                                android:text="Gender of the Owner(s)/Proprietor(s): "/>
+                                android:text="Gender of the Owner(s)/Proprietor(s) (*): "/>
                             <RadioGroup
                                 android:id="@+id/owner_gender"
                                 style="@style/rdg"
@@ -69,20 +69,24 @@
                                     android:id="@+id/owner_gender2"
                                     style="@style/rd_yesno"
                                     android:text="Female" />
+                                <RadioButton
+                                    android:id="@+id/owner_gender3"
+                                    style="@style/rd_yesno"
+                                    android:text="Comobine" />
                             </RadioGroup>
                         </LinearLayout>
                         <LinearLayout
                             style="@style/vliner">
                             <TextView
                                 style="@style/q_heading"
-                                android:text="Head Qaurter Address "/>
+                                android:text="Head Qaurter Address (*)"/>
                             <LinearLayout
                                 style="@style/horizontal_wrapper"
                                 android:weightSum="5">
                                 <EditText
                                     android:layout_width="0dp"
                                     android:layout_weight="3"
-                                    android:hint="Head Quarter Address"
+                                    android:hint="Head Quarter Address (*)"
                                     android:layout_marginRight="?pad"
                                     android:id="@+id/hq_address"
                                     style="@style/edit_form_text"/>
@@ -102,14 +106,14 @@
                             style="@style/vliner">
                             <TextView
                                 style="@style/q_heading"
-                                android:text="Factor Address "/>
+                                android:text="Factor Address (*)"/>
                             <LinearLayout
                                 style="@style/horizontal_wrapper"
                                 android:weightSum="5">
                                 <EditText
                                     android:layout_width="0dp"
                                     android:layout_weight="3"
-                                    android:hint="Factory Address"
+                                    android:hint="Factory Address (*)"
                                     android:layout_marginRight="?pad"
                                     android:id="@+id/factory_address"
                                     style="@style/edit_form_text"/>
@@ -130,7 +134,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Name of the Respondent: "/>
+                            android:text="Name of the Respondent (*): "/>
                         <EditText
                             android:id="@+id/name"
                             style="@style/edit_form_text"/>
@@ -139,16 +143,22 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Designation of the Respondent: "/>
-                        <EditText
-                            android:id="@+id/designation"
-                            style="@style/edit_form_text"/>
+                            android:text="Designation of the Respondent (*): "/>
+                        <RelativeLayout
+                            style="@style/vertical_wrapper"
+                            android:background="@drawable/spinner_container">
+                            <Spinner
+                                android:id="@+id/designation"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_desig"/>
+                        </RelativeLayout>
+
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Enter Contact Number" />
+                            android:text="Contact Number (*)" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
