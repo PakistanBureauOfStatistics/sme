@@ -156,10 +156,6 @@ public class HomeActivity extends FormActivity {
 
     }
 
-    public void goNext(){
-        btnn.callOnClick();
-    }
-
 
 
     public void upload(View view){
