@@ -21,6 +21,7 @@ import java.util.List;
 import pbs.sme.survey.R;
 import pbs.sme.survey.api.ApiClient;
 import pbs.sme.survey.api.ApiInterface;
+import pbs.sme.survey.helper.DateHelper;
 import pbs.sme.survey.helper.DialogHelper;
 import pbs.sme.survey.helper.GPSHelper;
 import pbs.sme.survey.helper.SectionAdapter;
@@ -151,7 +152,7 @@ public class HomeActivity extends FormActivity {
         adapter = new SectionAdapter(this,  l, dbHandler, intent);
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
-        //setSyncTime(enumerationHousehold.hh_uid);
+        setSyncTime(resumeModel.uid);
 
     }
 
@@ -184,8 +185,8 @@ public class HomeActivity extends FormActivity {
                             if(u.getCode()==1){
                                 resumeModel.sync_time=getTimeNow();
                                 dbHandler.execSql("UPDATE "+ Section12.class.getSimpleName()+" SET sync_time='"+ getTimeNowwithSeconds()+"' where ENV='"+env+"' AND  uid='"+resumeModel.uid+"';");
-                                dbHandler.execSql("UPDATE "+ Section34.class.getSimpleName()+" SET sync_time='"+ getTimeNowwithSeconds()+"' where ENV='"+env+"' AND  house_uid='"+resumeModel.uid+"';");
-                                dbHandler.execSql("UPDATE "+ Baseline.class.getSimpleName()+" SET sync_time='"+ getTimeNowwithSeconds()+"' where ENV='"+env+"' AND  house_uid='"+resumeModel.uid+"';");
+                                dbHandler.execSql("UPDATE "+ Section34.class.getSimpleName()+" SET sync_time='"+ getTimeNowwithSeconds()+"' where ENV='"+env+"' AND  uid='"+resumeModel.uid+"';");
+                                dbHandler.execSql("UPDATE "+ Baseline.class.getSimpleName()+" SET sync_time='"+ getTimeNowwithSeconds()+"' where ENV='"+env+"' AND  uid='"+resumeModel.uid+"';");
                                 setSection();
                                 StatsUtil.updateSyncTimeToNow();
                             }
@@ -216,6 +217,16 @@ public class HomeActivity extends FormActivity {
         }
         else{
             Toast.makeText(getApplicationContext(),"Complete Before Uploading",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void setSyncTime(String uid){
+        stime=dbHandler.queryString("SELECT SYNC_TIME FROM "+Section12.class.getSimpleName()+" where env=? and is_deleted=? and uid=?",env,"0",uid);
+        if(stime!=null && !stime.isEmpty()){
+            tv_synctime.setText(DateHelper.toDate("yyyy-MM-dd'T'HH:mm","dd MMM yy, HH:mm a",stime));
+        }
+        else{
+            tv_synctime.setText("");
         }
     }
 }

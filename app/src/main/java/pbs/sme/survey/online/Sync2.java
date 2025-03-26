@@ -2,6 +2,8 @@ package pbs.sme.survey.online;
 
 import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 import pbs.sme.survey.model.Baseline;
@@ -11,8 +13,11 @@ import pbs.sme.survey.model.Section34;
 
 @Keep
 public class Sync2 {
+    @SerializedName("section12")
     protected List<Section12> s12;
+    @SerializedName("section34")
     protected List<Section34> s34;
+    @SerializedName("baseline")
     protected List<Baseline> base;
 
     public List<Section12> getS12() {

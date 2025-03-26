@@ -39,6 +39,6 @@ public interface ApiInterface {
     Call<Returning> upload(@Body Sync data);
 
 
-    @POST("sme/sync_sme?")
+    @POST("sme/mupload?")
     Call<Returning> upload2(@Body Sync2 data);
 }
