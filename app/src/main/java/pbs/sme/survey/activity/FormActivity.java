@@ -324,10 +324,11 @@ public class FormActivity extends MyActivity{
             m.uid = resumeModel.uid;
             m.sid = resumeModel.sid;
             m.sno = resumeModel.sno;
-            m.env=resumeModel.env;
+            m.env=env;
         }else{
             m.modified_time = getTimeNowwithSeconds();
             m.env=resumeModel.env;
+            m.is_deleted = 0;
         }
     }
 

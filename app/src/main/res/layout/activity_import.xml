@@ -108,7 +108,7 @@
                         android:text="Small"/>
 
                     <TextView
-                        android:id="@+id/thh"
+                        android:id="@+id/c1"
                         style="@style/txt_bg"
                         android:text="000"/>
                     <ProgressBar
@@ -129,7 +129,7 @@
                         android:text="Medium" />
 
                     <TextView
-                        android:id="@+id/th"
+                        android:id="@+id/c2"
                         style="@style/txt_bg"
                         android:text="000"/>
 
@@ -147,7 +147,7 @@
                         android:text="Uploaded"/>
 
                     <TextView
-                        android:id="@+id/uhh"
+                        android:id="@+id/c3"
                         style="@style/txt_bg"
                         android:text="000" />
                     <ProgressBar

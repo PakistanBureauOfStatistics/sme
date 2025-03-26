@@ -2,6 +2,8 @@ package pbs.sme.survey.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +16,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import pbs.sme.survey.R;
@@ -25,8 +30,8 @@ public class S2Activity extends FormActivity {
     private Button sbtn;
     private Section12 modelDatabase;
     private RadioGroup is_registered;
-    Spinner sownership, mownership;
-    AutoCompleteTextView pisc;
+    Spinner sownership, mownership, organization;
+    Spinner psic2, psic;
 
     private final String[] inputValidationOrder= new String[]{
             "started_year","is_registered","exports","imports","stocks","agency","is_maintaining","sownership","mownership","ownership_other","organization","activity","is_seasonal",
@@ -49,6 +54,12 @@ public class S2Activity extends FormActivity {
             sbtn.requestFocus();
             StaticUtils.getHandler().post(this::saveForm);
         });
+
+        psic2=findViewById(R.id.psic2);
+        psic=findViewById(R.id.psic);
+        sownership=findViewById(R.id.sownership);
+        mownership=findViewById(R.id.mownership);
+        organization=findViewById(R.id.organization);
 
         if(resumeModel.emp_count!=null && resumeModel.emp_count>=50){
             for(int l : medium){
@@ -82,34 +93,19 @@ public class S2Activity extends FormActivity {
                 }
             }
         });
-
-
-        pisc = findViewById(R.id.psic);
-        // Set up AutoCompleteTextView Adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_dropdown_item_1line,
-                getResources().getStringArray(R.array.spn_pisc)
-        );
-
-        pisc.setAdapter(adapter);
-        pisc.setThreshold(1); // Start showing suggestions after typing 1 character
-
-        // Handle item selection
-        pisc.setOnItemClickListener((parent, view, position, id) -> {
-            String selectedText = (String) parent.getItemAtPosition(position);
-
-            // Find matching PSIC code
-            for (String model : getResources().getStringArray(R.array.spn_pisc)) {
-                TextView activity2=findViewById(R.id.activity2);
-                if (model.equals(selectedText)) {
-                    activity2.setText("Selected PSIC Code: " + model);
-                    break;
+        psic2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if(i!=0){
+                    showpsic(i);
                 }
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
         });
-
-
 
     }
 
@@ -120,6 +116,24 @@ public class S2Activity extends FormActivity {
             modelDatabase = s2.get(0);
             //Part1TextWatcher.IGNORE_TEXT_WATCHER = true;
             setFormFromModel(this, modelDatabase, inputValidationOrder, "", false, this.findViewById(android.R.id.content));
+            try{
+                int ind=Integer.parseInt(modelDatabase.psic.trim().substring(0,2))-9;
+                if(ind>0 && ind<=33){
+                    psic2.setSelection(ind);
+                    showpsic(ind);
+                    for(int i=0; i<psic.getAdapter().getCount(); i++){
+                        String pisc=psic.getAdapter().getItem(i).toString().trim();
+                        if(pisc.startsWith(modelDatabase.psic)){
+                            final int pos=i;
+                            new Handler().postDelayed(()->psic.setSelection(pos),500);
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e){
+            }
+
         }
 
     }
@@ -154,48 +168,65 @@ public class S2Activity extends FormActivity {
         }
 
         if(sec.started_year<1900 || sec.started_year>2025){
-            setScrollAndBorderAnimation(findViewById(R.id.started_year));
-            mUXToolkit.showAlertDialogue("Failed","Started Year should be 1900-2025"  , alertForEmptyFieldEvent);
-            sbtn.setEnabled(true);
+            setErrorField(R.id.started_year,"Started Year should be 1900-2025");
             return;
         }
 
+        if(sec.emp_count>50 && sec.emp_count<=250){
+            if(sec.mownership==1 && !(sec.organization==4 || sec.organization==6)){
+                setErrorField(R.id.organization,"Only Public Limited Co or Govt. can be selected");
+                return;
+            }
+            else if((sec.mownership==3) && (sec.organization==1 || sec.organization==4 || sec.organization==6)){
+                setErrorField(R.id.organization,"Individual, Public Limited Co or Govt. can not be selected");
+                return;
+            }
+            else if((sec.mownership==2 || sec.mownership==4) && (sec.organization==4 || sec.organization==6)){
+                setErrorField(R.id.organization,"Public Limited Co or Govt. can not be selected");
+                return;
+            }
+        }
+
         if(sec.months>12){
-            setScrollAndBorderAnimation(findViewById(R.id.months));
-            mUXToolkit.showAlertDialogue("Failed","Number of months work 0-12"  , alertForEmptyFieldEvent);
-            sbtn.setEnabled(true);
+            setErrorField(R.id.months,"Number of months work 0-12");
             return;
         }
 
         try{
             if(sec.emp_count!=(sec.male_count+sec.female_count)){
-                setScrollAndBorderAnimation(findViewById(R.id.emp_count));
-                mUXToolkit.showAlertDialogue("Failed","Male+Female Employees <> Total"  , alertForEmptyFieldEvent);
-                sbtn.setEnabled(true);
+                setErrorField(R.id.emp_count,"Male+Female Employees <> Total");
                 return;
             }
         }
         catch (Exception e){
-            setScrollAndBorderAnimation(findViewById(R.id.emp_count));
-            mUXToolkit.showAlertDialogue("Failed","Male+Female Employees <> Total"  , alertForEmptyFieldEvent);
-            sbtn.setEnabled(true);
+            setErrorField(R.id.emp_count,"Male+Female Employees <> Total");
             return;
         }
 
         try{
             if(sec.emp_count>50 && sec.emp_unpaid!=(sec.male_unpaid+sec.female_unpaid)){
-                setScrollAndBorderAnimation(findViewById(R.id.emp_unpaid));
-                mUXToolkit.showAlertDialogue("Failed","Male+Female Unpaid <> Total"  , alertForEmptyFieldEvent);
-                sbtn.setEnabled(true);
+                setErrorField(R.id.emp_unpaid,"Male+Female Unpaid <> Total");
+                return;
+            }
+            if(sec.emp_count>50 && sec.emp_unpaid>sec.emp_count){
+                setErrorField(R.id.emp_unpaid,"Total Unpaid cannot be greater than Total Employees");
                 return;
             }
         }
         catch (Exception e){
-            setScrollAndBorderAnimation(findViewById(R.id.emp_unpaid));
-            mUXToolkit.showAlertDialogue("Failed","Male+Female Unpaid <> Total"  , alertForEmptyFieldEvent);
-            sbtn.setEnabled(true);
+            setErrorField(R.id.emp_unpaid,"Male+Female Unpaid <> Total");
             return;
         }
+
+        String pisc=psic.getSelectedItem().toString();
+        int i=pisc.indexOf(" - ");
+        if(i>=0){
+            pisc=pisc.substring(0,i);
+        }
+        else{
+            pisc=String.valueOf(psic2.getSelectedItemPosition()+9);
+        }
+        sec.psic=pisc.trim();
 
         /////TODO CHECKS////////////////////////////
 
@@ -229,8 +260,8 @@ public class S2Activity extends FormActivity {
         return t;
     }
 
-    private void setOwnership(int id, int pos){
-        Spinner spn=findViewById(id);
+    private void setOwnership(int vid, int pos){
+        Spinner spn=findViewById(vid);
         spn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -247,5 +278,56 @@ public class S2Activity extends FormActivity {
 
             }
         });
+    }
+
+    public void showpsic(int p){
+            ArrayList<String> nlist=new ArrayList<>();
+            ArrayList<String> list=new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.spn_pisc)));
+            nlist.add(list.get(0));
+            for(String s:list){
+                if(s.substring(0,2).equals(String.valueOf(p+9))){
+                    nlist.add(s);
+                }
+            }
+            if(nlist.size()>1){
+                nlist.remove(1);
+            }
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line,nlist);
+            psic.setAdapter(adapter);
+
+    }
+
+    public void decideOrganization(int id, int p){
+        if(id==R.id.mownership){
+            ArrayList<String> list=new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.spn_organization)));
+            if(p==1){
+                list.remove(7);
+                list.remove(5);
+                list.remove(3);
+                list.remove(2);
+                list.remove(1);
+            }
+            else if(p==2 || p==4){
+                list.remove(6);
+                list.remove(4);
+            }
+            else if(p==3){
+                list.remove(6);
+                list.remove(4);
+                list.remove(1);
+            }
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line,list);
+            organization.setAdapter(adapter);
+        }
+
+    }
+
+    public void setErrorField(int field, String msg){
+        setScrollAndBorderAnimation(findViewById(field));
+        mUXToolkit.showAlertDialogue("Failed",msg, alertForEmptyFieldEvent);
+        sbtn.setEnabled(true);
+        return;
     }
 }

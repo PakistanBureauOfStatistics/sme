@@ -31,7 +31,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Year of Commencement of Activity"/>
+                        android:text="Year of Commencement of Activity (*)"/>
                     <EditText
                         android:id="@+id/started_year"
                         style="@style/edit_form_text"
@@ -46,7 +46,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Is the establishment registered with any government agency/autonomous body?"/>
+                            android:text="Is the establishment registered with government agency/autonomous body? (*)"/>
                         <RadioGroup
                             android:id="@+id/is_registered"
                             style="@style/rdg"
@@ -68,7 +68,7 @@
                         android:visibility="gone">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Name of  agency"/>
+                            android:text="Name of  agency (*)"/>
                         <EditText
                             android:id="@+id/agency"
                             style="@style/edit_form_text"/>
@@ -78,7 +78,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Is the establishment maintaining accounts?"/>
+                        android:text="Is the establishment maintaining accounts? (*)"/>
                     <RadioGroup
                         android:id="@+id/is_maintaining"
                         style="@style/rdg"
@@ -102,7 +102,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Establishement Export Production?"/>
+                            android:text="Establishement Export Production? (*)"/>
                         <RadioGroup
                             android:id="@+id/exports"
                             style="@style/rdg"
@@ -122,7 +122,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Establishment Import Raw Material?"/>
+                            android:text="Establishment Import Raw Material? (*)"/>
                         <RadioGroup
                             android:id="@+id/imports"
                             style="@style/rdg"
@@ -142,7 +142,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Establishment Listed with Stock Exchange?"/>
+                            android:text="Establishment Listed with Stock Exchange? (*)"/>
                         <RadioGroup
                             android:id="@+id/stocks"
                             style="@style/rdg"
@@ -167,7 +167,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Type of Ownership (Small Enterprise)"/>
+                        android:text="Type of Ownership (Small Enterprise) (*)"/>
                     <RelativeLayout
                         style="@style/spn_rel">
                         <Spinner
@@ -182,7 +182,7 @@
                     android:visibility="gone">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Type of Ownership (Medium Enterprise)"/>
+                        android:text="Type of Ownership (Medium Enterprise) (*)"/>
                     <RelativeLayout
                         style="@style/spn_rel">
                         <Spinner
@@ -197,7 +197,7 @@
                     android:visibility="gone">
                     <TextView
                         style="@style/q_heading"
-                        android:text="If Other (Specify)"/>
+                        android:text="If Other (Specify) (*)"/>
                     <EditText
                         android:id="@+id/ownership_other"
                         style="@style/edit_form_text"/>
@@ -208,7 +208,7 @@
                     android:visibility="gone">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Type of Organization"/>
+                        android:text="Type of Organization (*)"/>
                     <RelativeLayout
                         style="@style/spn_rel">
                         <Spinner
@@ -221,7 +221,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Description of the Activity"/>
+                        android:text="Description of the Activity (*)"/>
                     <EditText
                         android:id="@+id/activity"
                         style="@style/edit_form_text"/>
@@ -230,22 +230,27 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Code (PSIC-2010)"/>
-                    <LinearLayout style="@style/vliner">
-
-                    </LinearLayout>
-                    <LinearLayout
-                        style="@style/vertical_wrapper">
-                        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Search PSIC Code">
-                            <AutoCompleteTextView android:id="@+id/psic" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp"/>
-                        </com.google.android.material.textfield.TextInputLayout>
-                        <TextView android:id="@+id/activity2" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:padding="8dp" android:text="Selected PSIC Code will appear here"/>
-                        <!--<Spinner
-                            android:id="@+id/psicx"
+                        android:text="Select Category (*)"/>
+                    <RelativeLayout
+                        style="@style/spn_rel">
+                        <Spinner
+                            android:id="@+id/psic2"
+                            style="@style/spn_form"
+                            android:entries="@array/spn_pisc2"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="PISC Code (*)"/>
+                    <RelativeLayout
+                        style="@style/spn_rel">
+                        <Spinner
+                            android:id="@+id/psic"
                             style="@style/spn_form"
                             android:entries="@array/spn_pisc"/>
-                            -->
-                    </LinearLayout>
+                    </RelativeLayout>
                 </LinearLayout>
 
 
@@ -254,7 +259,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Is the major manufacturing activity seasonal?"/>
+                        android:text="Is the major manufacturing activity seasonal? (*)"/>
                     <RadioGroup
                         android:id="@+id/is_seasonal"
                         style="@style/rdg"
@@ -277,7 +282,7 @@
                     android:weightSum="10">
                     <TextView
                         style="@style/q_heading"
-                        android:text="If Yes tick the months during which activity is carried out "/>
+                        android:text="If Yes tick the months during which activity is carried out  (*)"/>
                     <LinearLayout
                         style="@style/horizontal_wrapper"
                         android:weightSum="4">
@@ -358,7 +363,7 @@
                     android:visibility="gone">
                     <TextView
                         style="@style/q_heading"
-                        android:text="No. of  months worked During the Year"/>
+                        android:text="No. of  months worked During the Year  (*)"/>
                     <EditText
                         android:inputType="number"
                         android:id="@+id/months"
@@ -372,7 +377,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Is there any other seasonal activity carried out by establishment?  "/>
+                        android:text="Is there any other seasonal activity carried out by establishment? (*)"/>
                     <RadioGroup
                         android:id="@+id/is_establishement"
                         style="@style/rdg"
@@ -392,7 +397,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Employees (Male + Female = Total)"/>
+                        android:text="Employees (Male + Female = Total)  (*)"/>
                     <LinearLayout
                         style="@style/vliner"
                         android:orientation="horizontal"
@@ -426,7 +431,7 @@
                     android:visibility="gone">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Un-Paid Workers (Male + Female = Total)"/>
+                        android:text="Un-Paid Workers (Male + Female = Total)  (*)"/>
                     <LinearLayout
                         style="@style/vliner"
                         android:orientation="horizontal"
@@ -456,7 +461,7 @@
                     style="@style/vliner">
                     <TextView
                         style="@style/q_heading"
-                        android:text="Employement Cost (in RS)"/>
+                        android:text="Employement Cost (in RS) (*)"/>
                     <EditText
                         android:id="@+id/emp_cost"
                         style="@style/edit_form_val"

@@ -258,7 +258,7 @@ public class S1Activity extends FormActivity {
             return;
         }
 
-
+        setCommonFields(sec);
         sec.email=((EditText) findViewById(R.id.email)).getText().toString();
         sec.website=((EditText) findViewById(R.id.website)).getText().toString();
 

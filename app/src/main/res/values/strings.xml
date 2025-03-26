@@ -172,18 +172,44 @@
         <item>--Select Organization Type--</item>
         <item>Individual Group</item>
         <item>Partnership</item>
-        <item>Private Limited Co.</item>
-        <item>Public Limited Co.</item>
+        <item>Private Limited Co</item>
+        <item>Public Limited Co</item>
         <item>Cooperative</item>
         <item>Govt.</item>
         <item>Others</item>
     </string-array>
-
+    <string-array name="spn_pisc2">
+        <item>Select 2 Digit PISC Code</item>
+        <item>10 - Manufacture of food products</item>
+        <item>11 - Manufacture of beverages</item>
+        <item>12 - Manufacture of tobacco products</item>
+        <item>13 - Manufacture of textiles</item>
+        <item>14 - Manufacture of wearing apparel</item>
+        <item>15 - Manufacture of leather and related products</item>
+        <item>16 - Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials</item>
+        <item>17 - Manufacture of paper and paper products</item>
+        <item>18 - Printing and reproduction of recorded media</item>
+        <item>19 - Manufacture of coke and refined petroleum products</item>
+        <item>20 - Manufacture of chemicals and chemical products</item>
+        <item>21 - Manufacture of basic pharmaceutical products and pharmaceutical preparations</item>
+        <item>22 - Manufacture of rubber and plastics products</item>
+        <item>23 - Manufacture of other non-metallic mineral products</item>
+        <item>24 - Manufacture of basic metals</item>
+        <item>25 - Manufacture of fabricated metal products, except machinery and equipment</item>
+        <item>26 - Manufacture of computer, electronic and optical products</item>
+        <item>27 - Manufacture of electrical equipment</item>
+        <item>28 - Manufacture of machinery and equipment n.e.c.</item>
+        <item>29 - Manufacture of motor vehicles, trailers and semi-trailers</item>
+        <item>30 - Manufacture of other transport equipment</item>
+        <item>31 - Manufacture of furniture</item>
+        <item>32 - Other manufacturing</item>
+        <item>33 - Repair and installation of machinery and equipment</item>
+    </string-array>
     <string-array name="spn_pisc">
         <item>Select PISC Code</item>
-        <item>    10 - Manufacture of food products</item>
-        <item>   101 - Processing and preserving of meat</item>
-        <item>  1010 - Processing and preserving of meat</item>
+        <item>   10 - Manufacture of food products</item>
+        <item>  101 - Processing and preserving of meat</item>
+        <item> 1010 - Processing and preserving of meat</item>
         <item>10101 - Operation of slaughterhouses</item>
         <item>10102 - Production of fresh, chilled or frozen meat, in carcasses, in cuts or in individual portions</item>
         <item>10103 - Production of dried, salted or smoked meat</item>
@@ -193,16 +219,16 @@
         <item>10107 - Processing of animal offal</item>
         <item>10108 - Production of pulled wool</item>
         <item>10109 - Others n.e.c.</item>
-        <item>   102 - Processing and preserving of fish, crustaceans and molluscs</item>
-        <item>  1020 - Processing and preserving of fish, crustaceans and molluscs</item>
+        <item>  102 - Processing and preserving of fish, crustaceans and molluscs</item>
+        <item> 1020 - Processing and preserving of fish, crustaceans and molluscs</item>
         <item>10201 - Preparation and preservation of fish, crustaceans and molluscs</item>
         <item>10202 - Production of fish, crustacean and mollusc products</item>
         <item>10203 - Production of fishmeal for human consumption or animal feed</item>
         <item>10204 - Production of meals and solubles from fish and other aquatic animals unfit for human consumption</item>
         <item>10205 - Activities of vessels engaged only in the processing and preserving of fish</item>
         <item>10209 - Others n.e.c.</item>
-        <item>   103 - Processing and preserving of fruit and vegetables</item>
-        <item>  1030 - Processing and preserving of fruit and vegetables</item>
+        <item>  103 - Processing and preserving of fruit and vegetables</item>
+        <item> 1030 - Processing and preserving of fruit and vegetables</item>
         <item>10301 - Manufacture of food consisting chiefly of fruit or vegetables/ manufacture of perishable prepared foods of fruit and vegetables, such as: Salads, peeled or cut vegetables, tofu (bean curd)</item>
         <item>10302 - Preserving of fruit, nuts or vegetables</item>
         <item>10303 - Manufacture of fruit or vegetable food products</item>
@@ -211,8 +237,8 @@
         <item>10306 - Processing, preserving and industrial peeling of potatoes</item>
         <item>10307 - Roasting of nuts/ manufacture of nut foods and pastes</item>
         <item>10309 - Others n.e.c.</item>
-        <item>   104 - Manufacture of vegetable and animal oils and fats</item>
-        <item>  1040 - Manufacture of vegetable and animal oils and fats</item>
+        <item>  104 - Manufacture of vegetable and animal oils and fats</item>
+        <item> 1040 - Manufacture of vegetable and animal oils and fats</item>
         <item>10401 - Manufacture of crude / refined vegetable oils and their processing</item>
         <item>10402 - Manufacture of non-defatted flour or meal of oilseeds, oil nuts or oil kernels</item>
         <item>10403 - Manufacture of margarine/ melanges and similar spreads</item>
@@ -220,8 +246,8 @@
         <item>10405 - Production of cotton linters</item>
         <item>10406 - Production of oilcakes and other residual products of oil production</item>
         <item>10409 - Others n.e.c.</item>
-        <item>   105 - Manufacture of dairy products</item>
-        <item>  1050 - Manufacture of dairy products</item>
+        <item>  105 - Manufacture of dairy products</item>
+        <item> 1050 - Manufacture of dairy products</item>
         <item>10501 - Manufacture of fresh liquid milk, pasteurized, sterilized, homogenized and/or ultra heat treated/ manufacture of milk-based drinks</item>
         <item>10502 - Manufacture of cream from fresh liquid milk</item>
         <item>10503 - Manufacture of dried or concentrated milk</item>
@@ -229,48 +255,48 @@
         <item>10505 - Manufacture of yoghurt</item>
         <item>10506 - Manufacture of ice cream and other edible ice/ Manufacture of milk or cream in solid form</item>
         <item>10509 - Others n.e.c.</item>
-        <item>   106 - Manufacture of grain mill products, starches and starch products</item>
-        <item>  1061 - Manufacture of grain mill products</item>
+        <item>  106 - Manufacture of grain mill products, starches and starch products</item>
+        <item> 1061 - Manufacture of grain mill products</item>
         <item>10611 - Grain milling</item>
         <item>10612 - Rice milling</item>
         <item>10613 - Vegetable milling</item>
         <item>10614 - Manufacture of cereal breakfast foods</item>
         <item>10615 - Manufacture of flour mixes and prepared blended flour and dough for bread, cakes, biscuits or pancakes</item>
         <item>10619 - Others n.e.c.</item>
-        <item>  1062 - Manufacture of starches and starch products</item>
+        <item> 1062 - Manufacture of starches and starch products</item>
         <item>10621 - Manufacture of starches from rice, potatoes, maize etc.</item>
         <item>10622 - Wet corn milling</item>
         <item>10623 - Manufacture of glucose, glucose syrup, maltose, inulin etc.</item>
         <item>10624 - Manufacture of gluten</item>
         <item>10625 - Manufacture of corn oil</item>
         <item>10629 - Others n.e.c.</item>
-        <item>   107 - Manufacture of other food products</item>
-        <item>  1071 - Manufacture of bakery products</item>
+        <item>  107 - Manufacture of other food products</item>
+        <item> 1071 - Manufacture of bakery products</item>
         <item>10711 - Manufacture of bread and rolls</item>
         <item>10712 - Manufacture of fresh/ preserved pastry, cakes, pies, tarts etc.</item>
         <item>10713 - Manufacture of rusks, biscuits and other “dry” bakery products/ snack products</item>
         <item>10719 - Others n.e.c.</item>
-        <item>  1072 - Manufacture of sugar</item>
+        <item> 1072 - Manufacture of sugar</item>
         <item>10721 - Manufacture or refining of sugar and sugar substitutes from the juice of cane, beet, maple and palm etc.</item>
         <item>10722 - Manufacture of sugar syrups</item>
         <item>10723 - Manufacture of molasses</item>
         <item>10724 - Production of maple syrup and sugar</item>
-        <item>  1073 - Manufacture of cocoa, chocolate and sugar confectionery</item>
+        <item> 1073 - Manufacture of cocoa, chocolate and sugar confectionery</item>
         <item>10731 - Manufacture of cocoa, cocoa butter, cocoa fat, cocoa oil</item>
         <item>10732 - Manufacture of chocolate and chocolate confectionery, sugar confectionery etc.</item>
         <item>10733 - Manufacture of chewing gum</item>
         <item>10734 - Preserving in sugar of fruit, nuts, fruit peels and other parts of plants</item>
         <item>10739 - Others n.e.c.</item>
-        <item>  1074 - Manufacture of macaroni, noodles, couscous and similar farinaceous products</item>
+        <item> 1074 - Manufacture of macaroni, noodles, couscous and similar farinaceous products</item>
         <item>10741 - Manufacture of pastas such as macaroni and noodles etc.</item>
         <item>10742 - Manufacture of canned or frozen pasta products</item>
         <item>10749 - Others n.e.c.</item>
-        <item>  1075 - Manufacture of prepared meals and dishes</item>
+        <item> 1075 - Manufacture of prepared meals and dishes</item>
         <item>10751 - Manufacture of meat or poultry dishes</item>
         <item>10752 - Manufacture of fish dishes, including fish and chips</item>
         <item>10753 - Manufacture of prepared dishes of vegetables</item>
         <item>10759 - Others n.e.c.</item>
-        <item>  1079 - Manufacture of other food products n.e.c.</item>
+        <item> 1079 - Manufacture of other food products n.e.c.</item>
         <item>10791 - Decaffeinating and roasting of coffee/ production of coffee products/ manufacture of coffee substitutes</item>
         <item>10792 - Blending of tea and mate/ manufacture of extracts and preparations based on tea or maté</item>
         <item>10793 - Manufacture of soups and broths</item>
@@ -280,62 +306,62 @@
         <item>10797 - Manufacture of herb infusions (mint, vervain, chamomile etc.)/ manufacture of extracts and juices of meat, fish, crustaceans or molluscs</item>
         <item>10798 - Processing of salt into food-grade salt, e.g. iodized salt</item>
         <item>10799 - Others n.e.c.</item>
-        <item>   108 - Manufacture of prepared animal feeds</item>
-        <item>  1080 - Manufacture of prepared animal feeds</item>
+        <item>  108 - Manufacture of prepared animal feeds</item>
+        <item> 1080 - Manufacture of prepared animal feeds</item>
         <item>10801 - Manufacture of prepared feeds for pets, including dogs, cats, birds, fish etc.</item>
         <item>10802 - Manufacture of prepared feeds/ preparation of unmixed feeds for farm animals</item>
         <item>10803 - Treatment of slaughter waste to produce animal feeds</item>
         <item>10809 - Others n.e.c.</item>
-        <item>    11 - Manufacture of beverages</item>
-        <item>   110 - Manufacture of beverages</item>
-        <item>  1101 - Distilling, rectifying and blending of spirits</item>
+        <item>   11 - Manufacture of beverages</item>
+        <item>  110 - Manufacture of beverages</item>
+        <item> 1101 - Distilling, rectifying and blending of spirits</item>
         <item>11010 - Manufacture of distilled, potable, alcoholic beverages, blending of distilled spirits, production of neutral spirits</item>
-        <item>  1102 - Manufacture of wines</item>
+        <item> 1102 - Manufacture of wines</item>
         <item>11020 - Manufacture of wine etc.</item>
-        <item>  1103 - Manufacture of malt liquors and malt</item>
+        <item> 1103 - Manufacture of malt liquors and malt</item>
         <item>11030 - Manufacture of malt and malt liquors</item>
-        <item>  1104 - Manufacture of soft drinks; production of mineral waters and other bottled waters</item>
+        <item> 1104 - Manufacture of soft drinks; production of mineral waters and other bottled waters</item>
         <item>11041 - Manufacture of non-alcoholic beverages</item>
         <item>11042 - Production of natural mineral waters and other bottled waters</item>
         <item>11043 - Manufacture of soft drinks like lemonade, orangeade, cola, fruit drinks, tonic waters etc.</item>
-        <item>    12 - Manufacture of tobacco products</item>
-        <item>   120 - Manufacture of tobacco products</item>
-        <item>  1200 - Manufacture of tobacco products</item>
+        <item>   12 - Manufacture of tobacco products</item>
+        <item>  120 - Manufacture of tobacco products</item>
+        <item> 1200 - Manufacture of tobacco products</item>
         <item>12001 - Manufacture of tobacco products and products of tobacco substitutes etc.</item>
         <item>12009 - Others n.e.c.</item>
-        <item>    13 - Manufacture of textiles</item>
-        <item>   131 - Spinning, weaving and finishing of textiles</item>
-        <item>  1311 - Preparation and spinning of textile fibres</item>
+        <item>   13 - Manufacture of textiles</item>
+        <item>  131 - Spinning, weaving and finishing of textiles</item>
+        <item> 1311 - Preparation and spinning of textile fibres</item>
         <item>13111 - Preparatory operations on textile fibres</item>
         <item>13112 - Spinning and manufacture of yarn or thread</item>
         <item>13113 - Manufacture of paper yarn</item>
-        <item>  1312 - Weaving of textiles</item>
+        <item> 1312 - Weaving of textiles</item>
         <item>13121 - Manufacture of broad woven cotton-type, woollen-type, worsted-type or silk-type fabrics</item>
         <item>13122 - Manufacture of other broad woven fabrics, using flax, ramie, hemp, jute, bast fibres and special yarns</item>
         <item>13129 - Others n.e.c.</item>
-        <item>  1313 - Finishing of textiles</item>
+        <item> 1313 - Finishing of textiles</item>
         <item>13131 - Bleaching and dyeing of textile fibres, yarns, fabrics and textile articles, including wearing apparel</item>
         <item>13132 - Dressing, drying, steaming, shrinking, mending, Sanforizing, mercerizing of textiles and textile articles, including wearing apparel</item>
         <item>13139 - Others n.e.c.</item>
-        <item>   139 - Manufacture of other textiles</item>
-        <item>  1391 - Manufacture of knitted and crocheted fabrics</item>
+        <item>  139 - Manufacture of other textiles</item>
+        <item> 1391 - Manufacture of knitted and crocheted fabrics</item>
         <item>13910 - Manufacture and processing of knitted or crocheted fabrics etc.</item>
-        <item>  1392 - Manufacture of made-up textile articles, except apparel</item>
+        <item> 1392 - Manufacture of made-up textile articles, except apparel</item>
         <item>13921 - Manufacture, of made-up articles of any textile material</item>
         <item>13922 - Manufacture of made-up furnishing articles</item>
         <item>13929 - Others n.e.c.</item>
-        <item>  1393 - Manufacture of carpets and rugs</item>
+        <item> 1393 - Manufacture of carpets and rugs</item>
         <item>13930 - Manufacture of textile floor coverings like carpets, rugs and mats, tiles etc.</item>
-        <item>  1394 - Manufacture of cordage, rope, twine and netting</item>
+        <item> 1394 - Manufacture of cordage, rope, twine and netting</item>
         <item>13941 - Manufacture of twine, cordage, rope and cables of textile fibres or strip or the like</item>
         <item>13942 - Manufacture of knotted netting of twine, cordage or rope including products of rope or netting</item>
-        <item>  1399 - Manufacture of other textiles n.e.c.</item>
+        <item> 1399 - Manufacture of other textiles n.e.c.</item>
         <item>13991 - Manufacture of labels, badges etc.</item>
         <item>13992 - Manufacture of tulles and other net fabrics, and of lace and embroidery/ ornamental trimmings</item>
         <item>13999 - Others n.e.c. (see detail under class 1399)</item>
-        <item>    14 - Manufacture of wearing apparel</item>
-        <item>   141 - Manufacture of wearing apparel, except fur apparel</item>
-        <item>  1410 - Manufacture of wearing apparel, except fur apparel</item>
+        <item>   14 - Manufacture of wearing apparel</item>
+        <item>  141 - Manufacture of wearing apparel, except fur apparel</item>
+        <item> 1410 - Manufacture of wearing apparel, except fur apparel</item>
         <item>14101 - Manufacture of wearing apparel made of leather or composition leather</item>
         <item>14102 - Manufacture of other outerwear/ work wear</item>
         <item>14103 - Manufacture of underwear and nightwear</item>
@@ -343,80 +369,80 @@
         <item>14105 - Manufacture of other clothing accessories such as gloves, belts, shawls, ties, cravats, hairnets etc./ hats and caps/ </item>
         <item>14106 - Manufacture of footwear of textile material without applied soles</item>
         <item>14109 - Others n.e.c.</item>
-        <item>   142 - Manufacture of articles of fur</item>
-        <item>  1420 - Manufacture of articles of fur</item>
+        <item>  142 - Manufacture of articles of fur</item>
+        <item> 1420 - Manufacture of articles of fur</item>
         <item>14200 - Manufacture of articles made of fur skins</item>
-        <item>   143 - Manufacture of knitted and crocheted apparel</item>
-        <item>  1430 - Manufacture of knitted and crocheted apparel</item>
+        <item>  143 - Manufacture of knitted and crocheted apparel</item>
+        <item> 1430 - Manufacture of knitted and crocheted apparel</item>
         <item>14301 - Manufacture of knitted or crocheted wearing apparel and other made-up articles like  pullovers, cardigans, jerseys, waistcoats and similar articles</item>
         <item>14302 - Manufacture of hosiery, including socks, tights and pantyhose</item>
         <item>14309 - Others n.e.c.</item>
-        <item>    15 - Manufacture of leather and related products</item>
-        <item>   151 - Tanning and dressing of leather; manufacture of luggage, handbags, saddlery and harness; dressing and dyeing of fur</item>
-        <item>  1511 - Tanning and dressing of leather; dressing and dyeing of fur</item>
+        <item>   15 - Manufacture of leather and related products</item>
+        <item>  151 - Tanning and dressing of leather; manufacture of luggage, handbags, saddlery and harness; dressing and dyeing of fur</item>
+        <item> 1511 - Tanning and dressing of leather; dressing and dyeing of fur</item>
         <item>15111 - Tanning, dyeing and dressing of hides and skins</item>
         <item>15112 - Scraping, shearing, plucking, currying, tanning, bleaching and dyeing of fur skins and hides with the hair on</item>
         <item>15119 - Others n.e.c.</item>
-        <item>  1512 - Manufacture of luggage, handbags and the like, saddlery and harness</item>
+        <item> 1512 - Manufacture of luggage, handbags and the like, saddlery and harness</item>
         <item>15121 - Manufacture of luggage, handbags and the like, of leather, composition leather or any other material</item>
         <item>15122 - Manufacture of diverse articles of leather or composition leather</item>
         <item>15129 - Others n.e.c.</item>
-        <item>   152 - Manufacture of footwear</item>
-        <item>  1520 - Manufacture of footwear</item>
+        <item>  152 - Manufacture of footwear</item>
+        <item> 1520 - Manufacture of footwear</item>
         <item>15201 - Manufacture of footwear for all purposes, of any material, by any process</item>
         <item>15202 - Manufacture of leather parts of footwear etc.</item>
         <item>15209 - Others n.e.c.</item>
-        <item>    16 - Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials</item>
-        <item>   161 - Sawmilling and planning of wood</item>
-        <item>  1610 - Sawmilling and planning of wood</item>
+        <item>   16 - Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials</item>
+        <item>  161 - Sawmilling and planning of wood</item>
+        <item> 1610 - Sawmilling and planning of wood</item>
         <item>16101 - Sawing, planning and machining of wood/ slicing, peeling or chipping logs</item>
         <item>16102 - Manufacture of wooden railway sleepers</item>
         <item>16103 - Manufacture of unassembled wooden flooring/ wood wool, wood flour, chips, particles</item>
         <item>16109 - Others n.e.c.</item>
-        <item>   162 - Manufacture of products of wood, cork, straw and plaiting materials</item>
-        <item>  1621 - Manufacture of veneer sheets and wood-based panels</item>
+        <item>  162 - Manufacture of products of wood, cork, straw and plaiting materials</item>
+        <item> 1621 - Manufacture of veneer sheets and wood-based panels</item>
         <item>16211 - Manufacture of veneer sheets</item>
         <item>16212 - Manufacture of plywood, veneer panels and similar laminated wood boards and sheets</item>
         <item>16213 - Manufacture of particle board and fibreboard/ densified wood etc.</item>
         <item>16219 - Others n.e.c.</item>
-        <item>  1622 - Manufacture of builders’ carpentry and joinery</item>
+        <item> 1622 - Manufacture of builders’ carpentry and joinery</item>
         <item>16221 - Manufacture of wooden goods intended to be used in the construction industry</item>
         <item>16222 - Manufacture of prefabricated buildings, or elements thereof, predominantly of wood/ mobile homes / wood partitions etc.</item>
-        <item>  1623 - Manufacture of wooden containers</item>
+        <item> 1623 - Manufacture of wooden containers</item>
         <item>16231 - Manufacture of packing cases, boxes, crates, drums/ cable-drums etc. of wood</item>
         <item>16232 - Manufacture of pallets, box pallets and other load boards of wood/ manufacture of barrels, vats, tubs and other coopers’ products  of wood</item>
         <item>16233 - Manufacture of wooden cable-drums</item>
-        <item>  1629 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials</item>
+        <item> 1629 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials</item>
         <item>16291 - Manufacture of various wood products (see detail in description)</item>
         <item>16292 - Natural cork processing, manufacture of agglomerated cork / articles of cork etc.</item>
         <item>16299 - Others n.e.c.</item>
-        <item>    17 - Manufacture of paper and paper products</item>
-        <item>   170 - Manufacture of paper and paper products</item>
-        <item>  1701 - Manufacture of pulp, paper and paperboard</item>
+        <item>   17 - Manufacture of paper and paper products</item>
+        <item>  170 - Manufacture of paper and paper products</item>
+        <item> 1701 - Manufacture of pulp, paper and paperboard</item>
         <item>17011 - Manufacture of paper pulp/ pulp from waste paper</item>
         <item>17012 - Manufacture of cotton-linters pulp</item>
         <item>17013 - Manufacture of paper and paperboard/ further processing of paper and paperboard</item>
         <item>17014 - Manufacture of newsprint and other printing or writing paper</item>
         <item>17015 - Manufacture of others like carbon paper or stencil paper etc.</item>
         <item>17019 - Others n.e.c.</item>
-        <item>  1702 - Manufacture of corrugated paper and paperboard and of containers of paper and paperboard</item>
+        <item> 1702 - Manufacture of corrugated paper and paperboard and of containers of paper and paperboard</item>
         <item>17021 - Manufacture of corrugated paper and paperboard and their container etc.</item>
         <item>17022 - Manufacture of sacks, bags, office box files and similar articles of paper</item>
         <item>17029 - Others n.e.c.</item>
-        <item>  1709 - Manufacture of other articles of paper and paperboard</item>
+        <item> 1709 - Manufacture of other articles of paper and paperboard</item>
         <item>17091 - Manufacture of household and personal hygiene paper and cellulose wadding products</item>
         <item>17092 - Manufacture of printing and writing paper, computer printout paper, self-copy paper etc. ready for use</item>
         <item>17099 - Others n.e.c. (see detail in description)</item>
-        <item>    18 - Printing and reproduction of recorded media</item>
-        <item>   181 - Printing and service activities related to printing</item>
-        <item>  1811 - Printing</item>
+        <item>   18 - Printing and reproduction of recorded media</item>
+        <item>  181 - Printing and service activities related to printing</item>
+        <item> 1811 - Printing</item>
         <item>18111 - Printing of newspapers, magazines and other periodicals</item>
         <item>18112 - Printing of books and brochures, music and music manuscripts, maps, atlases, posters, advertising catalogues, prospectuses and other printed advertising,</item>
         <item>18113 - Printing of postage stamps, taxation stamps, documents of title, cheques and other security papers</item>
         <item>18114 - Printing of diaries, calendars, business forms and other commercial printed matter, personal stationery and other printed matter by letterpress, offset, photogravure, flexographic and other printing presses, duplication machines, computer printers, embossers etc., including quick printing</item>
         <item>18115 - Printing directly onto textiles, plastic, glass, metal, wood and ceramics (except silk-screen printing on textiles and wearing apparel)</item>
         <item>18119 - Other printing n.e.c.</item>
-        <item>  1812 - Service activities related to printing</item>
+        <item> 1812 - Service activities related to printing</item>
         <item>18121 - Binding of printed sheets</item>
         <item>18122 - Composition, typesetting, phototypesetting, pre-press data input including scanning and optical character recognition, electronic make-up</item>
         <item>18123 - Plate-making services including image-setting and plate-setting</item>
@@ -424,34 +450,34 @@
         <item>18125 - Design of printing products e.g. sketches, layouts, dummies etc.</item>
         <item>18126 - Other graphic activities such as die-sinking or die-stamping, Braille copying, embossing, varnishing and laminating, collating and insetting, creasing</item>
         <item>18129 - Other such activities n.e.c.</item>
-        <item>   182 - Reproduction of recorded media</item>
-        <item>  1820 - Reproduction of recorded media</item>
+        <item>  182 - Reproduction of recorded media</item>
+        <item> 1820 - Reproduction of recorded media</item>
         <item>18201 - Reproduction from master copies of gramophone records, compact discs and tapes with music or other sound recordings</item>
         <item>18202 - Reproduction from master copies of records, compact discs and tapes with motion pictures and other video recordings</item>
         <item>18203 - Reproduction from master copies of software and data on discs and tapes</item>
         <item>18209 - Other such activities n.e.c.</item>
-        <item>    19 - Manufacture of coke and refined petroleum products</item>
-        <item>   191 - Manufacture of coke oven products</item>
-        <item>  1910 - Manufacture of coke oven products</item>
+        <item>   19 - Manufacture of coke and refined petroleum products</item>
+        <item>  191 - Manufacture of coke oven products</item>
+        <item> 1910 - Manufacture of coke oven products</item>
         <item>19101 - Operation of coke ovens</item>
         <item>19102 - Production of coke and semi-coke/ production of coke oven gas</item>
         <item>19103 - Production of pitch and pitch coke</item>
         <item>19104 - Production of crude coal and lignite tars</item>
         <item>19105 - Agglomeration of coke</item>
-        <item>   192 - Manufacture of refined petroleum products</item>
-        <item>  1920 - Manufacture of refined petroleum products</item>
+        <item>  192 - Manufacture of refined petroleum products</item>
+        <item> 1920 - Manufacture of refined petroleum products</item>
         <item>19201 - Production of motor fuel like gasoline, kerosene etc.</item>
         <item>19202 - Production of fuel, refinery gases such as ethane, propane, butane etc.</item>
         <item>19203 - Manufacture of oil-based lubricating oils or greases, including from waste oil</item>
         <item>19204 - Manufacture of products for the petrochemical industry and for the </item>
-        <item> - manufacture of road coverings</item>
+        <item>- manufacture of road coverings</item>
         <item>19205 - Manufacture of various products like white spirit, Vaseline, paraffin wax etc.</item>
         <item>19206 - Manufacture of hard-coal and lignite fuel briquettes / petroleum briquettes</item>
         <item>19207 - Blending of bio fuels</item>
         <item>19209 - Others n.e.c.</item>
-        <item>    20 - Manufacture of chemicals and chemical products</item>
-        <item>   201 - Manufacture of basic chemicals, fertilizers and nitrogen compounds, plastics and synthetic rubber in primary forms</item>
-        <item>  2011 - Manufacture of basic chemicals</item>
+        <item>   20 - Manufacture of chemicals and chemical products</item>
+        <item>  201 - Manufacture of basic chemicals, fertilizers and nitrogen compounds, plastics and synthetic rubber in primary forms</item>
+        <item> 2011 - Manufacture of basic chemicals</item>
         <item>20111 - Manufacture of liquefied or compressed inorganic industrial or medical gases</item>
         <item>20112 - Manufacture of dyes and pigments in basic form or as concentrate</item>
         <item>20113 - Manufacture of inorganic acids except nitric acid, Manufacture of alkalis, lyes and other inorganic bases except ammonia</item>
@@ -461,22 +487,22 @@
         <item>20117 - Roasting of iron pyrites</item>
         <item>20118 - Manufacture of products of a kind used as fluorescent brightening agents or as luminophores</item>
         <item>20119 - Others n.e.c.</item>
-        <item>  2012 - Manufacture of fertilizers and nitrogen compounds</item>
+        <item> 2012 - Manufacture of fertilizers and nitrogen compounds</item>
         <item>20121 - Manufacture of fertilizers</item>
         <item>20122 - Manufacture of associated nitrogen products</item>
         <item>20123 - Manufacture of potting soil</item>
-        <item>  2013 - Manufacture of plastics and synthetic rubber in primary forms</item>
+        <item> 2013 - Manufacture of plastics and synthetic rubber in primary forms</item>
         <item>20131 - Manufacture of plastics in primary forms</item>
         <item>20132 - Manufacture of synthetic rubber in primary forms</item>
         <item>20133 - Manufacture of mixtures of synthetic and natural rubber or rubber-like gums (e.g. balata)/ manufacture of cellulose and its chemical derivatives</item>
         <item>20139 - Others n.e.c.</item>
-        <item>   202 - Manufacture of other chemical products</item>
-        <item>  2021 - Manufacture of pesticides and other agrochemical products</item>
+        <item>  202 - Manufacture of other chemical products</item>
+        <item> 2021 - Manufacture of pesticides and other agrochemical products</item>
         <item>20211 - Manufacture of insecticides, rodenticides, fungicides, herbicides</item>
         <item>20212 - Manufacture of anti-sprouting products, plant growth regulators</item>
         <item>20213 - Manufacture of disinfectants (for agricultural and other use)</item>
         <item>20219 - Manufacture of other agrochemical products n.e.c.</item>
-        <item>  2022 - Manufacture of paints, varnishes and similar coatings, printing ink and mastics</item>
+        <item> 2022 - Manufacture of paints, varnishes and similar coatings, printing ink and mastics</item>
         <item>20221 - Manufacture of paints and varnishes, enamels or lacquers</item>
         <item>20222 - Manufacture of prepared pigments and dyes, opacifiers and colours</item>
         <item>20223 - Manufacture of vitrifiable enamels and glazes and engobes etc.</item>
@@ -484,7 +510,7 @@
         <item>20225 - Manufacture of caulking compounds and similar non-refractory filling or surfacing preparations</item>
         <item>20226 - Manufacture of organic composite solvents and thinners/ paint/ varnish removers</item>
         <item>20227 - Manufacture of printing ink</item>
-        <item>  2023 - Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations</item>
+        <item> 2023 - Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations</item>
         <item>20231 - Manufacture of organic surface-active agents</item>
         <item>20232 - Manufacture of soap</item>
         <item>20233 - Manufacture of crude glycerol</item>
@@ -492,7 +518,7 @@
         <item>20235 - Manufacture of cleaning and polishing products</item>
         <item>20236 - Manufacture of perfumes and toilet preparations</item>
         <item>20239 - Others n.e.c.</item>
-        <item>  2029 - Manufacture of other chemical products n.e.c.</item>
+        <item> 2029 - Manufacture of other chemical products n.e.c.</item>
         <item>20291 - Manufacture of propellant powders/ explosives and pyrotechnic products</item>
         <item>20292 - Manufacture of gelatine and its derivatives, glues and prepared adhesives, including rubber-based glues and adhesives/ resinoids</item>
         <item>20293 - Manufacture of extracts of natural aromatic products/ aromatic distilled waters/ odoriferous products</item>
@@ -502,85 +528,85 @@
         <item>20297 - Manufacture of writing and drawing ink</item>
         <item>20298 - Manufacture of matches</item>
         <item>20299 - Others n.e.c.</item>
-        <item>   203 - Manufacture of man-made fibres</item>
-        <item>  2030 - Manufacture of man-made fibres</item>
+        <item>  203 - Manufacture of man-made fibres</item>
+        <item> 2030 - Manufacture of man-made fibres</item>
         <item>20301 - Manufacture of synthetic or artificial filament tow</item>
         <item>20302 - Manufacture of synthetic or artificial staple fibres, not carded, combed or otherwise processed for spinning</item>
         <item>20303 - Manufacture of synthetic or artificial filament yarn, including high-tenacity yarn</item>
         <item>20304 - Manufacture of synthetic or artificial monofilament or strip</item>
         <item>20309 - Others n.e.c.</item>
-        <item>    21 - Manufacture of basic pharmaceutical products and pharmaceutical preparations</item>
-        <item>   210 - Manufacture of pharmaceuticals, medicinal chemical and botanical product</item>
-        <item>  2100 - Manufacture of pharmaceuticals, medicinal chemical and botanical products</item>
+        <item>   21 - Manufacture of basic pharmaceutical products and pharmaceutical preparations</item>
+        <item>  210 - Manufacture of pharmaceuticals, medicinal chemical and botanical product</item>
+        <item> 2100 - Manufacture of pharmaceuticals, medicinal chemical and botanical products</item>
         <item>21001 - Manufacture of medicinal active substances</item>
         <item>21002 - Processing of blood</item>
         <item>21003 - Manufacture of medicaments including homeopathic preparations</item>
         <item>21004 - Manufacture of chemical contraceptive products/ medical diagnostic preparations</item>
         <item>21005 - Manufacture of biotech pharmaceuticals</item>
         <item>21009 - Other such activities n.e.c.</item>
-        <item>    22 - Manufacture of rubber and plastics products</item>
-        <item>   221 - Manufacture of rubber products</item>
-        <item>  2211 - Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres</item>
+        <item>   22 - Manufacture of rubber and plastics products</item>
+        <item>  221 - Manufacture of rubber products</item>
+        <item> 2211 - Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres</item>
         <item>22111 - Manufacture of rubber tyres</item>
         <item>22112 - Manufacture of inner tubes for tyres</item>
         <item>22113 - Manufacture of interchangeable tyre treads, tyre flaps, “camelback” strips for retreading tyres etc./ tyre rebuilding and retreading</item>
         <item>22119 - Others n.e.c.</item>
-        <item>  2219 - Manufacture of other rubber products</item>
+        <item> 2219 - Manufacture of other rubber products</item>
         <item>22191 - Manufacture of other products of natural or synthetic rubber (see description for detail)</item>
         <item>22192 - Manufacture of rubber brushes, pipe stems, combs, hair pins etc.</item>
         <item>22199 - Others n.e.c.</item>
-        <item>   222 - Manufacture of plastics products</item>
-        <item>  2220 - Manufacture of plastics products</item>
+        <item>  222 - Manufacture of plastics products</item>
+        <item> 2220 - Manufacture of plastics products</item>
         <item>22201 - Manufacture of semi-manufactures and finished plastic products/ plastic articles for the packing of goods</item>
         <item>22202 - Manufacture of builders’ plastics ware(see note for detail)</item>
         <item>22203 - Manufacture of plastic tableware, kitchenware and toilet articles</item>
         <item>22204 - Manufacture of artificial stone/ plastic signs etc.</item>
         <item>22209 - Manufacture of other diverse plastic products (see note for detail)</item>
-        <item>    23 - Manufacture of other non-metallic mineral products</item>
-        <item>   231 - Manufacture of glass and glass products</item>
-        <item>  2310 - Manufacture of glass and glass products</item>
+        <item>   23 - Manufacture of other non-metallic mineral products</item>
+        <item>  231 - Manufacture of glass and glass products</item>
+        <item> 2310 - Manufacture of glass and glass products</item>
         <item>23101 - Manufacture of flat glass/ glass paving blocks/ insulating units etc.</item>
         <item>23102 - Manufacture of glass mirrors/ bottles and other containers/ drinking glasses etc.</item>
         <item>23103 - Manufacture of laboratory, hygienic or pharmaceutical glassware etc.</item>
         <item>23109 - Others n.e.c. (see description for detail)</item>
-        <item>   239 - Manufacture of non-metallic mineral products n.e.c.</item>
-        <item>  2391 - Manufacture of refractory products</item>
+        <item>  239 - Manufacture of non-metallic mineral products n.e.c.</item>
+        <item> 2391 - Manufacture of refractory products</item>
         <item>23911 - Manufacture of refractory mortars, concretes etc.</item>
         <item>23912 - Manufacture of refractory ceramic goods</item>
         <item>23913 - Manufacture of refractory articles containing magnesite, dolomite or chromite</item>
-        <item>  2392 - Manufacture of clay building materials</item>
+        <item> 2392 - Manufacture of clay building materials</item>
         <item>23921 - Manufacture of non-refractory ceramic hearth or wall tiles, mosaic cubes etc.</item>
         <item>23922 - Manufacture of structural non-refractory clay building materials, like ceramic bricks, roofing tiles, pipes, conduits etc./ flooring blocks in baked clay</item>
         <item>23923 - Manufacture of ceramic sanitary fixtures</item>
-        <item>  2393 - Manufacture of other porcelain and ceramic products</item>
+        <item> 2393 - Manufacture of other porcelain and ceramic products</item>
         <item>23931 - Manufacture of ceramic tableware and other domestic or toilet articles etc.</item>
         <item>23932 - Manufacture of electrical insulators and insulating fittings of ceramics/ magnets</item>
         <item>23933 - Manufacture of ceramic laboratory, chemical and industrial products etc.</item>
         <item>23934 - Manufacture of ceramic furniture</item>
         <item>23939 - Manufacture of other porcelain and ceramic products n.e.c.</item>
-        <item>  2394 - Manufacture of cement, lime and plaster</item>
+        <item> 2394 - Manufacture of cement, lime and plaster</item>
         <item>23941 - Manufacture of clinkers and hydraulic cements, including Portland, aluminous cement, slag cement and super phosphate cements</item>
         <item>23942 - Manufacture of quicklime, slaked lime and hydraulic lime</item>
         <item>23943 - Manufacture of plasters of calcined gypsum or calcined sulphate</item>
         <item>23944 - Manufacture of calcined dolomite</item>
-        <item>  2395 - Manufacture of articles of concrete, cement and plaster</item>
+        <item> 2395 - Manufacture of articles of concrete, cement and plaster</item>
         <item>23951 - Manufacture of precast concrete, cement or artificial stone articles and plaster articles for use in construction</item>
         <item>23952 - Manufacture of prefabricated structural components for buildings or civil engineering of cement, concrete or artificial stone</item>
         <item>23953 - Manufacture of articles of asbestos-cement or cellulose fibre-cement or the like (sheets, panels, tiles,, pipes, troughs, basins, sinks, furniture, frames etc.)</item>
         <item>23959 - Manufacture of other articles of concrete, plaster, cement or artificial stone</item>
-        <item>  2396 - Cutting, shaping and finishing of stone</item>
+        <item> 2396 - Cutting, shaping and finishing of stone</item>
         <item>23961 - Cutting, shaping and finishing of stone for use in construction, in cemeteries, on roads, as roofing etc.</item>
         <item>23962 - Manufacture of stone furniture</item>
-        <item>  2399 - Manufacture of other non-metallic mineral products n.e.c.</item>
+        <item> 2399 - Manufacture of other non-metallic mineral products n.e.c.</item>
         <item>23991 - Manufacture of millstones, sharpening or polishing stones and natural or artificial abrasive products, including abrasive products on a soft base</item>
         <item>23992 - Manufacture of friction material and unmounted articles thereof with a base of mineral substances or of cellulose</item>
         <item>23993 - Manufacture of mineral insulating materials</item>
         <item>23994 - Manufacture of articles of diverse mineral substances</item>
         <item>23995 - Manufacture of articles of asphalt or similar material, e.g. asphalt-based adhesives, coal tar pitch etc.</item>
         <item>23999 - Manufacture of other such products n.e.c.</item>
-        <item>    24 - Manufacture of basic metals</item>
-        <item>   241 - Manufacture of basic iron and steel</item>
-        <item>  2410 - Manufacture of basic iron and steel</item>
+        <item>   24 - Manufacture of basic metals</item>
+        <item>  241 - Manufacture of basic iron and steel</item>
+        <item> 2410 - Manufacture of basic iron and steel</item>
         <item>24101 - Operation of blast furnaces, steel converters, rolling and finishing mills</item>
         <item>24102 - Production of pig iron and spiegeleisen in pigs, blocks or other primary forms, ferro-alloys and ferrous products</item>
         <item>24103 - Production of pure iron, granular iron and iron powder</item>
@@ -590,8 +616,8 @@
         <item>24107 - Manufacture of railway track materials (unassembled rails) of steel</item>
         <item>24108 - Manufacture of welded tubes and pipes of steel/ tube fittings etc.</item>
         <item>24109 - Others n.e.c.</item>
-        <item>   242 - Manufacture of basic precious and other non-ferrous metals</item>
-        <item>  2420 - Manufacture of basic precious and other non-ferrous metals</item>
+        <item>  242 - Manufacture of basic precious and other non-ferrous metals</item>
+        <item> 2420 - Manufacture of basic precious and other non-ferrous metals</item>
         <item>24201 - Production and refining of unwrought or wrought precious metals, precious metal alloys/ semi-products: gold, silver, platinum etc. from ore and scrap</item>
         <item>24202 - Production of aluminium from alumina/ aluminium waste and scrap, Production of aluminium alloys/ semi-manufacturing of aluminium</item>
         <item>24203 - Production of lead, zinc and tin from ores, from refining of lead, zinc and tin waste and scrap, Production of lead, zinc and tin alloys/ semi-manufacturing of lead, zinc and tin</item>
@@ -599,54 +625,54 @@
         <item>24205 - Production of copper alloys/ manufacture of fuse wire or strip/ semi-manufacturing of copper</item>
         <item>24206 - Production of chrome, manganese, nickel etc. from ores or oxides, from refining waste and scrap, Production of alloys and semi-manufacturing of chrome, manganese, nickel etc.</item>
         <item>24209 - Others n.e.c.</item>
-        <item>   243 - Casting of metals</item>
-        <item>  2431 - Casting of iron and steel</item>
+        <item>  243 - Casting of metals</item>
+        <item> 2431 - Casting of iron and steel</item>
         <item>24311 - Casting of semi-finished iron products/ casting of iron castings</item>
         <item>24312 - Casting of semi-finished steel products/ casting of steel castings</item>
         <item>24313 - Manufacture of tubes, pipes and hollow profiles and fittings of cast-iron, manufacture of seamless tubes and pipes of steel/ fittings of cast-steel</item>
         <item>24319 - Others n.e.c.</item>
-        <item>  2432 - Casting of non-ferrous metals</item>
+        <item> 2432 - Casting of non-ferrous metals</item>
         <item>24321 - Casting of semi-finished products of aluminium, magnesium, titanium, zinc etc.</item>
         <item>24322 - Casting of light metal castings</item>
         <item>24323 - Casting of heavy metal castings</item>
         <item>24324 - Casting of precious metal castings</item>
         <item>24325 - Die-casting of non-ferrous metal castings</item>
         <item>24329 - Others n.e.c.</item>
-        <item>    25 - Manufacture of fabricated metal products, except machinery and equipment</item>
-        <item>   251 - Manufacture of structural metal products, tanks, reservoirs and steam generators</item>
-        <item>  2511 - Manufacture of structural metal products</item>
+        <item>   25 - Manufacture of fabricated metal products, except machinery and equipment</item>
+        <item>  251 - Manufacture of structural metal products, tanks, reservoirs and steam generators</item>
+        <item> 2511 - Manufacture of structural metal products</item>
         <item>25111 - Manufacture of metal frameworks or skeletons for construction and parts thereof (towers, bridges etc.)/ Industrial frameworks in metal (frameworks for blast furnaces, lifting and handling equipment etc.)</item>
         <item>25112 - Manufacture of prefabricated buildings mainly of metal, metal doors, windows and their frames, shutters and gates, room partitions etc.</item>
         <item>25119 - Others n.e.c.</item>
-        <item>  2512 - Manufacture of tanks, reservoirs and containers of metal</item>
+        <item> 2512 - Manufacture of tanks, reservoirs and containers of metal</item>
         <item>25121 - Manufacture of reservoirs, tanks and similar containers of metal, of types normally installed as fixtures for storage or manufacturing use</item>
         <item>25122 - Manufacture of metal containers for compressed or liquefied gas</item>
         <item>25123 - Manufacture of central heating boilers and radiators</item>
-        <item>  2513 - Manufacture of steam generators, except central heating hot water boilers</item>
+        <item> 2513 - Manufacture of steam generators, except central heating hot water boilers</item>
         <item>25131 - Manufacture of steam or other vapour generators and auxiliary plant for use with steam generators like condensers, super heaters, steam collectors etc.</item>
         <item>25132 - Manufacture of parts for marine or power boilers/ nuclear reactors etc.</item>
-        <item>   252 - Manufacture of weapons and ammunition</item>
-        <item>  2520 - Manufacture of weapons and ammunition</item>
+        <item>  252 - Manufacture of weapons and ammunition</item>
+        <item> 2520 - Manufacture of weapons and ammunition</item>
         <item>25201 - Manufacture of heavy weapons (artillery, mobile guns, rocket launchers, torpedo tubes, heavy machine guns)</item>
         <item>25202 - Manufacture of small arms (revolvers, shotguns, light machine guns)</item>
         <item>25203 - Manufacture of air or gas guns and pistols/ hunting, sporting or protective firearms</item>
         <item>25204 - Manufacture of war ammunition</item>
         <item>25209 - Others n.e.c.</item>
-        <item>   259 - Manufacture of other fabricated metal products; metalworking service activities</item>
-        <item>  2591 - Forging, pressing, stamping and roll-forming of metal; powder metallurgy</item>
+        <item>  259 - Manufacture of other fabricated metal products; metalworking service activities</item>
+        <item> 2591 - Forging, pressing, stamping and roll-forming of metal; powder metallurgy</item>
         <item>25911 - Forging, pressing, stamping and roll-forming of metal</item>
         <item>25912 - Powder metallurgy: production of metal objects directly from metal powders</item>
-        <item>  2592 - Treatment and coating of metals; machining</item>
+        <item> 2592 - Treatment and coating of metals; machining</item>
         <item>25921 - Plating, anodizing etc., heat treatment, deburring, sandblasting, tumbling, cleaning of metals</item>
         <item>25922 - Colouring and engraving, non-metallic coating, hardening, buffing of metals</item>
         <item>25923 - Boring, turning, milling, eroding, planning, lapping, broaching, levelling, sawing, grinding, sharpening, polishing, welding, splicing etc. of metalwork pieces</item>
         <item>25924 - Cutting of and writing on metals by means of laser beams</item>
-        <item>  2593 - Manufacture of cutlery, hand tools and general hardware</item>
+        <item> 2593 - Manufacture of cutlery, hand tools and general hardware</item>
         <item>25931 - Manufacture of cutlery</item>
         <item>25932 - Manufacture of knives and cutting blades, hand tools, non-power-driven agricultural hand tools, saws and saw blades for machines or for mechanical appliances</item>
         <item>25933 - Manufacture of padlocks, locks, keys, hinges and the like, hardware for buildings, furniture, vehicles etc.</item>
         <item>25934 - Manufacture of other tools of such nature n.e.c.</item>
-        <item>  2599 - Manufacture of other fabricated metal products n.e.c.</item>
+        <item> 2599 - Manufacture of other fabricated metal products n.e.c.</item>
         <item>25991 - Manufacture of cans, drums, buckets, boxes, tins and cans for food products, metal cable, plaited bands and similar articles, </item>
         <item>25992 - Manufacture of uninsulated metal cable or insulated cable not capable of being used as a conductor of electricity, articles made of wire etc.</item>
         <item>25993 - Manufacture of screw machine products, nails and pins, bolts, screws, nuts, springs, chains etc.</item>
@@ -655,25 +681,25 @@
         <item>25996 - Manufacture of safes, strongboxes, armoured doors etc.</item>
         <item>25997 - Manufacture of various metal articles</item>
         <item>25999 - Others n.e.c.</item>
-        <item>    26 - Manufacture of computer, electronic and optical products</item>
-        <item>   261 - Manufacture of electronic components and boards</item>
-        <item>  2610 - Manufacture of electronic components and boards</item>
+        <item>   26 - Manufacture of computer, electronic and optical products</item>
+        <item>  261 - Manufacture of electronic components and boards</item>
+        <item> 2610 - Manufacture of electronic components and boards</item>
         <item>26101 - Manufacture of capacitors, electronic, resistors, electronic, microprocessors, bare printed circuit boards, electron tubes, electronic connectors, integrated circuits</item>
         <item>26102 - Manufacture of diodes, transistors and related discrete devices</item>
         <item>26103 - Manufacture of inductors (e.g. chokes, coils, transformers), electronic component type</item>
         <item>26104 - Manufacture of electronic crystals and crystal assemblies</item>
         <item>26105 - Manufacture of interface cards (e.g. sound, video, controllers, network, modems)</item>
         <item>26109 - Others n.e.c.</item>
-        <item>   262 - Manufacture of computers and peripheral equipment</item>
-        <item>  2620 - Manufacture of computers and peripheral equipment</item>
+        <item>  262 - Manufacture of computers and peripheral equipment</item>
+        <item> 2620 - Manufacture of computers and peripheral equipment</item>
         <item>26201 - Manufacture of desktop, laptop, hand-held,  main frame computers</item>
         <item>26202 - Manufacture of magnetic disk drives, flash drives and other storage devices</item>
         <item>26203 - Manufacture of optical (e.g. CD-RW, CD-ROM, DVD-ROM, DVD-RW) disk drives etc.</item>
         <item>26204 - Manufacture of printers, monitors, keyboards etc.</item>
         <item>26205 - Manufacture of computer servers, scanners, projectors etc.</item>
         <item>26209 - Others n.e.c.</item>
-        <item>   263 - Manufacture of communication equipment</item>
-        <item>  2630 - Manufacture of communication equipment</item>
+        <item>  263 - Manufacture of communication equipment</item>
+        <item> 2630 - Manufacture of communication equipment</item>
         <item>26301 - Manufacture of switching equipment, cordless telephones, private branch exchange (PBX) equipment, telephone and facsimile equipment</item>
         <item>26302 - Manufacture of data communications equipment, such as bridges, routers, and gate-ways</item>
         <item>26303 - Manufacture of cable television equipment, transmitting and receiving antenna</item>
@@ -682,16 +708,16 @@
         <item>26306 - Manufacture of modems, carrier equipment</item>
         <item>26307 - Manufacture of burglar and fire alarm systems, sending signals to a control station, remote controls</item>
         <item>26309 - Others n.e.c.</item>
-        <item>   264 - Manufacture of consumer electronics</item>
-        <item>  2640 - Manufacture of consumer electronics</item>
+        <item>  264 - Manufacture of consumer electronics</item>
+        <item> 2640 - Manufacture of consumer electronics</item>
         <item>26401 - Manufacture of video cassette recorders and duplicating equipment</item>
         <item>26402 - Manufacture of televisions, television monitors and displays</item>
         <item>26403 - Manufacture of audio recording and duplicating systems, stereo equipment</item>
         <item>26404 - Manufacture of radio receivers, speaker systems, amplifiers for musical instruments and public address systems</item>
         <item>26405 - Manufacture of microphones, CD and DVD players, headphones</item>
         <item>26409 - Others n.e.c.</item>
-        <item>   265 - Manufacture of measuring, testing, navigating and control equipment; watches and clocks</item>
-        <item>  2651 - Manufacture of measuring, testing, navigating and control equipment</item>
+        <item>  265 - Manufacture of measuring, testing, navigating and control equipment; watches and clocks</item>
+        <item> 2651 - Manufacture of measuring, testing, navigating and control equipment</item>
         <item>26511 - Manufacture of aircraft engine instruments</item>
         <item>26512 - Manufacture of testing equipment, i,e., automotive emissions testing equipment, meteorological instruments, physical properties testing and inspection equipment, instruments for measuring and testing electricity andelectrical signals</item>
         <item>26513 - Manufacture of surveying instruments</item>
@@ -699,103 +725,103 @@
         <item>26515 - Manufacture of detecting and navigating equipment, i.e., mine detectors, pulse (signal) generators; metal detectors, radiation detection and monitoring instruments, GPS devices, radar equipment</item>
         <item>26516 - Manufacture of laboratory scales, balances, incubators, and miscellaneous laboratory apparatus for measuring, testing, etc.</item>
         <item>26519 - Manufacture of others n.e.c.</item>
-        <item>  2652 - Manufacture of watches and clocks</item>
+        <item> 2652 - Manufacture of watches and clocks</item>
         <item>26521 - Manufacture of watches and clocks, watch and clock cases, components for clocks and watches</item>
         <item>26522 - Manufacture of time-recording equipment such as parking meters,</item>
-        <item> - time clocks, time/date stamps, process timers etc.</item>
-        <item>   266 - Manufacture of irradiation, electro medical and electrotherapeutic equipment</item>
-        <item>  2660 - Manufacture of irradiation, electro medical and electrotherapeutic equipment</item>
+        <item>- time clocks, time/date stamps, process timers etc.</item>
+        <item>  266 - Manufacture of irradiation, electro medical and electrotherapeutic equipment</item>
+        <item> 2660 - Manufacture of irradiation, electro medical and electrotherapeutic equipment</item>
         <item>26601 - Manufacture of CT / PET scanners / magnetic resonance imaging (MRI) equipment / medical ultrasound equipment</item>
         <item>26602 - Manufacture of electrocardiographs / electro medical endoscopic equipment / medical laser equipment</item>
         <item>26603 - Manufacture of pacemakers / hearing aids etc.</item>
         <item>26604 - Manufacture of beta-, gamma, X-ray or other radiation equipment / food and milk irradiation equipment etc.</item>
-        <item>   267 - Manufacture of optical instruments and photographic equipment</item>
-        <item>  2670 - Manufacture of optical instruments and photographic equipment</item>
+        <item>  267 - Manufacture of optical instruments and photographic equipment</item>
+        <item> 2670 - Manufacture of optical instruments and photographic equipment</item>
         <item>26701 - Manufacture of lenses and prisms / optical mirrors</item>
         <item>26702 - Manufacture of optical microscopes, binoculars and telescopes</item>
         <item>26703 - Manufacture of optical magnifying / gun sighting / positioning instruments etc.</item>
         <item>26704 - Manufacture of optical measuring and checking devices and instruments</item>
         <item>26705 - Manufacture of film cameras and digital cameras</item>
         <item>26706 - Manufacture of motion picture and slide projectors / overhead transparency projectors / laser assemblies etc.</item>
-        <item>   268 - Manufacture of magnetic and optical media</item>
-        <item>  2680 - Manufacture of magnetic and optical media</item>
+        <item>  268 - Manufacture of magnetic and optical media</item>
+        <item> 2680 - Manufacture of magnetic and optical media</item>
         <item>26801 - Manufacture of blank magnetic audio and video tapes/ cassettes</item>
         <item>26802 - Manufacture of blank diskettes/ blank optical discs/ hard drive media</item>
-        <item>    27 - Manufacture of electrical equipment</item>
-        <item>   271 - Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus</item>
-        <item>  2710 - Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus</item>
+        <item>   27 - Manufacture of electrical equipment</item>
+        <item>  271 - Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus</item>
+        <item> 2710 - Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus</item>
         <item>27101 - Manufacture of distribution electric / arc-welding transformers / substation transformers for electric power distribution</item>
         <item>27102 - Manufacture of transmission and distribution voltage regulators / electric motors / power generators / prime mover generator sets / armatures etc.</item>
         <item>27103 - Manufacture of power circuit breakers / surge suppressors / control panels for electric power distribution / electrical relays etc.</item>
         <item>27104 - Manufacture of duct for electrical switchboard apparatus / electric fuses / power switching equipment / electric power switches</item>
         <item>27109 - Others n.e.c.</item>
-        <item>   272 - Manufacture of batteries and accumulators</item>
-        <item>  2720 - Manufacture of batteries and accumulators</item>
+        <item>  272 - Manufacture of batteries and accumulators</item>
+        <item> 2720 - Manufacture of batteries and accumulators</item>
         <item>27201 - Manufacture of primary cells and primary batteries</item>
         <item>27202 - Manufacture of electric accumulators, including parts thereof</item>
         <item>27203 - Manufacture of lead acid / NiCad / NiMH / lithium / dry- / wet cell etc. batteries</item>
         <item>27209 - Others n.e.c.</item>
-        <item>   273 - Manufacture of wiring and wiring devices</item>
-        <item>  2731 - Manufacture of fibre optic cables</item>
+        <item>  273 - Manufacture of wiring and wiring devices</item>
+        <item> 2731 - Manufacture of fibre optic cables</item>
         <item>27310 - Manufacture of fibre optic cable for data transmission or live transmission of images etc.</item>
-        <item>  2732 - Manufacture of other electronic and electric wires and cables</item>
+        <item> 2732 - Manufacture of other electronic and electric wires and cables</item>
         <item>27320 - Manufacture of insulated wire and cable, made of steel, copper, aluminium</item>
-        <item>  2733 - Manufacture of wiring devices</item>
+        <item> 2733 - Manufacture of wiring devices</item>
         <item>27331 - Manufacture of bus bars, electrical conductors, GFCI (ground fault circuit interrupters), lamp holders, coils, switches/ boxes for electrical wiring, electrical outlets and sockets, electrical conduit and fitting etc.</item>
         <item>27332 - Manufacture of transmission pole and line hardware</item>
         <item>27333 - Manufacture of plastic non current-carrying wiring devices including plastic junction boxes, face plates, and similar, plastic pole line fittings etc.</item>
-        <item>   274 - Manufacture of electric lighting equipment</item>
-        <item>  2740 - Manufacture of electric lighting equipment</item>
+        <item>  274 - Manufacture of electric lighting equipment</item>
+        <item> 2740 - Manufacture of electric lighting equipment</item>
         <item>27401 - Manufacture of lamps, fixtures and bulbs, ceiling lighting fixtures, chandeliers, table lamps, flashlights, electric insect lamps, lanterns, spotlights etc.</item>
         <item>27402 - Manufacture of street lighting fixtures, lighting equipment for transportation equipment, non-electrical lighting equipment etc.</item>
         <item>27409 - Others n.e.c.</item>
-        <item>   275 - `</item>
-        <item>  2750 - Manufacture of domestic appliances</item>
+        <item>  275 - `</item>
+        <item> 2750 - Manufacture of domestic appliances</item>
         <item>27501 - Manufacture of domestic electric appliances (see description for detail)</item>
         <item>27502 - Manufacture of domestic electrothermic appliances(see description for detail)</item>
         <item>27503 - Manufacture of domestic non-electric cooking and heating equipment</item>
-        <item>   279 - Manufacture of other electrical equipment</item>
-        <item>  2790 - Manufacture of other electrical equipment</item>
+        <item>  279 - Manufacture of other electrical equipment</item>
+        <item> 2790 - Manufacture of other electrical equipment</item>
         <item>27901 - Manufacture of battery chargers, door opening and closing devices, electrical, bells, tanning beds</item>
         <item>27902 - Manufacture of uninterruptible power supplies (UPS), power supplies</item>
         <item>27903 - Manufacture of appliance cords, extension cords, and other electrical cord sets with insulated wire and connectors, electrical capacitors, resistors, condensers and similar components, electromagnets, sirens etc.</item>
         <item>27904 - Manufacture of electronic scoreboards, electrical signs, manufacture of electrical signalling equipment such as traffic lights and pedestrian signalling equipment</item>
         <item>27905 - Manufacture of electrical welding and soldering equipment, including hand-held soldering irons</item>
         <item>27909 - Others n.e.c.</item>
-        <item>    28 - Manufacture of machinery and equipment n.e.c.</item>
-        <item>   281 - Manufacture of general-purpose machinery</item>
-        <item>  2811 - Manufacture of engines and turbines, except aircraft, vehicle and cycle engines</item>
+        <item>   28 - Manufacture of machinery and equipment n.e.c.</item>
+        <item>  281 - Manufacture of general-purpose machinery</item>
+        <item> 2811 - Manufacture of engines and turbines, except aircraft, vehicle and cycle engines</item>
         <item>28111 - Manufacture of internal combustion piston engines like marine/ railway engines, and pistons, piston rings, carburettors etc., inlet and exhaust valves etc.</item>
         <item>28112 - Manufacture of turbines and parts thereof, boiler-turbine sets, turbine-generator sets etc.</item>
-        <item>  2812 - Manufacture of fluid power equipment</item>
+        <item> 2812 - Manufacture of fluid power equipment</item>
         <item>28121 - Manufacture of hydraulic and pneumatic components, manufacture of air preparation equipment</item>
         <item>28122 - Manufacture of fluid power systems, hydraulic transmission equipment</item>
-        <item>  2813 - Manufacture of other pumps, compressors, taps and valves</item>
+        <item> 2813 - Manufacture of other pumps, compressors, taps and valves</item>
         <item>28131 - Manufacture of air or vacuum pumps, air or other gas compressors</item>
         <item>28132 - Manufacture of pumps for liquids whether or not fitted with a measuring device</item>
         <item>28133 - Manufacture of pumps designed for fitting to internal combustion engines: oil, water and fuel pumps for motor vehicles etc.</item>
         <item>28134 - Manufacture of industrial taps and valves, including regulating valves and intake taps, sanitary taps and valves, heating taps and valves, hand pumps etc.</item>
-        <item>  2814 - Manufacture of bearings, gears, gearing and driving elements</item>
+        <item> 2814 - Manufacture of bearings, gears, gearing and driving elements</item>
         <item>28141 - Manufacture of ball and roller bearings and parts thereof</item>
         <item>28142 - Manufacture of mechanical power transmission equipment</item>
         <item>28143 - Manufacture of gears, gearing and gear boxes and other speed changers, clutches and shaft couplings, flywheels and pulleys, power transmission chain etc.</item>
-        <item>  2815 - Manufacture of ovens, furnaces and furnace burners</item>
+        <item> 2815 - Manufacture of ovens, furnaces and furnace burners</item>
         <item>28151 - Manufacture of electrical and other furnaces, ovens, incinerators, burners etc.</item>
         <item>28152 - Manufacture of permanent mount electric heaters, non-electric household heating equipment etc.</item>
-        <item>  2816 - Manufacture of lifting and handling equipment</item>
+        <item> 2816 - Manufacture of lifting and handling equipment</item>
         <item>28161 - Manufacture of hand-operated or power-driven lifting, handling, loading or unloading machinery (see note for detail)</item>
         <item>28162 - Manufacture of conveyors, telfers, lifts, escalators and moving walkways etc.</item>
         <item>28163 - Manufacture of parts specialized for lifting and handling equipment</item>
-        <item>  2817 - Manufacture of office machinery and equipment (except computers and peripheral equipment)</item>
+        <item> 2817 - Manufacture of office machinery and equipment (except computers and peripheral equipment)</item>
         <item>28171 - Manufacture of calculating machines, adding machines, calculators, mail handling machines, typewriters, stenography machines</item>
         <item>28172 - Manufacture of office-type binding equipment</item>
         <item>28173 - Manufacture of cheque writing, coin counting and coin wrapping machines</item>
         <item>28174 - Manufacture of pencil sharpeners, staplers and staple removers, hole punches, </item>
         <item>28175 - Manufacture of photocopy machines, toner cartridges, blackboards etc.</item>
         <item>28179 - Others n.e.c.</item>
-        <item>  2818 - Manufacture of power-driven hand tools</item>
+        <item> 2818 - Manufacture of power-driven hand tools</item>
         <item>28180 - Manufacture of hand tools, with self-contained electric or non-electric motor or pneumatic drive (see note for detail)</item>
-        <item>  2819 - Manufacture of other general-purpose machinery</item>
+        <item> 2819 - Manufacture of other general-purpose machinery</item>
         <item>28191 - Manufacture of industrial refrigerating or freezing equipment, air-conditioning machines, non-domestic fans etc.</item>
         <item>28192 - Manufacture of weighing, packing and wrapping machinery</item>
         <item>28193 - Manufacture of filtering or purifying machinery and apparatus for liquids, equipment for projecting, dispersing or spraying liquids or powders</item>
@@ -805,8 +831,8 @@
         <item>28197 - Manufacture of automatic goods vending machines</item>
         <item>28198 - Manufacture of parts for general-purpose machinery</item>
         <item>28199 - Others n.e.c.</item>
-        <item>   282 - Manufacture of special-purpose machinery</item>
-        <item>  2821 - Manufacture of agricultural and forestry machinery</item>
+        <item>  282 - Manufacture of special-purpose machinery</item>
+        <item> 2821 - Manufacture of agricultural and forestry machinery</item>
         <item>28211 - Manufacture of tractors used in agriculture and forestry</item>
         <item>28212 - Manufacture of mowers, including lawnmowers</item>
         <item>28213 - Manufacture of agricultural self-loading or self-unloading trailers or semi-trailers</item>
@@ -815,7 +841,7 @@
         <item>28216 - Manufacture of milking machines</item>
         <item>28217 - Manufacture of spraying machinery for agricultural use</item>
         <item>28219 - Manufacture of diverse agricultural machinery (see note for detail)</item>
-        <item>  2822 - Manufacture of metal-forming machinery and machine tools</item>
+        <item> 2822 - Manufacture of metal-forming machinery and machine tools</item>
         <item>28221 - Manufacture of machine tools for working metals and other materials  including those using a laser beam, ultrasonic waves, plasma arc, magnetic pulse etc.</item>
         <item>28222 - Manufacture of machine tools for turning, drilling, milling, shaping, planning, boring, grinding etc.</item>
         <item>28223 - Manufacture of stamping or pressing machine tools</item>
@@ -824,10 +850,10 @@
         <item>28226 - Manufacture of electroplating machinery</item>
         <item>28227 - Manufacture of parts and accessories for the machine tools listed above</item>
         <item>28229 - Others n.e.c.</item>
-        <item>  2823 - Manufacture of machinery for metallurgy</item>
+        <item> 2823 - Manufacture of machinery for metallurgy</item>
         <item>28231 - Manufacture of machines and equipment for handling hot metals like converters, ingot moulds, ladles, casting machines etc.</item>
         <item>28232 - Manufacture of metal-rolling mills and rolls for such mills</item>
-        <item>  2824 - Manufacture of machinery for mining, quarrying and construction</item>
+        <item> 2824 - Manufacture of machinery for mining, quarrying and construction</item>
         <item>28241 - Manufacture of continuous-action elevators and conveyors for underground use</item>
         <item>28242 - Manufacture of boring, cutting, sinking and tunnelling machinery</item>
         <item>28243 - Manufacture of machinery for treating minerals by screening, sorting, separating, washing, crushing etc.</item>
@@ -837,7 +863,7 @@
         <item>28247 - Manufacture of track laying tractors and tractors used in construction or mining</item>
         <item>28248 - Manufacture of off-road dumping trucks</item>
         <item>28249 - Others n.e.c.</item>
-        <item>  2825 - Manufacture of machinery for food, beverage and tobacco processing</item>
+        <item> 2825 - Manufacture of machinery for food, beverage and tobacco processing</item>
         <item>28251 - Manufacture of agricultural dryers</item>
         <item>28252 - Manufacture of machinery for the dairy industry</item>
         <item>28253 - Manufacture of machinery for the grain milling industry</item>
@@ -847,7 +873,7 @@
         <item>28257 - Manufacture of machinery for the preparation of tobacco and for the making of cigarettes or cigars, or for pipe or chewing tobacco or snuff</item>
         <item>28258 - Manufacture of machinery for the preparation of food in hotels and restaurants</item>
         <item>28259 - Manufacture of machines and equipment to process diverse foods</item>
-        <item>  2826 - Manufacture of machinery for textile, apparel and leather production</item>
+        <item> 2826 - Manufacture of machinery for textile, apparel and leather production</item>
         <item>28261 - Manufacture of textile machinery</item>
         <item>28262 - Manufacture of auxiliary machines or equipment for textile machinery</item>
         <item>28263 - Manufacture of textile printing machinery</item>
@@ -856,7 +882,7 @@
         <item>28266 - Manufacture of sewing machines</item>
         <item>28267 - Manufacture of machines for producing or finishing felt or non-wovens</item>
         <item>28268 - Manufacture of leather machines</item>
-        <item>  2829 - Manufacture of other special-purpose machinery</item>
+        <item> 2829 - Manufacture of other special-purpose machinery</item>
         <item>28291 - Manufacture of machinery for making and drying paper pulp, paper and paperboard etc. and machinery for producing articles of paper or paperboard</item>
         <item>28292 - Manufacture of machinery for working soft rubber or plastics or for the manufacture of products of these materials</item>
         <item>28293 - Manufacture of printing and bookbinding machines and machines for activities supporting printing on a variety of materials</item>
@@ -865,95 +891,95 @@
         <item>28296 - Manufacture of diverse special-purpose machinery and equipment</item>
         <item>28297 - Manufacture of tire alignment and balancing equipment; balancing equipment (except wheel balancing)</item>
         <item>28299 - Others n.e.c.</item>
-        <item>    29 - Manufacture of motor vehicles, trailers and semi-trailers</item>
-        <item>   291 - Manufacture of motor vehicles</item>
-        <item>  2910 - Manufacture of motor vehicles</item>
+        <item>   29 - Manufacture of motor vehicles, trailers and semi-trailers</item>
+        <item>  291 - Manufacture of motor vehicles</item>
+        <item> 2910 - Manufacture of motor vehicles</item>
         <item>29101 - Manufacture of passenger cars, commercial vehicles, buses, coaches etc.</item>
         <item>29102 - Manufacture of motor vehicle engines, chassis fitted with engines</item>
         <item>29103 - Manufacture of other motor vehicles</item>
-        <item>   292 - Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers</item>
-        <item>  2920 - Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers</item>
+        <item>  292 - Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers</item>
+        <item> 2920 - Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers</item>
         <item>29201 - Manufacture of bodies, including cabs for motor vehicles and outfitting of all types</item>
         <item>29202 - Manufacture of trailers and semi-trailers</item>
         <item>29203 - Manufacture of containers for carriage by one or more modes of transport</item>
-        <item>   293 - Manufacture of parts and accessories for motor vehicles</item>
-        <item>  2930 - Manufacture of parts and accessories for motor vehicles</item>
+        <item>  293 - Manufacture of parts and accessories for motor vehicles</item>
+        <item> 2930 - Manufacture of parts and accessories for motor vehicles</item>
         <item>29301 - Manufacture of diverse parts and accessories for motor vehicles</item>
         <item>29302 - Manufacture of parts and accessories of bodies for motor vehicles, car seats etc.</item>
         <item>29303 - Manufacture of motor vehicle electrical equipment</item>
-        <item>    30 - Manufacture of other transport equipment</item>
-        <item>   301 - Building of ships and boats</item>
-        <item>  301130111 - Building of ships and floating structures</item>
+        <item>   30 - Manufacture of other transport equipment</item>
+        <item>  301 - Building of ships and boats</item>
+        <item> 301130111 - Building of ships and floating structures</item>
         <item>30112 - Building of commercial vessels</item>
         <item>30113 - Building of warships</item>
         <item>30114 - Building of fishing boats and fish-processing factory vessels</item>
         <item>30115 - Construction of drilling platforms, floating structures etc.</item>
-        <item>  3012 - Building of pleasure and sporting boats</item>
+        <item> 3012 - Building of pleasure and sporting boats</item>
         <item>30121 - Manufacture of inflatable boats and rafts, sporting boats etc.</item>
         <item>30122 - Building of sailboats, motor boats, recreation-type hovercraft, personal watercraft etc.</item>
-        <item>   302 - Manufacture of railway locomotives and rolling stock</item>
-        <item>  3020 - Manufacture of railway locomotives and rolling stock</item>
+        <item>  302 - Manufacture of railway locomotives and rolling stock</item>
+        <item> 3020 - Manufacture of railway locomotives and rolling stock</item>
         <item>30201 - Manufacture of electric, diesel, steam and other rail locomotives, mining locomotives and mining rail cars</item>
         <item>30202 - Manufacture of self-propelled railway or tramway coaches, vans and trucks, maintenance or service vehicles</item>
         <item>30203 - Manufacture of railway or tramway rolling stock, not self-propelled and their specialized parts, railway car seats etc.</item>
         <item>30204 - Manufacture of mechanical and electromechanical signalling, safety and traffic control equipment for railways, tramways, inland waterways, roads, parking facilities, airfields etc.</item>
-        <item>   303 - Manufacture of air and spacecraft and related machinery</item>
-        <item>  3030 - Manufacture of air and spacecraft and related machinery</item>
+        <item>  303 - Manufacture of air and spacecraft and related machinery</item>
+        <item> 3030 - Manufacture of air and spacecraft and related machinery</item>
         <item>30301 - Manufacture of airplanes for the transport of goods or passengers, parts and accessories of the aircraft, for use by the defence forces, helicopters, gliders, hang-gliders, dirigibles and hot air balloons</item>
         <item>30302 - Manufacture of ground flying trainers</item>
         <item>30309 - Others n.e.c.</item>
-        <item>   304 - Manufacture of military fighting vehicles</item>
-        <item>  3040 - Manufacture of military fighting vehicles</item>
+        <item>  304 - Manufacture of military fighting vehicles</item>
+        <item> 3040 - Manufacture of military fighting vehicles</item>
         <item>30401 - manufacture of tanks</item>
         <item>30402 - manufacture of armoured amphibious and other military fighting vehicles </item>
-        <item>   309 - Manufacture of transport equipment n.e.c.</item>
-        <item>  3091 - Manufacture of motorcycles</item>
+        <item>  309 - Manufacture of transport equipment n.e.c.</item>
+        <item> 3091 - Manufacture of motorcycles</item>
         <item>30911 - Manufacture of motorcycles, mopeds and cycles fitted with an auxiliary engine, engines for motorcycles, sidecars etc.</item>
         <item>30912 - Manufacture of parts and accessories for motorcycles</item>
-        <item>  3092 - Manufacture of bicycles and invalid carriages</item>
+        <item> 3092 - Manufacture of bicycles and invalid carriages</item>
         <item>30921 - Manufacture of non-motorized bicycles and other cycles, parts and accessories of bicycles etc.</item>
         <item>30922 - Manufacture of invalid carriages, their parts and accessories, baby carriages etc.</item>
-        <item>  3099 - Manufacture of other transport equipment n.e.c.</item>
+        <item> 3099 - Manufacture of other transport equipment n.e.c.</item>
         <item>30991 - Manufacture of hand-propelled vehicles: luggage trucks, handcarts, sledges, shopping carts etc.</item>
         <item>30992 - Manufacture of vehicles drawn by animals: sulkies, donkey-carts, hearses etc.</item>
-        <item>    31 - Manufacture of furniture</item>
-        <item>   310 - Manufacture of furniture</item>
-        <item>  3100 - Manufacture of furniture</item>
+        <item>   31 - Manufacture of furniture</item>
+        <item>  310 - Manufacture of furniture</item>
+        <item> 3100 - Manufacture of furniture</item>
         <item>31001 - manufacture of chairs and seats, sofas, sofa beds and sofa sets</item>
         <item>31002 - manufacture of special furniture for shops: counters, display cases, shelves etc., for churches, schools, restaurants</item>
         <item>31003 - manufacture of office furniture</item>
         <item>31004 - manufacture of kitchen furniture, furniture for bedrooms etc., cabinets</item>
         <item>31005 - manufacture of laboratory benches, stools and other laboratory seating, laboratory furniture (e.g. cabinets and tables)</item>
         <item>31009 - Others n.e.c.</item>
-        <item>    32 - Other manufacturing</item>
-        <item>   321 - Manufacture of jewellery, bijouterie and related articles</item>
-        <item>  3211 - Manufacture of jewellery and related articles</item>
+        <item>   32 - Other manufacturing</item>
+        <item>  321 - Manufacture of jewellery, bijouterie and related articles</item>
+        <item> 3211 - Manufacture of jewellery and related articles</item>
         <item>32111 - Production of worked pearls</item>
         <item>32112 - Production of precious and semi-precious stones / diamonds in the worked state</item>
         <item>32113 - Manufacture of jewellery, goldsmiths’ articles</item>
         <item>32114 - Manufacture of precious metal watch bands, wristbands, watch straps and cigarette cases etc.</item>
-        <item>  3212 - Manufacture of imitation jewellery and related articles</item>
+        <item> 3212 - Manufacture of imitation jewellery and related articles</item>
         <item>32121 - Manufacture of costume or imitation jewellery</item>
         <item>32122 - Manufacture of metal watch bands (except precious metal)</item>
-        <item>   322 - Manufacture of musical instruments</item>
-        <item>  3220 - Manufacture of musical instruments</item>
+        <item>  322 - Manufacture of musical instruments</item>
+        <item> 3220 - Manufacture of musical instruments</item>
         <item>32201 - Manufacture of stringed instruments, keyboard stringed instruments, harmoniums etc.</item>
         <item>32202 - Manufacture of musical instruments, the sound of which is produced electronically, musical boxes, fairground organs, calliopes etc., instrument parts and accessories</item>
         <item>32209 - Others n.e.c.</item>
-        <item>   323 - Manufacture of sports goods</item>
-        <item>  3230 - Manufacture of sports goods</item>
+        <item>  323 - Manufacture of sports goods</item>
+        <item> 3230 - Manufacture of sports goods</item>
         <item>32301 - Manufacture of foot balls</item>
         <item>32302 - Manufacture of rackets, bats</item>
         <item>32309 - Manufacture of other articles and equipment for sports, outdoor and indoor games, of any material (see note for detail)</item>
-        <item>   324 - Manufacture of games and toys</item>
-        <item>  3240 - Manufacture of games and toys</item>
+        <item>  324 - Manufacture of games and toys</item>
+        <item> 3240 - Manufacture of games and toys</item>
         <item>32401 - Manufacture of dolls and doll garments, parts and accessories, action figures, toy animals, musical instruments, </item>
         <item>32402 - Manufacture of playing cards, games, chess etc., </item>
         <item>32403 - Manufacture of coin-operated games, billiards, special tables for games, etc.</item>
         <item>32404 - Manufacture of puzzles and similar articles</item>
         <item>32409 - Others n.e.c.</item>
-        <item>   325 - Manufacture of medical and dental instruments and supplies</item>
-        <item>  3250 - Manufacture of medical and dental instruments and supplies</item>
+        <item>  325 - Manufacture of medical and dental instruments and supplies</item>
+        <item> 3250 - Manufacture of medical and dental instruments and supplies</item>
         <item>32501 - Manufacture of surgical drapes and sterile string and tissue</item>
         <item>32502 - Manufacture of dental fillings and cements (except denture adhesives), dental wax and other dental plaster preparations</item>
         <item>32503 - Manufacture of dental laboratory furnaces</item>
@@ -963,21 +989,21 @@
         <item>32507 - Manufacture of bone plates and screws, syringes, needles, catheters, cannulae, etc., artificial teeth, bridges, etc., medical thermometers, bone reconstruction cements</item>
         <item>32508 - Manufacture of ophthalmic goods, eyeglasses, sunglasses, lenses ground to prescription, contact lenses, safety goggles</item>
         <item>32509 - Others n.e.c.</item>
-        <item>   329 - Other manufacturing n.e.c.</item>
-        <item>  3290 - Other manufacturing n.e.c.</item>
+        <item>  329 - Other manufacturing n.e.c.</item>
+        <item> 3290 - Other manufacturing n.e.c.</item>
         <item>32901 - Manufacture of protective safety equipment (see note for detail)</item>
         <item>32902 - Manufacture of brooms and brushes, including brushes constituting parts of machines, shoe and clothes brushes, </item>
         <item>32903 - Manufacture of pens and pencils of all kinds whether or not mechanical, pencil leads, stamps etc.</item>
         <item>32909 - Others n.e.c.</item>
-        <item>    33 - Repair and installation of machinery and equipment</item>
-        <item>   331 - Repair of fabricated metal products, machinery and equipment</item>
-        <item>  3311 - Repair of fabricated metal products</item>
+        <item>   33 - Repair and installation of machinery and equipment</item>
+        <item>  331 - Repair of fabricated metal products, machinery and equipment</item>
+        <item> 3311 - Repair of fabricated metal products</item>
         <item>33111 - Repair of metal tanks, reservoirs and containers, pipes and pipelines, mobile welding repair, steel shipping drums etc.</item>
         <item>33112 - Repair and maintenance of steam or other vapour generators and their auxiliary plants etc.</item>
         <item>33113 - Repair and maintenance of parts for marine or power boilers, central heating boilers and radiators etc.</item>
         <item>33114 - Repair and maintenance of fire arms and ordnance</item>
         <item>33119 - Others n.e.c.</item>
-        <item>  3312 - Repair of machinery</item>
+        <item> 3312 - Repair of machinery</item>
         <item>33121 - Repair and maintenance of non-automotive engines, e.g. ship or rail engines</item>
         <item>33122 - Repair and maintenance of pumps and related equipment, fluid power equipment, valves, gearing and driving elements</item>
         <item>33123 - Repair and maintenance of industrial process furnaces, materials handling equipment</item>
@@ -987,28 +1013,28 @@
         <item>33127 - Repair and maintenance of miscellaneous machinery</item>
         <item>33128 - Repair and maintenance of weighing equipment, vending machines, photocopy machines, calculators, typewriters etc.</item>
         <item>33129 - Others n.e.c.</item>
-        <item>  3313 - Repair of electronic and optical equipment</item>
+        <item> 3313 - Repair of electronic and optical equipment</item>
         <item>33131 - Repair and maintenance of the measuring, testing, navigating and control equipment of group 265</item>
         <item>33132 - Repair and maintenance of irradiation, electro-medical and electrotherapeutic equipment of class 2660</item>
         <item>33133 - Repair and maintenance of optical instruments and equipment of class 2670, if the use is mainly commercial</item>
-        <item>  3314 - Repair of electrical equipment</item>
+        <item> 3314 - Repair of electrical equipment</item>
         <item>33141 - Repair and maintenance of power, distribution, and specialty transformers</item>
         <item>33142 - Repair and maintenance of electric motors, generators etc</item>
         <item>33143 - Repair and maintenance of switchgear and switchboard apparatus, relays and industrial controls, electric lighting equipment, primary and storage batteries etc.</item>
         <item>33144 - Repair and maintenance of current-carrying wiring devices and non current-carrying wiring devices for wiring electrical circuits etc.</item>
-        <item>  3315 - Repair of transport equipment, except motor vehicles</item>
+        <item> 3315 - Repair of transport equipment, except motor vehicles</item>
         <item>33151 - Repair and routine maintenance of ships</item>
         <item>33152 - Repair and maintenance of pleasure boats</item>
         <item>33153 - Repair and maintenance of locomotives and railroad cars (except factory rebuilding or factory conversion)</item>
         <item>33154 - Repair and maintenance of aircraft (except factory conversion, factory overhaul, factory rebuilding), aircraft engines</item>
         <item>33155 - Repair of animal drawn buggies and wagons</item>
-        <item>  3319 - Repair of other equipment</item>
+        <item> 3319 - Repair of other equipment</item>
         <item>33191 - repair of fishing nets, including mending, ropes, riggings, canvas and tarps, fertilizer and chemical storage bags, </item>
         <item>33192 - repair or reconditioning of wooden pallets, shipping drums or barrels, and similar items, repair of pinball machines and other coin-operated games</item>
         <item>33193 - restoring of organs and other historical musical instruments</item>
         <item>33199 - Others n.e.c.</item>
-        <item>   332 - Installation of industrial machinery and equipment</item>
-        <item>  3320 - Installation of industrial machinery and equipment</item>
+        <item>  332 - Installation of industrial machinery and equipment</item>
+        <item> 3320 - Installation of industrial machinery and equipment</item>
         <item>33201 - Installation of industrial machinery in industrial plant and industrial process control equipment</item>
         <item>33202 - Installation of other industrial equipment like communications equipment, mainframe and similar computers, irradiation and electro-medical equipment etc</item>
         <item>33203 - Dismantling large-scale machinery and equipment</item>

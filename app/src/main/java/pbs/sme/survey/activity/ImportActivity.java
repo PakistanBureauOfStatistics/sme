@@ -48,7 +48,7 @@ public class ImportActivity extends MyActivity {
     TextView user, txt_error,  network;
     TextView impDate, entDate, synDate;
     ProgressBar p_tblk, p_sblk, p_fblk, p_uhh, p_thh, p_th;
-    TextView tblk, sblk, fblk, uhh, thh, th;
+    TextView tblk, sblk, fblk, c1, c2, c3;
     ListView block_list;
 
     @Override
@@ -105,9 +105,9 @@ public class ImportActivity extends MyActivity {
         tblk.setText(("00" + tb).substring(String.valueOf(tb).length()));
         sblk.setText(("00" + sb).substring(String.valueOf(sb).length()));
         fblk.setText(("00" + cb).substring(String.valueOf(cb).length()));
-        th.setText(("000" + s).substring(String.valueOf(s).length()));
-        thh.setText(("000" + m).substring(String.valueOf(m).length()));
-        uhh.setText(("000" + u).substring(String.valueOf(u).length()));
+        c1.setText(("000" + s).substring(String.valueOf(s).length()));
+        c2.setText(("000" + m).substring(String.valueOf(m).length()));
+        c3.setText(("000" + u).substring(String.valueOf(u).length()));
     }
 
     @Override
@@ -146,9 +146,9 @@ public class ImportActivity extends MyActivity {
         tblk=findViewById(R.id.tblk);
         sblk=findViewById(R.id.sblk);
         fblk=findViewById(R.id.fblk);
-        uhh=findViewById(R.id.uhh);
-        thh=findViewById(R.id.thh);
-        th=findViewById(R.id.th);
+        c1=findViewById(R.id.c1);
+        c2=findViewById(R.id.c2);
+        c3=findViewById(R.id.c3);
 
         p_tblk=findViewById(R.id.p_tblk);
         p_sblk=findViewById(R.id.p_sblk);
@@ -478,9 +478,9 @@ public class ImportActivity extends MyActivity {
         fblk.setVisibility(View.GONE);
         sblk.setVisibility(View.GONE);
         tblk.setVisibility(View.GONE);
-        thh.setVisibility(View.GONE);
-        uhh.setVisibility(View.GONE);
-        th.setVisibility(View.GONE);
+        c1.setVisibility(View.GONE);
+        c2.setVisibility(View.GONE);
+        c3.setVisibility(View.GONE);
     }
 
     private void setProgress(){
@@ -494,9 +494,9 @@ public class ImportActivity extends MyActivity {
         fblk.setVisibility(View.VISIBLE);
         sblk.setVisibility(View.VISIBLE);
         tblk.setVisibility(View.VISIBLE);
-        thh.setVisibility(View.VISIBLE);
-        uhh.setVisibility(View.VISIBLE);
-        th.setVisibility(View.VISIBLE);
+        c1.setVisibility(View.VISIBLE);
+        c2.setVisibility(View.VISIBLE);
+        c3.setVisibility(View.VISIBLE);
     }
 
     private void deleteExistingAssignments(){
