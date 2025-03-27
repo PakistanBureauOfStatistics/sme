@@ -24,7 +24,7 @@ public class S4Activity extends FormActivity {
     };
 
     private final String[] codeList= new String[]{
-            "401","402","403","404","405","406","407","400","408"
+            "401","402","403","404","405","406","400","408"
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {

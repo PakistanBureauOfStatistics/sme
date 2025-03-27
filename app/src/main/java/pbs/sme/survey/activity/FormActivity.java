@@ -24,10 +24,12 @@ import java.util.HashMap;
 
 import pbs.sme.survey.R;
 import pbs.sme.survey.meta.ValueStore;
+import pbs.sme.survey.model.Baseline;
 import pbs.sme.survey.model.Block;
 import pbs.sme.survey.model.Constants;
 import pbs.sme.survey.model.FormTable;
 import pbs.sme.survey.model.Section12;
+import pbs.sme.survey.model.Section34;
 import pk.gov.pbs.utils.ExceptionReporter;
 import pk.gov.pbs.utils.StaticUtils;
 import pk.gov.pbs.utils.UXEventListeners;
@@ -88,8 +90,11 @@ public class FormActivity extends MyActivity{
         btnn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(next==HomeActivity.class){
+                    finishAffinity();
+                }
                 startActivity(intent);
+
             }
         });
         if(!(context instanceof HomeActivity)){
@@ -326,9 +331,13 @@ public class FormActivity extends MyActivity{
             m.sno = resumeModel.sno;
             m.env=env;
         }else{
+            m.sync_time=null;
             m.modified_time = getTimeNowwithSeconds();
             m.env=resumeModel.env;
             m.is_deleted = 0;
+            dbHandler.execSql("UPDATE "+ Section12.class.getSimpleName()+" SET sync_time=NULL where ENV='"+env+"' AND  uid='"+resumeModel.uid+"';");
+            dbHandler.execSql("UPDATE "+ Section34.class.getSimpleName()+" SET sync_time=NULL where ENV='"+env+"' AND  uid='"+resumeModel.uid+"';");
+            dbHandler.execSql("UPDATE "+ Baseline.class.getSimpleName()+" SET sync_time=NULL where ENV='"+env+"' AND  uid='"+resumeModel.uid+"';");
         }
     }
 

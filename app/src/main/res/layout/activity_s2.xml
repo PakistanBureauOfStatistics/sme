@@ -466,6 +466,7 @@
                         android:id="@+id/emp_cost"
                         style="@style/edit_form_val"
                         android:hint="Employee Cost (in RS)"
+                        android:text="000"
                         android:maxLength="12"/>
                 </LinearLayout>
 

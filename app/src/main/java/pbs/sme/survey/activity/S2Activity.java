@@ -1,10 +1,14 @@
 package pbs.sme.survey.activity;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -12,6 +16,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -32,6 +37,7 @@ public class S2Activity extends FormActivity {
     private RadioGroup is_registered;
     Spinner sownership, mownership, organization;
     Spinner psic2, psic;
+    RadioGroup seasonal;
 
     private final String[] inputValidationOrder= new String[]{
             "started_year","is_registered","exports","imports","stocks","agency","is_maintaining","sownership","mownership","ownership_other","organization","activity","is_seasonal",
@@ -60,8 +66,9 @@ public class S2Activity extends FormActivity {
         sownership=findViewById(R.id.sownership);
         mownership=findViewById(R.id.mownership);
         organization=findViewById(R.id.organization);
+        seasonal=findViewById(R.id.is_seasonal);
 
-        if(resumeModel.emp_count!=null && resumeModel.emp_count>=50){
+        if(resumeModel.emp_count!=null && resumeModel.emp_count>50){
             for(int l : medium){
                 findViewById(l).setVisibility(View.VISIBLE);
             }
@@ -70,7 +77,7 @@ public class S2Activity extends FormActivity {
             }
             setOwnership(R.id.mownership,4);
         }
-        else{
+        else if(resumeModel.emp_count!=null && resumeModel.emp_count<=50){
             for(int l : small){
                 findViewById(l).setVisibility(View.VISIBLE);
             }
@@ -78,6 +85,17 @@ public class S2Activity extends FormActivity {
                 findViewById(l).setVisibility(View.GONE);
             }
             setOwnership(R.id.mownership,3);
+            seasonal.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    if(checkedId==R.id.is_seasonal1){
+                        findViewById(R.id.small5).setVisibility(VISIBLE);
+                    }
+                    else{
+                        findViewById(R.id.small5).setVisibility(GONE);
+                    }
+                }
+            });
 
         }
 
@@ -93,6 +111,8 @@ public class S2Activity extends FormActivity {
                 }
             }
         });
+
+
         psic2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -219,6 +239,7 @@ public class S2Activity extends FormActivity {
         }
 
         String pisc=psic.getSelectedItem().toString();
+
         int i=pisc.indexOf(" - ");
         if(i>=0){
             pisc=pisc.substring(0,i);
@@ -227,6 +248,22 @@ public class S2Activity extends FormActivity {
             pisc=String.valueOf(psic2.getSelectedItemPosition()+9);
         }
         sec.psic=pisc.trim();
+
+        if(sec.is_seasonal==1){
+            sec.months=12;
+            sec.jan=1;
+            sec.feb=1;
+            sec.mar=1;
+            sec.apr=1;
+            sec.may=1;
+            sec.jun=1;
+            sec.jul=1;
+            sec.aug=1;
+            sec.sep=1;
+            sec.oct=1;
+            sec.nov=1;
+            sec.dec=1;
+        }
 
         /////TODO CHECKS////////////////////////////
 

@@ -53,6 +53,7 @@ public class BlockAdapter extends ArrayAdapter<Block> {
                 public void onClick(View v) {
                     final Intent intent = new Intent(context, OtherListActivity.class);
                     intent.putExtra(Constants.EXTRA.IDX_BLOCK, a);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
             });
@@ -67,6 +68,7 @@ public class BlockAdapter extends ArrayAdapter<Block> {
                 public void onClick(View v) {
                     final Intent intent = new Intent(context, BlockActivity.class);
                     intent.putExtra(Constants.EXTRA.IDX_BLOCK, a);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
             });

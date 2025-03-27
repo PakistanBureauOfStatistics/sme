@@ -618,6 +618,7 @@
     <style name="edit_table_num" parent="edit_table">
         <item name="android:inputType">number</item>
         <item name="android:digits">0123456789</item>
+        <item name="android:text">000</item>
     </style>
 
     <style name="edit_table_gender" parent="edit_table">

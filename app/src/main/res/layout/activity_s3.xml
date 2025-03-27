@@ -96,7 +96,7 @@
                             android:text="304"/>
                         <TextView
                             style="@style/summary_eng"
-                            android:text="Cost for repair and maintenance exc. IT" />
+                            android:text="Cost for repair and maintenance exclude IT" />
                         <EditText
                             android:id="@+id/value__304"
                             style="@style/edit_table_num"/>

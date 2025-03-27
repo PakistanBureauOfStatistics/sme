@@ -96,7 +96,7 @@
                             android:text="404"/>
                         <TextView
                             style="@style/summary_eng"
-                            android:text="Value of goods/material purchased for resale" />
+                            android:text="Income from sales from goods/material that is purchase for resale without further processing" />
                         <EditText
                             android:id="@+id/value__404"
                             style="@style/edit_table_num"/>
@@ -109,7 +109,7 @@
                             android:text="405"/>
                         <TextView
                             style="@style/summary_eng"
-                            android:text="Value of sales from goods/material that is purchase for resale without further processing" />
+                            android:text="Income from scrap, electricity, waste product etc" />
                         <EditText
                             android:id="@+id/value__405"
                             style="@style/edit_table_num"/>
@@ -122,22 +122,9 @@
                             android:text="406"/>
                         <TextView
                             style="@style/summary_eng"
-                            android:text="Income from scrap, electricity, waste product etc" />
-                        <EditText
-                            android:id="@+id/value__406"
-                            style="@style/edit_table_num"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        style="@style/hliner"
-                        android:weightSum="10">
-                        <TextView
-                            style="@style/summary_eng_c"
-                            android:text="407"/>
-                        <TextView
-                            style="@style/summary_eng"
                             android:text="Other revenues n.e.c" />
                         <EditText
-                            android:id="@+id/value__407"
+                            android:id="@+id/value__406"
                             style="@style/edit_table_num"/>
                     </LinearLayout>
                     <LinearLayout
