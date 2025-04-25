@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parent_drawer"
+    tools:context="pbs.sme.survey.activity.BaseActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scrollView"
+            style="@style/hr_form_scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_household"/>
+
+            <LinearLayout
+                style="@style/smp_container_hr"
+                android:orientation="vertical">
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red" android:text="3.Please evaluate on five-point scale how problematic these different areas are for doing business (1 least problematics and 5 most problematic) " />
+                        <TextView android:id="@+id/a3a_c"
+                            style="@style/cb_heading"
+                            android:text="3.(a)	Business Regulations (Enterprise Registration, Tax Laws, Labor Laws, Environmental Laws etc.)" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/a3a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/a3b_c"
+                            style="@style/cb_heading" android:text="3.(b)	Procedures of Import Export" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/a3b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/a3c_c"
+                            style="@style/cb_heading" android:text="3.(c)	High rates of taxation" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/a3c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/a3d_c"
+                            style="@style/cb_heading" android:text="3.(d)	Inadequate infrastructure " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/a3d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/a3e_c"
+                            style="@style/cb_heading" android:text="3.(e)	Security and law and order " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/a3e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red" android:text="1.	Please rank on five-point scale how problematic are the following aspects in terms of operating business effectively (1 least problematics and 5 most problematic)?" />
+                        <TextView android:id="@+id/c1a_c"
+                            style="@style/cb_heading"
+                            android:text="1.(a)	Dense population" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c1a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c1b_c"
+                            style="@style/cb_heading" android:text="1.(b)	Traffic congestions " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c1b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c1c_c"
+                            style="@style/cb_heading" android:text="1.(c)	Environment pollution (smoke, noise, affluent contamination) " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c1c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c1d_c"
+                            style="@style/cb_heading" android:text="1.(d)	Law and order and other security issues" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c1d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c1e_c"
+                            style="@style/cb_heading" android:text="1.(e)	Accessibility for customers and suppliers " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c1e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red"
+                            android:text="2.	What is the situation of availability of following utilities to operate business optimally? Please rank on five-point scale in terms of availability (1 for least satisfactory and 5 for most satisfactory)" />
+                        <TextView android:id="@+id/c2a_c"
+                            style="@style/cb_heading"
+                            android:text="2.(a)	Electricity" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c2a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scals"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c2b_c"
+                            style="@style/cb_heading" android:text="2.(b).	Communication (Phone, Mobile, Internet, Fax etc.)" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c2b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scals"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c2c_c"
+                            style="@style/cb_heading" android:text="2.(c)	Gas" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c2c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scals"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c2d_c"
+                            style="@style/cb_heading" android:text="2.(d)	Water Supply" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c2d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scals"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/c2e_c"
+                            style="@style/cb_heading" android:text="2.(e)	Security" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/c2e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scals"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/electercity"
+                    style="@style/vliner">
+                    <LinearLayout
+                        style="@style/horizontal_wrapper"
+                        android:weightSum="3">
+                        <TextView style="@style/summary_eng" android:text="Wapda %" android:layout_weight="1"/>
+                        <TextView style="@style/summary_eng" android:text="Solar %" android:layout_weight="1"/>
+                        <TextView style="@style/summary_eng" android:text="Generator %" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/horizontal_wrapper"
+                        android:weightSum="3">
+                        <EditText android:id="@+id/wapda" style="@style/edit_table_num" android:layout_weight="1" android:maxLength="2"/>
+                        <EditText android:id="@+id/solar"  style="@style/edit_table_num" android:layout_weight="1" android:maxLength="2" android:layout_marginHorizontal="?padd"/>
+                        <EditText android:id="@+id/generator"  style="@style/edit_table_num" android:layout_weight="1" android:maxLength="2"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red"
+                            android:text="3.	In your opinion, which of the following business development services are most important for your business? Please rank the following services on five-point scale in terms of importance (1 for least important and 5 for most important)" />
+                        <TextView android:id="@+id/d3a_c"
+                            style="@style/cb_heading"
+                            android:text="3.(a) Business information and advisory support" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d3a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scali"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/d3b_c"
+                            style="@style/cb_heading" android:text="3.(b)	Training and Capacity Building in Business Management, Finance or Operations  " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d3b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scali"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/d3c_c"
+                            style="@style/cb_heading" android:text="3.(c)	E-commerce / Online Business" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d3c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scali"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/d3d_c"
+                            style="@style/cb_heading" android:text="3.(d)	Marketing, Sales Promotion and Business Networking " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d3d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scali"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  android:id="@+id/d3e_c"
+                            style="@style/cb_heading" android:text="3.(e)	Technology acquisition, Licensing and Certification " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d3e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scali"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red"
+                            android:text="7.	Please rank on five-point scale that how problematic/challenging to avail business development services? (1 for least challenging and 5 for most challenging)" />
+                        <TextView style="@style/cb_heading" android:text="7.(a)	Lack of awareness" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d7a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="7.(b)	Services are not easily available in area " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d7b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="7.(c)	Does not fulfill current business needs" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d7c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="7.(d) Quality of services provided 	" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d7d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="7.(e)	Cost of services " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/d7e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red"
+                            android:text="5.	Please rank the following factors in terms of their influence on your decision to invest in technology upgrades (1 = least influential, 5 = most influential" />
+                        <TextView style="@style/cb_heading" android:text="5.(a)	Increased production efficiency and product quality" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f5a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalf"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="5.(b)	Cost reduction" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f5b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalf"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="5.(c)	Competitive advantage" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f5c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalf"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="5.(d)	Regulatory or International Compliance" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f5d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalf"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red"
+                            android:text="6.	Please rank the following challenges in terms of their impact on your technology adoption (1 = least significant, 5 = most significant)" />
+                        <TextView style="@style/cb_heading" android:text="6.(a)	High initial costs" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f6a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalg"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="6.(b) Lack of skilled workforce" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f6b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalg"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="6.(c)	Complexity of implementation" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f6c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalg"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="6.(d)	Security concerns" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f6d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalg"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="6.(e)	Uncertainty about ROI" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/f6e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalg"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/vertical_wrapper">
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/q_head_likit" android:textColor="@color/red"
+                            android:text="5.	In your opinion, what are the key challenges SMEs face in scaling their business for export markets? Please rank on five-point scale. (1 for least challenging and 5 for most challenging)" />
+                        <TextView style="@style/cb_heading" android:text="5.(a)	Access to finance and credit facilities" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/export5a"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/cb_heading" android:text="5.(b)	Compliance with international standards and certifications " />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/export5b"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="5.(c)	Limited market intelligence and export marketing support" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/export5c"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView  style="@style/cb_heading" android:text="5.(d)	Lack of awareness about Free Trade Agreements or Preferential Trade Agreements	" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/export5d"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView style="@style/cb_heading" android:text="5.(e)	Challenges in adapting products/services to meet foreign market demands" />
+                        <RelativeLayout
+                            style="@style/spn_rel">
+                            <Spinner
+                                android:id="@+id/export5e"
+                                style="@style/spn_form"
+                                android:entries="@array/spn_scalc"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+                
+
+                <include layout="@layout/layout_form_buttons"/>
+            </LinearLayout>
+        </ScrollView>
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer"/>
+    </RelativeLayout>
+    <include layout="@layout/layout_nav"/>
+</androidx.drawerlayout.widget.DrawerLayout>

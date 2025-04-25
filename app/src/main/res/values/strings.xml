@@ -155,6 +155,71 @@
         <item>NCHBLOCK</item>
     </string-array>
 
+    <string-array name="spn_scalp">
+        <item>0. Select Point-Scale</item>
+        <item>1. Not at All Problematic</item>
+        <item>2. Slightly Problematic</item>
+        <item>3. Moderately Problematic</item>
+        <item>4. Very Problematic</item>
+        <item>5. Extremely Problematic</item>
+    </string-array>
+    <string-array name="spn_scals">
+        <item>0. Select Point-Scale</item>
+        <item>1. Not at All Satisfactory</item>
+        <item>2. Slightly Satisfactory</item>
+        <item>3. Moderately Satisfactory</item>
+        <item>4. Very Satisfactory</item>
+        <item>5. Extremely Satisfactory</item>
+    </string-array>
+    <string-array name="spn_scali">
+        <item>0. Select Point-Scale</item>
+        <item>1. Not at All Important</item>
+        <item>2. Slightly Important</item>
+        <item>3. Moderately Important</item>
+        <item>4. Very Important</item>
+        <item>5. Extremely Important</item>
+    </string-array>
+    <string-array name="spn_scalc">
+        <item>0. Select Point-Scale</item>
+        <item>1. Not at All Challenging</item>
+        <item>2. Slightly Challenging</item>
+        <item>3. Moderately Challenging</item>
+        <item>4. Very Challenging</item>
+        <item>5. Extremely Challenging</item>
+    </string-array>
+    <string-array name="spn_scalf">
+        <item>0. Select Point-Scale</item>
+        <item>1. Not at All Influential</item>
+        <item>2. Slightly Influential</item>
+        <item>3. Moderately Influential</item>
+        <item>4. Very Influential</item>
+        <item>5. Extremely Influential</item>
+    </string-array>
+    <string-array name="spn_scalg">
+        <item>0. Select Point-Scale</item>
+        <item>1. Not at All Significant</item>
+        <item>2. Slightly Significant</item>
+        <item>3. Moderately Significant</item>
+        <item>4. Very Significant</item>
+        <item>5. Extremely Significant</item>
+    </string-array>
+
+    <string-array name="spn_interview">
+        <item>Select Interview Status</item>
+        <item>Completed</item>
+        <item>Partial Completed</item>
+        <item>Non-Response</item>
+        <item>Locked / Non-Contact</item>
+    </string-array>
+
+    <string-array name="spn_behaviour">
+        <item>Select Respondent Behaviour</item>
+        <item>Full Cooperation</item>
+        <item>Reluctant / Hesitant</item>
+        <item>Talkative</item>
+        <item>Least Informed</item>
+    </string-array>
+
     <string-array name="spn_sownership">
         <item>--Select Ownership Type--</item>
         <item>Individual</item>
@@ -909,7 +974,8 @@
         <item>29303 - Manufacture of motor vehicle electrical equipment</item>
         <item>   30 - Manufacture of other transport equipment</item>
         <item>  301 - Building of ships and boats</item>
-        <item> 301130111 - Building of ships and floating structures</item>
+        <item> 3011 - Building of ships and floating structures</item>
+        <item>30111 - Building of ships and floating structures</item>
         <item>30112 - Building of commercial vessels</item>
         <item>30113 - Building of warships</item>
         <item>30114 - Building of fishing boats and fish-processing factory vessels</item>

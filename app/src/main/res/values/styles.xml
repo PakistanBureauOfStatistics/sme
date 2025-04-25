@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="ThemeParent" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="bg">@color/white</item>
@@ -556,6 +556,29 @@
         <item name="android:textSize">18dp</item>
         <item name="android:color">@color/color_blue</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:justificationMode" tools:ignore="NewApi">inter_word</item>
+        <item name="android:layout_marginTop">?padd</item>
+    </style>
+
+    <style name="plain_btext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">?t_md</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="cb_heading">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:justificationMode" tools:ignore="NewApi">inter_word</item>
+        <item name="android:layout_marginTop">?padd</item>
+    </style>
+    <style name="q_head_likit" parent="q_heading">
+        <item name="android:textColor">@color/red</item>
     </style>
 
     <style name="s_heading">
@@ -597,6 +620,20 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:layout_weight">1.2</item>
     </style>
+    <style name="num_1w">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">?t_lg</item>
+        <item name="android:paddingTop">?pad</item>
+        <item name="android:paddingBottom">?pad</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">?pad</item>
+        <item name="android:layout_marginRight">?pad</item>
+
+    </style>
 
     <style name="edit_table">
         <item name="android:layout_width">0dp</item>
@@ -619,6 +656,7 @@
         <item name="android:inputType">number</item>
         <item name="android:digits">0123456789</item>
         <item name="android:text">000</item>
+        <item name="android:maxLength">10</item>
     </style>
 
     <style name="edit_table_gender" parent="edit_table">
@@ -661,6 +699,22 @@
         <item name="android:orientation">vertical</item>
     </style>
 
+    <style name="likitg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">?pad</item>
+        <item name="android:paddingBottom">?pad</item>
+        <item name="android:weightSum">5</item>
+        <item name="android:background">@drawable/likit_gradient</item>
+    </style>
+
+    <style name="likitr">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">?t_md</item>
+    </style>
 
 
 

@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class S1Activity extends FormActivity {
     CheckBox cb_same;
 
     private final String[] inputValidationOrder= new String[]{
-            "title","owner","owner_gender","name","factory_address", "factory_district", "hq_address","hq_district","designation","phone_type","phone_code","phone_number"
+            "title","owner","owner_gender","factory_address", "factory_district", "hq_address","hq_district","phone_type","phone_number"
             ,"reason_no_phone"
     };
 
@@ -68,8 +69,6 @@ public class S1Activity extends FormActivity {
         });
 
         init();
-
-
     }
     public void init(){
         phone_code2 = findViewById(R.id.phone_code2);
@@ -187,49 +186,12 @@ public class S1Activity extends FormActivity {
         List<Section12> s1= dbHandler.query(Section12.class,"uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         if(s1.size() == 1){
             modelDatabase = s1.get(0);
+            resumeModel=modelDatabase;
             //Part1TextWatcher.IGNORE_TEXT_WATCHER = true;
             setFormFromModel(this, modelDatabase, inputValidationOrder, "",false, this.findViewById(android.R.id.content));
         }
-        else{
-            setFormFromModel(this,resumeModel,inputValidationOrder,"",false,this.findViewById(android.R.id.content));
-        }
 
-        if(resumeModel.phone_type!=null){
-            phone_type.setSelection(resumeModel.phone_type);
-
-            if (resumeModel.phone_type == 1) {
-                int phoneCodePos = -1;
-                for (int i = 0; i < phone_code.getAdapter().getCount(); i++){
-                    if (((String) phone_code.getAdapter().getItem(i)).equalsIgnoreCase(resumeModel.phone_code))
-                        phoneCodePos = i;
-                }
-                if (phoneCodePos != -1) {
-                    phone_code.setSelection(phoneCodePos);
-                    phone_number.setText(resumeModel.phone_number);
-                }
-            }
-            else if (resumeModel.phone_type == 2){
-                phone_number.setFilters(new InputFilter[]{new InputFilter.LengthFilter(8)});
-                if(resumeModel.phone_code!=null)
-                    phone_code2.setText(resumeModel.phone_code);
-                if(resumeModel.phone_number!=null)
-                    phone_number.setText(resumeModel.phone_number);
-            }
-            else if (resumeModel.phone_type == 3 && resumeModel.reason_no_phone!=null){
-                reason_no_phone.setSelection(resumeModel.reason_no_phone);
-            }
-        }
-        else{
-            phone_type.setSelection(1);
-        }
-
-        if(resumeModel.email!=null){
-            ((EditText) findViewById(R.id.email)).setText(resumeModel.email);
-        }
-
-        if(resumeModel.website!=null){
-            ((EditText) findViewById(R.id.website)).setText(resumeModel.website);
-        }
+       loadPhoneNumber();
 
     }
 
@@ -257,9 +219,12 @@ public class S1Activity extends FormActivity {
             sbtn.setEnabled(true);
             return;
         }
+
+
         setCommonFields(sec);
         sec.email=((EditText) findViewById(R.id.email)).getText().toString();
         sec.website=((EditText) findViewById(R.id.website)).getText().toString();
+        sec=savePhoneNumber(sec);
 
        /* if(sec.email!=null && !sec.email.isEmpty() && !(sec.email.contains("@") && sec.email.contains("."))){
             setScrollAndBorderAnimation(findViewById(R.id.email));
@@ -293,5 +258,62 @@ public class S1Activity extends FormActivity {
     protected void onResume() {
         super.onResume();
         loadForm();
+    }
+
+    public void loadPhoneNumber(){
+        if(resumeModel.phone_type!=null){
+
+            if (resumeModel.phone_type == 1) {
+                int phoneCodePos = -1;
+                for (int i = 0; i < phone_code.getAdapter().getCount(); i++){
+                    if (((String) phone_code.getAdapter().getItem(i)).equalsIgnoreCase(resumeModel.phone_code))
+                        phoneCodePos = i;
+                }
+                if (phoneCodePos != -1) {
+                    phone_code.setSelection(phoneCodePos);
+                    phone_number.setText(resumeModel.phone_number);
+                }
+            }
+            else if (resumeModel.phone_type == 2){
+                phone_number.setFilters(new InputFilter[]{new InputFilter.LengthFilter(8)});
+                if(resumeModel.phone_code!=null)
+                    phone_code2.setText(resumeModel.phone_code);
+                if(resumeModel.phone_number!=null)
+                    phone_number.setText(resumeModel.phone_number);
+            }
+            else if (resumeModel.phone_type == 3 && resumeModel.reason_no_phone!=null){
+                reason_no_phone.setSelection(resumeModel.reason_no_phone);
+            }
+        }
+        else{
+            phone_type.setSelection(1);
+        }
+    }
+    public Section12 savePhoneNumber(Section12 sec){
+        if(sec.phone_type!=null){
+            if(sec.phone_type==1){
+                Spinner code=findViewById(R.id.phone_code);
+                if(code.getSelectedItemPosition()>0){
+                    sec.phone_code=code.getSelectedItem().toString();
+                }
+                else{
+                    setScrollAndBorderAnimation(findViewById(R.id.phone_code));
+                    mUXToolkit.showAlertDialogue("Failed","Select Mobile Code"  , alertForEmptyFieldEvent);
+                    sbtn.setEnabled(true);
+                }
+            }
+            else if(sec.phone_type==2){
+                EditText landline=findViewById(R.id.phone_code2);
+                if(landline.getText().toString()!=null && !landline.getText().toString().isEmpty() && landline.getText().toString().length()>2){
+                    sec.phone_code=landline.getText().toString();
+                }
+                else{
+                    setScrollAndBorderAnimation(findViewById(R.id.phone_code2));
+                    mUXToolkit.showAlertDialogue("Failed","Landline Code should have at-least 3 digits."  , alertForEmptyFieldEvent);
+                    sbtn.setEnabled(true);
+                }
+            }
+        }
+        return  sec;
     }
 }

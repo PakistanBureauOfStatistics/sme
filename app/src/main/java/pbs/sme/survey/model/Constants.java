@@ -3,6 +3,7 @@ package pbs.sme.survey.model;
 
 import pbs.sme.survey.activity.BaseActivity;
 import pbs.sme.survey.activity.HomeActivity;
+import pbs.sme.survey.activity.RespondentActivity;
 import pbs.sme.survey.activity.S1Activity;
 import pbs.sme.survey.activity.S2Activity;
 import pbs.sme.survey.activity.S3Activity;
@@ -57,19 +58,21 @@ public class Constants {
           public static final String IDX_EMP = "IDX_EMP";
 
      }
-     public static final String[] SECTION_CODES={"1","2","3","4","BL"};
+     public static final String[] SECTION_CODES={"1","2","3","4","BL","RES"};
      public static final String[] SECTION_NAMES={
              "Section-1: Basic Info"
              ,"Section-2: Economic Activity",
              "Section-3: Inputs",
-             "Section-4: Outputs"
-             ,"Baseline"};
+             "Section-4: Outputs",
+             "Baseline",
+             "Respondent Information"};
 
      public static final Class<?>[] FORM_ACTIVITIES={
              S1Activity.class,
              S2Activity.class,
              S3Activity.class,
              S4Activity.class,
-             BaseActivity.class
+             BaseActivity.class,
+             RespondentActivity.class
      };
 }

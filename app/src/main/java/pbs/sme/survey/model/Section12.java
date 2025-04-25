@@ -7,12 +7,14 @@ public class Section12 extends FormTable {
     public String title;
     public String owner;
     public Integer owner_gender;
+    public String designation;
     public String name;
+    public Integer interview_status;
+    public Integer respondent_behaviour;
     public String factory_district;
     public String factory_address;
     public String hq_district;
     public String hq_address;
-    public String designation;
     public Integer phone_type;
     public String phone_code;
     public String phone_number;
@@ -81,12 +83,14 @@ public class Section12 extends FormTable {
                 ", title='" + title + '\'' +
                 ", owner='" + owner + '\'' +
                 ", owner_gender=" + owner_gender +
+                ", designation='" + designation + '\'' +
                 ", name='" + name + '\'' +
+                ", interview_status='" + interview_status + '\'' +
+                ", respondent_behaviour='" + respondent_behaviour + '\'' +
                 ", factory_district='" + factory_district + '\'' +
                 ", factory_address='" + factory_address + '\'' +
                 ", hq_district='" + hq_district + '\'' +
                 ", hq_address='" + hq_address + '\'' +
-                ", designation='" + designation + '\'' +
                 ", phone_type=" + phone_type +
                 ", phone_code='" + phone_code + '\'' +
                 ", phone_number='" + phone_number + '\'' +

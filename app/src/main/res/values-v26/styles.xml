@@ -10,4 +10,5 @@
         <item name="android:layout_marginLeft">?padd</item>
         <item name="android:justificationMode">inter_word</item>
     </style>
+
 </resources>

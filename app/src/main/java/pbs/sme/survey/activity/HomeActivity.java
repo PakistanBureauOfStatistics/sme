@@ -100,6 +100,10 @@ public class HomeActivity extends FormActivity {
                 times[1]=o.modified_time;
                 status[1]=R.drawable.ic_tick;
             }
+            if(o.respondent_behaviour!=null){
+                times[5]=o.modified_time;
+                status[5]=R.drawable.ic_tick;
+            }
         }
 
         if(s3time!=null && !s3time.equalsIgnoreCase("")){
@@ -159,7 +163,7 @@ public class HomeActivity extends FormActivity {
 
 
     public void upload(View view){
-        if(stime==null && progress>=5){
+        if(stime==null && progress>=6){
             Toast.makeText(getApplicationContext(),"Uploading Please Wait",Toast.LENGTH_SHORT).show();
             List<Section12> s12=dbHandler.queryRawSql(Section12.class,"SELECT * FROM "+ Section12.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null and (is_deleted=0 OR is_deleted is null);");
             List<Section34> s34=dbHandler.queryRawSql(Section34.class,"SELECT * FROM "+ Section34.class.getSimpleName()+" WHERE ENV='"+env+"' AND  UID='"+resumeModel.uid+"' and sync_time is null and (is_deleted=0 OR is_deleted is null);");

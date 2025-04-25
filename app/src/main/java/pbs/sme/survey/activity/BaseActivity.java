@@ -22,6 +22,7 @@ import java.util.List;
 import pbs.sme.survey.R;
 import pbs.sme.survey.model.Baseline;
 import pbs.sme.survey.model.Section12;
+import pbs.sme.survey.model.Section34;
 import pk.gov.pbs.utils.StaticUtils;
 
 public class BaseActivity extends FormActivity {
@@ -30,30 +31,59 @@ public class BaseActivity extends FormActivity {
     private Baseline modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
-    "a1","a2","a3","b1","b2","b3","b4","b5","b6","b6_other",
-            "b7","b8","b9","b10","b10_other",
-            "c1","c1_other","c2","c3","d1","d2","d2_other","d3","d4","d5",
-            "d6","d7","d7_other","e1","e1_other","e2",
+    "a1","a2",
+            "a3a","a3b","a3c","a3d","a3e",
+            "b1","b2",
+            "b3a","b3b","b3c","b3d","b3e","b3f",
+            "b4a","b4b","b4c","b4d","b4e","b4f",
+            "b5a","b5b","b5c","b5d","b5e",
+            "b6a","b6b","b6c","b6d","b6e","b6f",
+            "b6_other",
+            "b7","b8","b9",
+            "b10a","b10b","b10c","b10d","b10e","b10f",
+            "b10_other",
+            "c1a","c1b","c1c","c1d","c1e","c1e",
+            //"c1_other",
+            "c2a","c2b","c2c","c2d","c2e",
+            "c3",
+            "wapda","solar","generator",
+            "d1","d2","d2_other",
+            "d3a","d3b","d3c","d3d","d3e",
+            "d4","d5",
+            "d6",
+            "d7a","d7b","d7c","d7d","d7e",
+            //"d7_other",
+            "e1a","e1b","e1c","e1d",
+            "e1_other","e2",
             "e3a","e3b","e3c","e3d","e3e",
-            "e4",
+            "e4a","e4b","e4c","e4d",
             "e5a","e5b","e5b","e5d",
-            "f1","f2","f3","f4","f5","f6","f6_other",
-            "f7","f8","f9_other","f10",
+
+            "f1","f2","f3","f4",
+            "f5a","f5b","f5c","f5d","f5e",
+            "f6a", "f6b", "f6c", "f6d", "f6e",
+            //"f6_other",
+            "f7","f8",
+            "f9_scheme",
+            "f10a","f10f","f10c","f10d","f10e","f10f",
             "f10_other",
             "f11a","f11b","f11c","f11d","f11e","f11f",
+            "f11_other",
             "export1",
             "export2a","export2b","export2c","export2d","export2e","export2f","export2g","export2h",
             "export3a","export3b","export3c","export3d","export3e","export3f",
             "export4a","export4b","export4c","export4d","export4e","export4f",
 
-            "export2_other","export5"};
+            "export2_other",
+            "export5a","export5b","export5c","export5d","export5e",
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
         setDrawer(this,"Baseline");
-        setParent(this,HomeActivity.class);
+        setParent(this, RespondentActivity.class);
         scrollView = findViewById(R.id.scrollView);
 
         sbtn = findViewById(R.id.btns);
@@ -66,12 +96,55 @@ public class BaseActivity extends FormActivity {
     }
 
     public void init(){
-        RadioGroup b6=findViewById(R.id.b6);
-        b6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        try{
+            //Arsalan SME specific code, remove this line if required
+            List<Section12> list= dbHandler.query(Section12.class," uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
+            if(list!=null && list.size()>0){
+                if(list.get(0).exports!=null && list.get(0).exports==2){
+                    findViewById(R.id.export).setVisibility(GONE);
+                }
+            }
+        }
+        catch (Exception e){
+
+        }
+
+        RadioGroup c3=findViewById(R.id.c3);
+        c3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                EditText wapda=findViewById(R.id.wapda);
+                EditText solar=findViewById(R.id.solar);
+                EditText generator=findViewById(R.id.generator);
+                if(checkedId==R.id.c33){
+                    wapda.setEnabled(true);
+                    solar.setEnabled(true);
+                    generator.setEnabled(false);
+                }
+                else if(checkedId==R.id.c34){
+                    wapda.setEnabled(false);
+                    solar.setEnabled(false);
+                    generator.setEnabled(true);
+                }
+                else if(checkedId==R.id.c35){
+                    wapda.setEnabled(true);
+                    solar.setEnabled(true);
+                    generator.setEnabled(true);
+                }
+                else{
+                    wapda.setEnabled(false);
+                    solar.setEnabled(false);
+                    generator.setEnabled(false);
+                }
+            }
+        });
+        CheckBox b6=findViewById(R.id.b6f);
+        b6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ViewGroup parent=(ViewGroup) findViewById(R.id.b6_other).getParent();
-                if(checkedId==R.id.b66){
+                if(isChecked){
                     parent.setVisibility(VISIBLE);
                 }
                 else{
@@ -80,12 +153,12 @@ public class BaseActivity extends FormActivity {
             }
         });
 
-        RadioGroup b10=findViewById(R.id.b10);
-        b10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        CheckBox b10=findViewById(R.id.b10d);
+        b10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ViewGroup parent=(ViewGroup) findViewById(R.id.b10_other).getParent();
-                if(checkedId==R.id.b104){
+                if(isChecked){
                     parent.setVisibility(VISIBLE);
                 }
                 else{
@@ -95,7 +168,7 @@ public class BaseActivity extends FormActivity {
         });
 
 
-        RadioGroup c1=findViewById(R.id.c1);
+        /*RadioGroup c1=findViewById(R.id.c1);
         c1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -107,7 +180,7 @@ public class BaseActivity extends FormActivity {
                     parent.setVisibility(GONE);
                 }
             }
-        });
+        });*/
 
         RadioGroup d2=findViewById(R.id.d2);
         d2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -123,7 +196,7 @@ public class BaseActivity extends FormActivity {
             }
         });
 
-        RadioGroup d7=findViewById(R.id.d7);
+        /*RadioGroup d7=findViewById(R.id.d7);
         d7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -135,14 +208,14 @@ public class BaseActivity extends FormActivity {
                     parent.setVisibility(GONE);
                 }
             }
-        });
+        });*/
 
-        RadioGroup e1=findViewById(R.id.e1);
-        e1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        CheckBox e1=findViewById(R.id.e1d);
+        e1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ViewGroup parent=(ViewGroup) findViewById(R.id.e1_other).getParent();
-                if(checkedId==R.id.e14){
+                if(isChecked){
                     parent.setVisibility(VISIBLE);
                 }
                 else{
@@ -151,7 +224,8 @@ public class BaseActivity extends FormActivity {
             }
         });
 
-        RadioGroup f6=findViewById(R.id.f6);
+
+        /*RadioGroup f6=findViewById(R.id.f6);
         f6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -163,31 +237,31 @@ public class BaseActivity extends FormActivity {
                     parent.setVisibility(GONE);
                 }
             }
-        });
+        });*/
 
         RadioGroup f8=findViewById(R.id.f8);
         f8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                ViewGroup f9=(ViewGroup) findViewById(R.id.f9_other).getParent();
-                ViewGroup f10=(ViewGroup) findViewById(R.id.f10).getParent();
+                ViewGroup f8=(ViewGroup) findViewById(R.id.f9_scheme).getParent();
+                ViewGroup f9=(ViewGroup) findViewById(R.id.f10a).getParent();
                 if(checkedId==R.id.f81){
-                    f9.setVisibility(VISIBLE);
-                    f10.setVisibility(GONE);
+                    f8.setVisibility(VISIBLE);
+                    f9.setVisibility(GONE);
                 }
                 else{
-                    f9.setVisibility(GONE);
-                    f10.setVisibility(VISIBLE);
+                    f8.setVisibility(GONE);
+                    f9.setVisibility(VISIBLE);
                 }
             }
         });
 
-        RadioGroup f10=findViewById(R.id.f10);
-        f10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        CheckBox f10=findViewById(R.id.f10f);
+        f10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 ViewGroup parent=(ViewGroup) findViewById(R.id.f10_other).getParent();
-                if(checkedId==R.id.f106){
+                if(isChecked){
                     parent.setVisibility(VISIBLE);
                 }
                 else{
@@ -195,6 +269,20 @@ public class BaseActivity extends FormActivity {
                 }
             }
         });
+        CheckBox f11=findViewById(R.id.f11f);
+        f11.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ViewGroup parent=(ViewGroup) findViewById(R.id.f11_other).getParent();
+                if(isChecked){
+                    parent.setVisibility(VISIBLE);
+                }
+                else{
+                    parent.setVisibility(GONE);
+                }
+            }
+        });
+
 
         CheckBox h2=findViewById(R.id.export2h);
         h2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -229,7 +317,7 @@ public class BaseActivity extends FormActivity {
         b2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                ViewGroup parent=(ViewGroup) findViewById(R.id.b3).getParent();
+                ViewGroup parent=(ViewGroup) findViewById(R.id.b3a).getParent();
                 if(checkedId==R.id.b21){
                     parent.setVisibility(VISIBLE);
                 }
@@ -245,7 +333,7 @@ public class BaseActivity extends FormActivity {
         b9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                ViewGroup parent=(ViewGroup) findViewById(R.id.b10).getParent();
+                ViewGroup parent=(ViewGroup) findViewById(R.id.b10a).getParent();
                 if(checkedId==R.id.b92){
                     parent.setVisibility(VISIBLE);
                 }

@@ -94,6 +94,7 @@ public class FormActivity extends MyActivity{
                     finishAffinity();
                 }
                 startActivity(intent);
+                finish();
 
             }
         });

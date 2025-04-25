@@ -133,7 +133,7 @@ public class S2Activity extends FormActivity {
     private void loadForm(){
         List<Section12> s2= dbHandler.query(Section12.class,"uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         if(s2.size() == 1){
-            modelDatabase = s2.get(0);
+            resumeModel=modelDatabase = s2.get(0);
             //Part1TextWatcher.IGNORE_TEXT_WATCHER = true;
             setFormFromModel(this, modelDatabase, inputValidationOrder, "", false, this.findViewById(android.R.id.content));
             try{
@@ -249,7 +249,7 @@ public class S2Activity extends FormActivity {
         }
         sec.psic=pisc.trim();
 
-        if(sec.is_seasonal==1){
+        if(sec.is_seasonal!=null && sec.is_seasonal==1){
             sec.months=12;
             sec.jan=1;
             sec.feb=1;

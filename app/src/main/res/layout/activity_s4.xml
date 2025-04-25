@@ -158,8 +158,222 @@
                             style="@style/edit_table_num"/>
                     </LinearLayout>
 
-                    <include layout="@layout/layout_form_buttons"/>
 
+                    <include layout="@layout/layout_form_buttons"/>
+                    <LinearLayout
+                        style="@style/vertical_wrapper">
+                        <LinearLayout
+                            android:layout_marginVertical="?pad"
+                            style="@style/hliner"
+                            android:weightSum="12">
+                            <TextView
+                                style="@style/num_1w"
+                                android:text="Type"
+                                android:layout_weight="2"/>
+                            <TextView
+                                style="@style/num_1w"
+                                android:text="Billion"
+                                android:textColor="@color/red"
+                                android:layout_weight="2"/>
+                            <TextView
+                                style="@style/num_1w"
+                                android:text="Million"
+                                android:textColor="@color/settGreen"
+                                android:layout_weight="3"/>
+                            <TextView
+                                style="@style/num_1w"
+                                android:text="Hundered"
+                                android:textColor="@color/color_blue"
+                                android:layout_weight="3"/>
+                            <TextView
+                                style="@style/num_1w"
+                                android:text="0"/>
+                            <TextView
+                                style="@style/num_1w"
+                                android:text="0" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginVertical="?pad"
+                            style="@style/hliner"
+                            android:background="@color/grey"
+                            android:weightSum="12">
+                            <TextView
+                                style="@style/num_1w"
+                                android:layout_weight="2"
+                                android:text="Input"/>
+                            <TextView
+                                android:id="@+id/input__10"
+                                style="@style/num_1w"
+                                android:textColor="@color/red"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/input__9"
+                                style="@style/num_1w"
+                                android:textColor="@color/red"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/input__8"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/input__7"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/input__6"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/input__5"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/input__4"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/input__3"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/input__2"
+                                style="@style/num_1w"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/input__1"
+                                style="@style/num_1w"
+                                android:text="" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginVertical="?pad"
+                            style="@style/hliner"
+                            android:background="@color/grey"
+                            android:weightSum="12">
+                            <TextView
+                                style="@style/num_1w"
+                                android:layout_weight="2"
+                                android:text="Output"/>
+                            <TextView
+                                android:id="@+id/output__10"
+                                style="@style/num_1w"
+                                android:textColor="@color/red"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/output__9"
+                                style="@style/num_1w"
+                                android:textColor="@color/red"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/output__8"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/output__7"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/output__6"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/output__5"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/output__4"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/output__3"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/output__2"
+                                style="@style/num_1w"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/output__1"
+                                style="@style/num_1w"
+                                android:text="" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginVertical="?pad"
+                            style="@style/hliner"
+                            android:background="@color/grey"
+                            android:weightSum="12">
+                            <TextView
+                                android:id="@+id/balance"
+                                style="@style/num_1w"
+                                android:layout_weight="2"
+                                android:text="Balance"/>
+                            <TextView
+                                android:id="@+id/balance__10"
+                                style="@style/num_1w"
+                                android:textColor="@color/red"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/balance__9"
+                                style="@style/num_1w"
+                                android:textColor="@color/red"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/balance__8"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/balance__7"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/balance__6"
+                                style="@style/num_1w"
+                                android:textColor="@color/settGreen"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/balance__5"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/balance__4"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/balance__3"
+                                style="@style/num_1w"
+                                android:textColor="@color/color_blue"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/balance__2"
+                                style="@style/num_1w"
+                                android:text=""/>
+                            <TextView
+                                android:id="@+id/balance__1"
+                                style="@style/num_1w"
+                                android:text="" />
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 

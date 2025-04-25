@@ -35,6 +35,11 @@
             android:exported="true">
         </activity>
         <activity
+            android:name="pbs.sme.survey.activity.Base2Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name="pbs.sme.survey.activity.GeoActivity"
             android:exported="true">
         </activity>
@@ -88,6 +93,10 @@
         </activity>
         <activity
             android:name="pbs.sme.survey.activity.LoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name="pbs.sme.survey.activity.RespondentActivity"
             android:exported="true">
         </activity>
         <service android:name="pbs.sme.survey.helper.SyncService" android:enabled="true" android:exported="true"/>
