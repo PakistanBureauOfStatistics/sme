@@ -872,6 +872,7 @@
                         android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="Other(Specify)" />
                         <EditText android:id="@+id/f10_other" style="@style/edit_form_text" android:hint="Other"/>
+                    </LinearLayout>
 
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="11. Which of the following types of Government support would be most helpful in acquisition of latest/modern technology in your business?" />
@@ -894,10 +895,9 @@
                         <TextView
                             style="@style/s_heading"
                             android:text="Section - Export"/>
-                        <LinearLayout
-                            style="@style/vliner"
-                            android:weightSum="2">
 
+                        <LinearLayout
+                            style="@style/vliner">
                             <TextView
                                 style="@style/q_heading"
                                 android:text="1. Is your enterprise currently involved in export activities?" />
@@ -905,6 +905,7 @@
                             <RadioGroup
                                 android:id="@+id/export1"
                                 android:layout_width="match_parent"
+                                android:weightSum="2"
                                 style="@style/rdg">
 
                                 <RadioButton
@@ -972,7 +973,6 @@
                             android:visibility="gone">
                             <TextView style="@style/q_heading" android:text="Other (Specify)" />
                             <EditText android:id="@+id/export_other" style="@style/edit_form_text" />
-                        </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
                             style="@style/vliner"

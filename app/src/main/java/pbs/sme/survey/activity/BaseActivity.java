@@ -105,9 +105,12 @@ public class BaseActivity extends FormActivity {
                     findViewById(R.id.export).setVisibility(GONE);
                 }
             }
+            else{
+                findViewById(R.id.export).setVisibility(VISIBLE);
+            }
         }
         catch (Exception e){
-
+            findViewById(R.id.export).setVisibility(VISIBLE);
         }
 
         RadioGroup c3=findViewById(R.id.c3);
