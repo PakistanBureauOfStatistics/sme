@@ -34,6 +34,7 @@ public class S1Activity extends FormActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -225,6 +226,9 @@ public class S1Activity extends FormActivity {
         sec.email=((EditText) findViewById(R.id.email)).getText().toString();
         sec.website=((EditText) findViewById(R.id.website)).getText().toString();
         sec=savePhoneNumber(sec);
+        if(sec==null){
+            return;
+        }
 
        /* if(sec.email!=null && !sec.email.isEmpty() && !(sec.email.contains("@") && sec.email.contains("."))){
             setScrollAndBorderAnimation(findViewById(R.id.email));
@@ -266,8 +270,11 @@ public class S1Activity extends FormActivity {
             if (resumeModel.phone_type == 1) {
                 int phoneCodePos = -1;
                 for (int i = 0; i < phone_code.getAdapter().getCount(); i++){
-                    if (((String) phone_code.getAdapter().getItem(i)).equalsIgnoreCase(resumeModel.phone_code))
+                    if (((String) phone_code.getAdapter().getItem(i)).equalsIgnoreCase(resumeModel.phone_code)){
                         phoneCodePos = i;
+                        break;
+                    }
+
                 }
                 if (phoneCodePos != -1) {
                     phone_code.setSelection(phoneCodePos);
@@ -300,6 +307,7 @@ public class S1Activity extends FormActivity {
                     setScrollAndBorderAnimation(findViewById(R.id.phone_code));
                     mUXToolkit.showAlertDialogue("Failed","Select Mobile Code"  , alertForEmptyFieldEvent);
                     sbtn.setEnabled(true);
+                    return null;
                 }
             }
             else if(sec.phone_type==2){
@@ -311,6 +319,7 @@ public class S1Activity extends FormActivity {
                     setScrollAndBorderAnimation(findViewById(R.id.phone_code2));
                     mUXToolkit.showAlertDialogue("Failed","Landline Code should have at-least 3 digits."  , alertForEmptyFieldEvent);
                     sbtn.setEnabled(true);
+                    return null;
                 }
             }
         }
