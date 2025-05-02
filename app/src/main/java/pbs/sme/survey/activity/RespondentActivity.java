@@ -24,7 +24,7 @@ public class RespondentActivity extends FormActivity {
     private Section12 modelDatabase;
     CheckBox cb_same;
     Spinner designation;
-    EditText name;
+    EditText name, remarks;
 
 
     private final String[] inputValidationOrder= new String[]{
@@ -50,6 +50,7 @@ public class RespondentActivity extends FormActivity {
 
         designation=findViewById(R.id.designation);
         name=findViewById(R.id.name);
+        remarks=findViewById(R.id.remarks);
 
         designation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -74,6 +75,9 @@ public class RespondentActivity extends FormActivity {
             resumeModel=modelDatabase = s1.get(0);
             //Part1TextWatcher.IGNORE_TEXT_WATCHER = true;
             setFormFromModel(this, modelDatabase, inputValidationOrder, "",false, this.findViewById(android.R.id.content));
+            if(resumeModel.remarks!=null){
+                remarks.setText(resumeModel.remarks);
+            }
         }
 
     }
@@ -105,7 +109,10 @@ public class RespondentActivity extends FormActivity {
 
 
 
-
+        if(!remarks.getText().toString().isEmpty()){
+            sec.remarks=remarks.getText().toString();
+        }
+        setCommonFields(sec);
         Long iid = dbHandler.replace(sec);
 
         if (iid != null && iid > 0) {
